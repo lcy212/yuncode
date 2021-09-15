@@ -3,14 +3,98 @@
 <html lang="ko-KR">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-compatable" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>문서제목</title>
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>리스트</title>
+        <!-- style -->
+        <style>
+            div { background-color:lightblue; 
+                  border-width:1px; border-color:blue; border-style:solid; }
+            .ex_part {background-color:cornflowerblue}
+            /* 리스트 형태가 원이어도 읽히는건 숫자 */
+            li { list-style-type:circle;}
+        </style>
     </head>
     <body>
         <!-- layout -->
+        <h1>웹 기초</h1>
 
+        <hr />
+        
+        <div>
+            <h2>list</h2>
+            <p>종류와 역할</p>
 
+            <div class="ex_part">
+                <h3>순서없는 리스트</h3>
+                <ul>
+                    <li>순서없는 리스트_ul_02</li>
+                    <li>순서없는 리스트_ul_03</li>
+                    <li>순서없는 리스트_ul_01</li>
+                    <li>순서없는 리스트_ul_04</li>
+                </ul>
+            </div> 
+
+            <hr />
+
+            <div class="ex_part">
+                <h3>순서있는 리스트</h3>
+                <ol>
+                    <li>순서있는 리스트_ol_01</li>
+                    <li>순서있는 리스트_ol_02</li>
+                    <li>순서있는 리스트_ol_03</li>
+                    <li>순서있는 리스트_ol_04</li>
+                </ol>
+            </div>
+
+            <hr />
+
+            <div class="ex_part">
+                <h3>제목/내용이 있는 리스트</h3>
+                <p>dl과 dt는 부모자식관계이며, dt와 dd는 형제관계이다.</p>
+                <dl>
+                    <dt>내용에 대한 제목_dt</dt>
+                    <dd>제목에 따른 내용_dd</dd>
+                    <dd>제목에 따른 내용_dd</dd>
+                    <dd>제목에 따른 내용_dd</dd>
+
+                    <dt>내용에 대한 제목_dt</dt>
+                    <dd>제목에 따른 내용_dd</dd>
+                    <dd>제목에 따른 내용_dd</dd>
+                    <dd>제목에 따른 내용_dd</dd>
+
+                </dl>
+            </div>
+
+            <div class="ex_part">
+                <h3>다단 리스트</h3>
+                <ul>
+                    <li>다단 리스트_01</li>
+                    <li>다단 리스트_02</li>
+                    <li>다단 리스트_03</li>
+                    <li>다단 리스트_04
+                        <ul>
+                            <li>다단 리스트_04_1</li>
+                            <li>다단 리스트_04_2
+                                <ol>
+                                    <li>다단 리스트_02_2_1</li>
+                                    <li>다단 리스트_02_2_2</li>
+                                    <li>다단 리스트_02_2_3</li>
+                                </ol>
+                            <li>다단 리스트_04_3</li>
+                            <li>다단 리스트_04_4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <hr />
+
+            <p>
+                ul, ol 리스트의 내부에는 li 요소만 작성 가능하다.
+                dl 리스트의 내부에는 dt, dd 요소만 작성 가능하다.
+                
+            </p>
+        </div>
         <!-- script -->
         <script></script>
     </body>
