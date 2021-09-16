@@ -1,0 +1,66 @@
+<!doctyoe html>
+<!-- a_03_id_class.html -->
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>id와 class 비교</title>
+        <!-- style -->
+
+        <!-- 
+            id는 camelCase, class는 under_score 사용
+            prefix 접두어는 카테고리 분류에 따른 이름
+            sufix 접미어 레벨의 차이
+            네이밍 사용시 특정 제품명, 사람은 지양
+            '형태(역할)_의미_상태' 순서로 조합 
+        -->
+        <style>
+            #wrap { width:100%; height:auto; background-color:#eee; }
+            .box_size { width:100%; height:700px; }
+            #contentBox { background-color:#a11; }
+            #lacalBox { background-color:#a44; }
+            #familyBox { background-color:#a66; }
+            #companyBox { background-color:#a88; }
+
+
+        </style>
+    </head>
+    <body>
+        <!-- layout -->
+        <div id="wrap">
+            <h1><a href="./a_00_content.html">웹 기초</a></h1>
+
+            <hr />
+
+            <div class="navigation">
+                <h2>id와 class에 대한 개념정리 및 기타</h2>
+                <p>
+                    페이지 이동을 하는 하이퍼링크 &gt; 페이지의 주소, <br />
+                    페이지 내부에서 위치를 찾아가게하는 마이크로링크 &gt; id속성의 값을 연결 <br />
+                    class는 단순한 이름을 의미하고 &amp; id는 핵심 또는 큰 범위의 틀을 의미한다.
+                </p>
+                <!-- 특수문자를 삽입하는 코드 : entity code 원화표시는 &#8361-->
+                <ul>
+                    <li><a href="#contentBox">contentBox</a></li>
+                    <li><a href="#lacalBox">lacalBox</a></li>
+                    <li><a href="#familyBox">familyBox</a></li>
+                    <li><a href="#companyBox">companyBox</a></li>
+                    <li><a href="#other_box">other_box</a></li>
+                </ul>
+            </div>
+
+            <div class="box_size" id="contentBox">contentBox</div>
+            <div class="box_size" id="lacalBox">lacalBox</div>
+            <div class="box_size" id="familyBox">familyBox</div>
+            <div class="box_size" id="companyBox">companyBox</div>
+            <div class="box_size other_box">other_box</div>
+
+        </div>
+
+        <!-- script -->
+        <script>
+
+        </script>
+    </body>
+</html>
