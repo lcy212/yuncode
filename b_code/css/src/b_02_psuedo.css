@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* b_02_psuedo.css */
+
+/* 
+
+    선택자 {}
+    @기능 () {}
+    ex) @media screen and(min-sidth:320px) {}                
+        @supports (옵션) {} if문
+    @기능 {}   
+    ex) @animation 이름 {}
+    @기능 "역할"
+    ex) @charset "UTF-8";
+        @improt url("data");
+    
+*/
+
+li {width:400px; height:30px; margin:5px; padding:10px; 
+    background-color:#7ac;}
+.on:hover {background-color :#468;}
+.push:active {background-color:#468;}
+.link > a:visited {color:#fff; }
+.go > a:link { display:block; width:100%; height:100%; 
+    background-color:#468;}
+.on:hover > div { display:block; }
+.none { display:none; width:400px; height:200px; 
+background-color:#468;}
+.check > a:focus { background-color:#468; color:#fff; }
+
+.front {font-weight:700; }
+.front:before,.front::before { content:"앞 글씨 추가 - "; color:#fff; }
+
+.back { color:#468; }
+.back:after, .back::after { content:" - 뒤 글씨 추가"; color:#fff; }
+
+.both:before,.both::before { content:"앞 글씨 추가 - "; color:#eee; }
+.both:after,.both::after { content:" - 뒤 글씨 추가"; color:#ddd; }
+
+.first::first-letter { font-size:2rem; font-weight:bold; color:#33F}
+.multi_line::first-line { text-decoration:underline; color:#33d; }
