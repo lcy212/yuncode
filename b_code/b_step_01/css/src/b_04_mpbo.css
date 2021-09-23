@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* b_04_mpbo.css */
+
+#wrap{
+    width:900px; height:auto;
+    margin:auto; padding-bottom:500px;
+    background-color:#ddd;
+}
+
+.ex_part {
+    margin-bottom:50px;
+    background-color: #aaa;
+}
+
+.ex {
+    width:95%; height:auto;
+    border-width:1px; border-style:solid;
+    border-color:#333
+}
+
+.ex > div {
+    width:150px; height:150px;
+    border-radius:5px;
+    background-color:#36a;
+    background-image:linear-gradient(45deg, #f58, #58c);
+    color:#fff; font-weight:900;
+}
+
+/* --------------------------------------------------------------- */
+
+/* margin:외부여백 - 요소와 요소 사이의 공백 */
+
+.m_base{
+    /* border:0; 
+       border가 0이되면 밧줄이 회수되어 div가 매달릴 수 없는것이므로
+       margin-top이 있어도 여백이 생기지 않음
+    */
+    background-color: #fda;
+}
+
+.m_base:after {
+    content:""; display:block; clear:both;
+}
+
+.m_base > div {
+    float:left;
+}
+
+.margin_01 {
+    margin-top:30px;
+    margin-left:50px;
+    margin-bottom:100px;
+}
+
+/* float이 있으면 margin 값이 각각 적용됨, 이외에 겹치면 둘 중 큰 값으로 적용됨 */
+
+.margin_02 {
+    margin-top:100px; 
+    margin-left:200px;
+    margin-bottom:50px;
+}
+
+/* --------------------------------------------------- */
+
+.m_base2 { margin-top:50px;}
+.m_base2:after { content:""; display:block; clear:both;}
+.m_base2 > div { float:left; }
+.m_01 { margin:50px; }
+.m_02 { margin:10px 30px; }
+.m_03 { margin:10px 50px 30px; }
+.m_04 { margin:5px 20px 40px 70px; }
+.m_05 { margin:20px; margin-bottom:10px; }
+   /* { margin:20px 20px 10px 20px}
+      { margin:20px 20px 10px; }*/
+.m_06 { margin:auto; } /* 양옆만 auto, 위아래는 따로 입력해야됨, float이 있으면 의미없음 */
+.m_07 { margin-top:-30px;}
+.m_08 { margin-left:10%;} 
+/* left, right는 부모값의 가로길이 기준 top, bottom은 대부분 브라우저 기준(랜덤)
+   따라서 잘 사용하지않음 */
+
+   /* --------------------------------------------------- */
+
+   .float_area { 
+       list-style:none;
+       padding:0;
+       width:500px;
+       margin:auto;
+       border:1px solid #333; 
+       background-color:#fff;
+    }
+    .float_area:after{
+        content:""; display:block; clear:both;
+        width:100%; height:30px;
+        background-color: #fff;
+    }
+   .float_area > li {
+       float:left;
+       width:100px; height:100px;
+       color:#fff; font-weight:900;
+       background-image:linear-gradient(45deg, #7ad, #f6b );
+   }
+
+   .l_01 {margin-bottom:10px;}
+   .float_area > .l_02 {height:50px; margin-bottom:10px; }
+
+   /* --------------------------------------------------- */
+
+   .p_base {
+       padding:0;
+       list-style:none;
+       width:600px; height:auto;
+   }
+
+   .p_base::after { 
+       content:""; display:block; clear:both; 
+    }
+
+   .p_base > li {
+       float:left;
+       width:100px; height: 100px;
+       background-color: #856;
+       background-image: linear-gradient(45deg, #7ad, #f6b);
+   }
+
+   .p_base span {
+       display:block;
+       width:100%; height:100%;
+       background-color: rgba(255,255,255,0.3);
+   }
+
+     /* --------------------------------------------------- */
+
+    /* padding : 안쪽여백. 
+    margin은 빈 공간을 생성하지만 padding은 껍데기를 불려 여백을 만든다
+    margin과 다르게 윗줄이랑 좀 붙는 편*/
+
+     .p_01 {padding: 10px;}
+     .p_02 {padding: 20px 40px;}
+     .p_03 {padding: 10px 40px 5px;}
+     .p_04 {padding: 5px 10px 20px 40px;}
+     .p_05 {padding-top: 30px; }
+     .p_06 {padding-top: 10%; padding-left:10% ;} /* ex_part 기준 */
+     .p_07 {padding: auto; } /* 0 */
+     .p_base .p_08 { /* margin 효과 */
+        padding-top:30px;
+        background-color: transparent; 
+        background-image:none;
+    } 
+    .p_base .p_09{ 
+        width:40px; 
+        height: 40px;
+        padding:30px; 
+    }
+    .p_10{ 
+        width: 100px; height: 100px;
+        /* box-sizing:content-box;  기본값*/
+        box-sizing: border-box; 
+        /* 작성한 가로,세로 값에 맞게 padding 포함 사이즈 조정되라 */
+        padding:30px; 
+    }
