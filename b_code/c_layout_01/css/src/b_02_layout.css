@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* b_02_layout */
+
+
+
+#wrap {
+    width: 600px; height: auto;
+    background-color: #afa;
+}
+
+.clearfix {
+    content:""; display:block; clear: both;
+}
+
+/* ------------------------------------------ */
+
+#header {
+    width: 600px; height: 100px;
+    background-color: #e54;
+}
+
+h1 {
+    float:left; margin:0;
+    width: 120px; height: 100px;
+    background-color: #dd8;
+}
+
+.navigation {
+    float:right; margin:0;
+    width: 400px; height: 100px;
+    background-color: #dd0;
+}
+
+ul li {
+    float:left; margin: auto; margin-right:5px;
+    width: 60px; height: 90px;
+    list-style:none;
+    background-color:#44d;
+}
+
+/* ------------------------------------------ */
+
+#section {
+    width: 600px; height: 300px;
+    background-color: #fa4;
+}
+
+.sect_01 {
+    float:left;
+    width: 40%; height: 300px;
+    background-color: #8b2;
+}
+
+.sect_02 {
+    float:left;
+    width: 60%; height: 300px;
+    background-color: #777;
+}
+
+/* ------------------------------------------ */
+
+#aside {
+    width: 100%; height: 300px;
+}
+
+#aside div {
+    float:left;
+    width: 200px; height: 300px;
+}
+
+.side_01 {
+    background-color: #a5d;
+}
+
+.side_02 {
+    background-color: #774;
+}
+
+.side_03 {
+    background-color: #84b;
+}
+
+/* ------------------------------------------ */
+
+#article {
+    width: 100%; height: 300px;
+}
+
+#article div {
+    float:left;
+}
+
+#article .art_01 {
+    width: 200px; height: 300px;
+    background-color:#448;
+}
+
+#article .art_02 {
+    width: 400px; height: 150px;
+    background-color: #e54;
+}
+
+#article .art_03 {
+    width: 400px; height: 150px;
+    background-color: #b5b;
+}
+
+/* ------------------------------------------ */
+
+#content {
+    width: 100%; height: 500px;
+}
+
+#content div {
+    float:right;
+}
+
+#content .art_01 {
+    width: 30%; height: 500px;
+    background-color:#448;
+}
+
+#content .art_02 {
+    width: 70%; height: 150px;
+    background-color: #e54;
+}
+
+#content .art_03 {
+    width: 70%; height: 350px;
+    background-color: #b5b;
+}
+
+
+/* ------------------------------------------ */
+
+#footer {
+    width: 600px; height: 100px;
+    background-color:#33d;
+}
+

@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* b_02_layout_copy */
+
+/* reset.css 
+================================ */
+
+body {margin:0;}
+
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd {
+    margin:0; padding:0;
+    font: size 1rem; /* 16px */
+    font-family:sans-serif;
+}
+
+ul,ol,li,dl,dt,dd { margin:0; padding:0; }
+ul,ol { list-style:none; }
+
+a { text-decoration:none; color:inherit; } /* inherit:부모값 따르기 */
+button { border:0; background-color:transparent; cursor:pointer;}
+
+/* common.css 
+=============================== */
+
+.clearfix:after,
+.clearfix::after {
+    content:""; display:block; clear: both;
+}
+
+/* design 
+=================================== */
+
+#wrap {
+    width: 600px; height: auto; min-height:500px;
+    margin:auto; margin-top:50px;
+    /* background-color: #afa; */
+}
+
+
+/* #header 
+------------------------------------------------------ */
+
+#header {
+    width: 100%; height: 100px;
+    background-color: #e54;
+}
+
+    h1 {
+        float:left; margin:0;
+        width: 120px; height: 100px;
+        background-color: #dd8;
+    }
+
+    .navigation {
+        float:right;
+        width: 400px; height: 100px;
+        padding-top:50px; box-sizing: border-box;
+        background-color: #dd0;
+    }
+
+        .navigation > ul {
+            float:right; width: auto; height:auto; background-color:#fff;
+        }
+        .navigation li {
+            float:left; /* right하면 오른쪽부터 1번 */
+            width:40px; height: 50px;
+            margin-left:20px;
+            background-color:#44d; color:#fff;
+        }
+
+        .navigation li:first-child { margin:0; }
+
+        .navigation li a {
+            display: block; width: 100%; height: 100%; background-color: #ca7;
+        }
+    
+/* #section
+ ------------------------------------------ */
+
+#section {
+    width: 100%; height: auto; background-color: #fa4; }
+
+    #section > div { float:left; height:300px; }
+
+    .sect_01 { width: 40%; background-color: #8b2; }
+
+    .sect_02 { width: 60%; background-color: #777; }
+
+/* #aside 
+------------------------------------------ */
+
+#aside {
+    width: 100%; height: auto;
+}
+
+    #aside div {
+        float:left;
+        width: calc(100% / 3); height: 300px; /* calc:계산기. 연산자 앞 뒤로 띄어쓰기 필수*/ 
+    }
+    /* 구형 브라우저에서 calc를 인식못하면 33.333333% 33.333334% 33.333333% 각각 입력 */
+    .side_01 { background-color: #a5d; }
+
+    .side_02 { background-color: #774; }
+
+    .side_03 { background-color: #84b; }
+
+/* #article 
+------------------------------------------ */
+
+#article {
+    width: 100%; height: auto;
+}
+
+    /* #article div {
+        float:left;
+    } 크기가 딱 맞는 경우 다 left를 써도 무방함 */
+
+    #article .art_01 {
+        float:left;
+        width: calc(100% / 3); height: 300px;
+        background-color:#448;
+    }
+
+    #article .art_02 {
+        float:right;
+        width: calc(100% / 3 * 2); height: 150px;
+        background-color: #e54;
+    }
+
+    #article .art_03 {
+        float:right;
+        width: calc(100% / 3 * 2); height: 150px;
+        background-color: #b5b;
+    }
+
+/* #content 
+------------------------------------------ */
+
+#content {
+    width: 100%; height: auto;
+}
+
+    /* #content div {
+        float:right;
+    } 크기가 딱 맞는 경우 다 right를 써도 무방함 */
+    /* layout문제말고 아래 방식처럼 쓰는게 보편적임 */
+    #content .art_01 {
+        float:left;
+        width: 70%; height: 150px; 
+        background-color: #e54;
+    }
+
+    #content .art_02 {
+        float:left;
+        width: 70%; height: 350px;
+        background-color: #b5b;
+    }
+
+    #content .art_03 {
+        float:left;
+        width: 30%; height: 500px;
+        background-color:#448;
+        margin-top:-150px;
+    }
+
+
+/* #footer 
+------------------------------------------ */
+
+#footer {
+    width: 100%; height: 100px;
+    background-color:#33d;
+}

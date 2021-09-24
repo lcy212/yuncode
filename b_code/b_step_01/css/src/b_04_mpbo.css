@@ -78,83 +78,207 @@
 /* left, right는 부모값의 가로길이 기준 top, bottom은 대부분 브라우저 기준(랜덤)
    따라서 잘 사용하지않음 */
 
-   /* --------------------------------------------------- */
+/* --------------------------------------------------- */
 
-   .float_area { 
-       list-style:none;
-       padding:0;
-       width:500px;
-       margin:auto;
-       border:1px solid #333; 
-       background-color:#fff;
-    }
-    .float_area:after{
-        content:""; display:block; clear:both;
-        width:100%; height:30px;
-        background-color: #fff;
-    }
-   .float_area > li {
-       float:left;
-       width:100px; height:100px;
-       color:#fff; font-weight:900;
-       background-image:linear-gradient(45deg, #7ad, #f6b );
-   }
+.float_area { 
+    list-style:none;
+    padding:0;
+    width:500px;
+    margin:auto;
+    border:1px solid #333; 
+    background-color:#fff;
+}
+.float_area:after{
+    content:""; display:block; clear:both;
+    width:100%; height:30px;
+    background-color: #fff;
+}
+.float_area > li {
+    float:left;
+    width:100px; height:100px;
+    color:#fff; font-weight:900;
+    background-image:linear-gradient(45deg, #7ad, #f6b );
+}
 
-   .l_01 {margin-bottom:10px;}
-   .float_area > .l_02 {height:50px; margin-bottom:10px; }
+.l_01 {margin-bottom:10px;}
+.float_area > .l_02 {height:50px; margin-bottom:10px; }
 
-   /* --------------------------------------------------- */
+/* --------------------------------------------------- */
 
-   .p_base {
-       padding:0;
-       list-style:none;
-       width:600px; height:auto;
-   }
+.p_base {
+    padding:0;
+    list-style:none;
+    width:600px; height:auto;
+}
 
-   .p_base::after { 
-       content:""; display:block; clear:both; 
-    }
+.p_base::after { 
+    content:""; display:block; clear:both; 
+}
 
-   .p_base > li {
-       float:left;
-       width:100px; height: 100px;
-       background-color: #856;
-       background-image: linear-gradient(45deg, #7ad, #f6b);
-   }
+.p_base > li {
+    float:left;
+    width:100px; height: 100px;
+    background-color: #856;
+    background-image: linear-gradient(45deg, #7ad, #f6b);
+}
 
-   .p_base span {
-       display:block;
-       width:100%; height:100%;
-       background-color: rgba(255,255,255,0.3);
-   }
+.p_base span {
+    display:block;
+    width:100%; height:100%;
+    background-color: rgba(255,255,255,0.3);
+}
 
-     /* --------------------------------------------------- */
+    /* --------------------------------------------------- */
 
-    /* padding : 안쪽여백. 
-    margin은 빈 공간을 생성하지만 padding은 껍데기를 불려 여백을 만든다
-    margin과 다르게 윗줄이랑 좀 붙는 편*/
+/* padding : 안쪽여백. 
+margin은 빈 공간을 생성하지만 padding은 껍데기를 불려 여백을 만든다
+margin과 다르게 윗줄이랑 좀 붙는 편*/
 
-     .p_01 {padding: 10px;}
-     .p_02 {padding: 20px 40px;}
-     .p_03 {padding: 10px 40px 5px;}
-     .p_04 {padding: 5px 10px 20px 40px;}
-     .p_05 {padding-top: 30px; }
-     .p_06 {padding-top: 10%; padding-left:10% ;} /* ex_part 기준 */
-     .p_07 {padding: auto; } /* 0 */
-     .p_base .p_08 { /* margin 효과 */
-        padding-top:30px;
-        background-color: transparent; 
-        background-image:none;
-    } 
-    .p_base .p_09{ 
-        width:40px; 
-        height: 40px;
-        padding:30px; 
-    }
-    .p_10{ 
-        width: 100px; height: 100px;
-        /* box-sizing:content-box;  기본값*/
-        box-sizing: border-box; 
-        /* 작성한 가로,세로 값에 맞게 padding 포함 사이즈 조정되라 */
-        padding:30px; 
-    }
+    .p_01 {padding: 10px;}
+    .p_02 {padding: 20px 40px;}
+    .p_03 {padding: 10px 40px 5px;}
+    .p_04 {padding: 5px 10px 20px 40px;}
+    .p_05 {padding-top: 30px; }
+    .p_06 {padding-top: 10%; padding-left:10% ;} /* ex_part 기준 */
+    .p_07 {padding: auto; } /* 0 */
+    .p_base .p_08 { /* margin 효과 */
+    padding-top:30px;
+    background-color: transparent; 
+    background-image:none;
+} 
+.p_base .p_09{ 
+    width:40px; 
+    height: 40px;
+    padding:30px; 
+}
+.p_10{ 
+    width: 100px; height: 100px;
+    /* box-sizing:content-box;  기본값*/
+    box-sizing: border-box; 
+    /* 작성한 가로,세로 값에 맞게 padding 포함 사이즈 조정되라 */
+    padding:30px; 
+}
+
+/* --------------------------------------------------- */
+
+.b_base {
+    margin:auto; padding:0; list-style:none;
+}
+
+.b_base:after,.b_base::after {
+    content:""; display:block; clear:both;
+    width: 100%; height: 10px; 
+}
+
+.b_base > li {
+    float:left; margin:30px;
+    width:100px; height:100px; background-color:#5a3;
+}
+
+.b_01 {
+    border-width: 5px; 
+    border-style: solid; /* border-style:dotted || dashed || ridge ; */
+    border-color: #563;
+}
+
+.b_02 {
+    border:10px dotted #fda; /* 순서는 상관없지만 두께, 스타일, 색상이 보편적임 */
+}
+
+.b_03 {
+    border:5px dashed #58c;
+    box-sizing:border-box; /* 박스 내부에 테두리가 생김 */
+}
+
+.b_04 {
+    border:10px dotted #f58;
+    background-clip:content-box;
+}
+/* content-box : 테두리까지 면이 확장되지않음(padding값 있으면 margin처럼 여백생기고 테두리)
+   padding-box : padding의 값만큼 면이 확장됨
+   border-box : 테두리까지 면이 확장됨
+*/
+
+.b_05 {
+    border:10px dotted #f6b;
+    border-top: 2px dashed #f6b;
+    border-bottom-width:0px;
+}
+/* border가 맞닿는 부분은 대각선으로 반반 */
+
+.b_06 {
+    border-top:5px solid #563;
+    border-bottom:5px solid #563;
+}
+
+.b_06 button {
+    padding:0; 
+    cursor:pointer;
+    border:10px solid transparent;
+    border-left:30px solid #58c;
+    border-right:0;
+    background-color:transparent;
+}
+/* 삼각형 만드는 방법 */
+
+
+.b_06 span{
+    display:block;
+    width: 0; height: 0; overflow:hidden;
+}
+
+/* --------------------------------------------------- */
+
+.o_base {
+    margin:auto; padding:0;
+    list-style: none;
+}
+
+.o_base > li {
+    width: 100px; height: 100px; 
+    margin: 50px;
+    background-color:#58c;
+}
+
+.o_01 {
+    outline:5px solid #36a;
+}
+/* outline은 left right 등이 없음 */
+.o_02 {
+    outline:5px dotted #36a;
+    outline-offset:20px;
+}
+ /* 
+ outline-offset : 면과 outline간 여백 생성. 구형 브라우저에서 동작안함 
+ 포커스되면 생기는 외곽선이 outline 
+ */
+
+ .o_03 > a {
+     display: block;
+     width: 100%; height: 100%;
+     color: #fff; text-decoration: none;
+     text-align: center;
+     line-height:100px;
+ }
+
+ .o_04 > button { /* button의 기본 설정 */
+     width: 100%; height: 100%;  /* 글씨 가운데 정렬됨 */
+     margin:0; padding:0; border:0; 
+     border-radius:0;
+     background-color: transparent;
+     cursor:pointer;
+ }
+
+ .o_03 a:hover,
+ .o_04 button:hover {
+     background-color:#7ad;
+     color:#333;
+     outline:5px solid #f58;
+     transition: all 300ms ease; /* 애니메이션 효과*/
+ }
+
+ .o_03 a:focus,
+ .o_04 button:focus {
+    outline:5px solid #f58;
+    font-size:1.2rem;
+ } 
