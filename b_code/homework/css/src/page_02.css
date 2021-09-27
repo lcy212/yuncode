@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* page_02.css */
+
+/* reset.css 
+================================ */
+
+body {margin:0;}
+
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd {
+    margin:0; padding:0;
+    font: size 1rem; /* 16px */
+    font-family:sans-serif;
+}
+
+ul,ol,li,dl,dt,dd { margin:0; padding:0; }
+ul,ol { list-style:none; }
+
+a { text-decoration:none; color:inherit; } /* inherit:부모값 따르기 */
+button { border:0; background-color:transparent; cursor:pointer;}
+
+/* common.css 
+=============================== */
+
+.clearfix:after,
+.clearfix::after {
+    content:""; display:block; clear: both;
+}
+
+
+/* design
+--------------------------------------------------------- */
+
+#wrap { 
+    width: 1600px; height:auto; 
+    margin:auto; margin-top:50px; margin-bottom:50px;}
+h1 { margin-bottom:50px;}
+div {margin:auto; }
+
+/* headBox
+--------------------------------------------------------- */
+
+#headBox { width: 1600px; height:150px ; background-color:#aaa;}
+    #headBox div { 
+        float:left; margin-top:34px;
+        height:80px; background-color: #77f;}
+    h1 {
+        float:left; margin-top:34px;
+        height:80px; background-color: #77f; 
+        width: 250px; margin-left:50px; margin-right:75px ;
+        text-align:center; font-size:2rem;
+    }
+    .gnb { width: 850px; margin-right:75px ;}
+    .unb {width: 250px; margin-right:50px; }
+
+/* adViewBox
+--------------------------------------------------------- */
+
+#adViewBox { 
+    width: 1600px; height:750px;
+    background-color:#777; padding-top:28px;
+    }
+    #adViewBox div { 
+    background-color: #77f; margin:auto; }
+    #adViewBox .view_outer { width: 1300px; height: 600px;}
+    #adViewBox .view_indicator { width: 850px; height: 60px; margin-top:28px; }
+
+/* localNavBox
+--------------------------------------------------------- */
+
+#localNavBox { 
+    width: 1600px; height:250px; 
+    background-color:#555; 
+    margin-bottom:50px; padding-top:18px; }
+    #localNavBox div { background-color: #77f; margin:auto;}
+    #localNavBox .local_nav_outer {
+        width: 1500px; height: 196px;
+    }
+
+/* popularContentBox
+--------------------------------------------------------- */
+
+#popularContentBox { width: 1600px; height: 600px; ; background-color:#777;}
+#popularContentBox div { background-color: #77f; margin:auto; }
+h3 {
+    width: 1300px; height: 50px; 
+    margin:auto; margin-bottom:30px; 
+    background-color: #77f;  }
+.pop_con_area { width: 1300px; height: 470px;}
+
+
+/* newContentBox
+--------------------------------------------------------- */
+
+#newContentBox { width: 1600px; height: 900px; ; 
+    background-color:#aaa; margin-bottom:80px;
+    padding-top:60px;
+ }
+#newContentBox div { background-color: #77f; margin:auto; }
+.new_con_area { width:1300px; height:700px;}
+
+
+/* recommendedConttentBox
+--------------------------------------------------------- */
+
+#recommendedConttentBox { 
+    width: 1600px; height: 600px; 
+    background-color:#777; 
+    margin-bottom:80px; padding-top:30px;
+ }
+#recommendedConttentBox div { background-color: #77f; margin:auto;}
+.recom_con_area { width: 1300px; height: 440px;}
+/* communityBox
+--------------------------------------------------------- */
+
+#communityBox { 
+    width: 1600px; height: 800px;
+    background-color:#aaa;
+    margin-bottom:80px; padding-top:60px; 
+}
+#communityBox div { background-color: #77f;}
+.community_area {width: 1300px; height: 600px;}
+
+/* miniAdBox
+--------------------------------------------------------- */
+
+#miniAdBox { 
+    width: 1600px; height: 400px; ; 
+    background-color:#555; 
+    margin-bottom:80px; padding-top:40px;
+}
+#miniAdBox div { background-color: #77f;}
+.mini_ad_outer { width: 1500px; height: 300px;}
+
+/* footBox
+--------------------------------------------------------- */
+
+#footBox { 
+    width: 1600px; height:200px ;
+    background-color:#333;
+    padding-top:22px;
+    }
+#footBox div { background-color: #77f;}
+.footer { width: 1300px; height: 140px;}

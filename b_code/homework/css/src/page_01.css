@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* page_01.css */
+
+/* reset.css 
+================================ */
+
+body {margin:0;}
+
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd {
+    margin:0; padding:0;
+    font: size 1rem; /* 16px */
+    font-family:sans-serif;
+}
+
+ul,ol,li,dl,dt,dd { margin:0; padding:0; }
+ul,ol { list-style:none; }
+
+a { text-decoration:none; color:inherit; } /* inherit:부모값 따르기 */
+button { border:0; background-color:transparent; cursor:pointer;}
+
+/* common.css 
+=============================== */
+
+.clearfix:after,
+.clearfix::after {
+    content:""; display:block; clear: both;
+}
+
+
+/* design
+--------------------------------------------------------- */
+
+#wrap { width: 1600px; height:auto; margin:auto; margin-top:50px; margin-bottom:50px;}
+h1 { margin-bottom:50px;}
+
+
+/* headBox
+--------------------------------------------------------- */
+
+#headBox { width: 1600px; height:150px ; background-color:#aaa;}
+
+/* adViewBox
+--------------------------------------------------------- */
+
+#adViewBox { width: 1600px; height:750px; background-color:#777;}
+
+/* localNavBox
+--------------------------------------------------------- */
+
+#localNavBox { width: 1600px; height:250px; background-color:#555; margin-bottom:50px; }
+
+/* popularContentBox
+--------------------------------------------------------- */
+
+#popularContentBox { width: 1600px; height: 600px; ; background-color:#777;}
+
+/* newContentBox
+--------------------------------------------------------- */
+
+#newContentBox { width: 1600px; height: 900px; ; background-color:#aaa; margin-bottom:80px; }
+
+/* recommendedConttentBox
+--------------------------------------------------------- */
+
+#recommendedConttentBox { width: 1600px; height: 600px; ; background-color:#777; margin-bottom:80px; }
+
+/* communityBox
+--------------------------------------------------------- */
+
+#communityBox { width: 1600px; height: 800px; ; background-color:#aaa; margin-bottom:80px; }
+
+/* miniAdBox
+--------------------------------------------------------- */
+
+#miniAdBox { width: 1600px; height: 400px; ; background-color:#555; margin-bottom:80px; }
+
+/* footBox
+--------------------------------------------------------- */
+
+#footBox { width: 1600px; height:200px ; background-color:#333;}

@@ -1,0 +1,53 @@
+{
+"html_base_01": {
+	"prefix": "start",
+	"body": [
+		"<!DOCTYPE html>",
+		"<!-- ${TM_FILENAME_BASE}.html -->",
+		"<html lang=\"ko-KR\" class=\"no-js\">",
+		"<head>",
+		"    <meta charset=\"UTF-8\">",
+		"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+		"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+		"",
+		"    <link rel=\"stylesheet\" href=\"../css/src/${TM_FILENAME_BASE}.css\">",
+		"    <script src=\"../js/base/modernizr-custom.js\"></script>",
+		"",
+
+		"    <title>${1:DOCUMENT}</title>",
+		"    <link rel=\"shortcut icon\" href=\"../favicon.png\" type=\"image/png\">",
+		"    <link rel=\"apple-touch-icon\" href=\"../favicon.png\">",
+		"</head>",
+		"<body>",
+		"    <!-- layout -->",
+		"    <div id=\"wrap\">",
+		"       ${2:<h1><a href=\"./a_00_content.html\">웹</a></h1>}",
+		"",
+		"    </div><!-- wrap -->",
+		"",
+		"    <!-- script -->",
+		"    <script></script>",
+		"</body>",
+		"</html>",
+		""
+	],
+	"description": "html_base_01"
+	},
+	"html_ex_01": {
+		"prefix": "ex",
+		"body": [
+		  "",
+		  "<hr />",
+		  "",
+		  "<div class=\"ex_part\">",
+		  "  <h2>${3:DOCUMENNT}</h2>",
+		  "",
+		  "  <div class=\"\">",
+		  "",
+		  "  </div><!-- class -->",
+		  "</div><!-- ex_part -->",
+		  ""
+		],
+		"description": "html_ex_01"
+	  }
+}
