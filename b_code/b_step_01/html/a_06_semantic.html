@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- a_06_semantic.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/src/a_06_semantic.css">
+    <script src="../js/base/modernizr-custom.js"></script>
+
+    <title>시맨틱구조</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+        <header id="headBox">
+            <h1>site</h1>
+            <nav id="navigation">
+                <h2>navigation</h2>
+                <div class="gnb" role="menu">
+                    <h3>gnb</h3>
+                </div>
+                <div class="unb" role="menu">
+                    <h3>unb</h3>
+                </div>
+            </nav>
+        </header><!-- #headBox -->
+
+        <section id="viewBox">
+            <h2>광고영역</h2>
+        </section><!-- #viewBox -->
+
+        <main class="content_wrap"><!-- main h2는 선택사항 -->
+            <article id="contentBox_01">
+                <h2>주요내용</h2>
+                <figure><!-- 이미지, 글 등 눈에 보이는 것 표현가능 -->
+                    <figcaption>이미지에 대해 설명</figcaption>
+                    <img src="../img/sticker/002-bee.png" alt="image">
+                </figure>
+                <figure>
+                    <figcaption>노래가사</figcaption>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, excepturi dolorem cumque at optio corrupti nesciunt asperiores quas tempore fuga reprehenderit laudantium soluta veritatis placeat ea itaque odio voluptatibus ullam!</p>
+                </figure>
+            </article><!-- #contentBox_01 -->
+            <article id="contentBox_02">
+                <h2>주요내용</h2>
+            </article><!-- #contentBox_02 -->
+            <article id="contentBox_03">
+                <h2>주요내용</h2>
+            </article><!-- #contentBox_03 -->
+            <article id="contentBox_04">
+                <h2>주요내용</h2>
+            </article><!-- #contentBox_04 -->
+        </main> <!-- main 잡는 범위는 정해져있지않음 -->
+
+        <aside id="sideBox">
+            <h2>보조 추가내용</h2><!-- 없어도됨 -->
+            <!-- 내용 : 최근 본 상품, 장바구니, 위로 이동-->
+        </aside>
+
+        <footer id="footBox">
+            <h2>company information</h2><!-- h2 없어도됨 -->
+        </footer><!-- #footBox -->
+    </div><!-- wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

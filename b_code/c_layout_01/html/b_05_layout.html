@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- b_05_layout.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/src/b_05_layout.css">
+    <script src="../js/base/modernizr-custom.js"></script>
+
+    <title>layout_test_05</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+        <header id="headBox" class="clearfix">
+            <h1><a href="./a_00_content.htlm">웹</a></h1>
+            <nav class="navigation clearfix">
+                <h2 class="blind">navigation</h2>
+                <ul>
+                    <li>li_01</li>
+                    <li>li_02</li>
+                    <li>li_03</li>
+                    <li>li_04</li>
+                </ul>
+                <!-- ul 대신 div를 사용할 경우
+                    <div class="gnb">
+                        <a href="#">nav_01</a>
+                        <a href="#">nav_02</a>
+                        <a href="#">nav_03</a>
+                        <a href="#">nav_04</a>
+                    </div>
+                -->
+            </nav>
+        </header><!-- #headBox -->
+
+       <section id="viewBox">
+           <h2>banner</h2>
+        </section><!-- #viewBox -->
+
+       <aside id="asideBox"><!-- subBox, subAdBox 등등 -->
+           <h2>aside</h2>
+        </aside><!-- #aside -->
+
+       <!--
+           <article id="contentBox">
+            <h2 class="blind">contentBox</h2>
+            <div class="con_area_01">
+                    <h3 class="blind">con_area</h3>
+                    <div class="con_img">img_01</div>
+                    <div class="con_img">img_02</div>
+                    <div class="con_img">img_03</div>
+                    <div class="con_img">img_04</div>
+                </div>
+            <div class="con_area_02">
+                    <h3 class="blind">con_area</h3>
+                    <div class="con_text">text_01</div>
+                    <div class="con_text">text_02</div>
+                    <div class="con_text">text_03</div>
+                </div>
+            </article> -- #contentBox --
+        -->
+
+        
+            <div class="content_wrap clearfix">
+                <article id="contentBox" class="con_area">
+                    <h2 class="blind">content</h2>
+                    <div class="con_01">con_01</div>
+                    <div class="con_02">con_02</div>
+                    <div class="con_03">con_03</div>
+                    <div class="con_04">con_04</div>
+                </article>
+                <article id="infoBox" class="con_area">
+                    <h2 class="blind">info</h2>
+                    <div class="info_01">info_01</div>
+                    <div class="info_02">info_02</div>
+                    <div class="info_03">info_03</div>
+                </article>
+            </div>
+        
+
+       <footer id="footBox">
+           <h2>footer</h2>
+       </footer><!-- #footBox -->
+
+    </div><!-- wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>
+
+<!--
+    * 쓰면 안되는 이름
+      - right, left, top, bottom 위치를 표현하는 말(css 수정하다보면 서로 위치가 바뀌기도해서)
+        왼쪽 오른쪽 화살표 : prev, next
+      - 사물의 이름, 사람의 이름
+      - 무슨 의미인지 구별이 안되는 이름
+-->
