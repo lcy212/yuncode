@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- a_07_position.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/src/a_07_position.css">
+    <script src="../js/base/modernizr-custom.js"></script>
+
+    <title>position</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+        <hgroup>
+            <h1><a href="./a_00_content.html">웹</a></h1>
+            <h2>position</h2>
+        </hgroup>
+        <hr />
+        
+        <div class="part">
+            <ul>
+                <li class="default">default</li>
+                <li class="static">static</li>
+                <li class="fixed">fixed</li>
+                <li class="absolute">absolute</li>
+                <li class="relative">relative</li>
+                <li class="default">default</li>
+            </ul>
+        </div><!-- .part -->
+           
+        <div class="ex_part" hidden>
+            <h3>화면 가운데에 무조건 배치</h3>
+            
+            <div class="view_center">
+                <div class="close"><!-- position은 버튼이 아닌 div에 -->
+                    <button type="button">닫기</button>
+                </div>
+                화면 가운데에 배치할 박스
+            </div>
+            <div class="view_bg">
+                배경에 꽉차게 만들기
+            </div>
+        </div>
+        
+        <div class="ex_part">
+            <h3>화면 가운데 기준. 우측 500px, 하단 50px 위로 버튼 생성</h3>
+            <div class="btn">
+                <button type="button">상단으로 이동</button>
+            </div>
+        </div>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

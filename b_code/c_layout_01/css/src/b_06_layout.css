@@ -83,7 +83,7 @@ button { border:0; background-color:transparent; cursor:pointer;}
 ------------------------------------------------ */
 #viewBox {
     width: 100%; height:600px;
-    box-sizing:border-box; padding:100px 300px 100px;
+    box-sizing:border-box; padding:100px 270px;
     background-color: #834c33;
 }
     #viewBox div {
@@ -92,19 +92,24 @@ button { border:0; background-color:transparent; cursor:pointer;}
         background-color: #c4c4c4;
     }
     .text {
-        margin-right:50px;
+        margin-right:80px;
     }
 
 /* newBox
 ------------------------------------------------ */
 #newBox {
     width: 100%; height:700px;
-    box-sizing: border-box; padding:179px 250px;
+    box-sizing: border-box; padding-top:67px;
     background-color: #fff;
 }
+    #newBox h2 {
+        width: 245px; height: 54px;
+        margin-left:270px;
+        background-color: #ddd;      
+    }
     .new_con {
         width: 100%; height:auto;
-        margin:auto;
+        margin-top:58px; margin-left:250px;
     }
     .new_con li {
         float:left;
