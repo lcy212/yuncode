@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- c_01_layout.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/c_01_layout.css">
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>예제</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <!-- <h1><a href="./a_00_content.html">웹</a></h1> -->
+        <header id="headBox">
+            <h1><a href="./a_00_content.html">웹</a></h1>
+            <nav id="navigation" class="clearfix">
+                <h2 class="blind">navigation</h2>
+                <ul class="gnb">
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">악세사리</a></li>
+                </ul>
+            </nav>
+        </header> <!-- #headBox -->
+
+        <section id="viewBox">
+            <h2 class="blind">광고영역</h2>
+        </section><!-- #viewBox -->
+<!--
+        <article id="contentBox">
+            <h2 class="blind">본문내용</h2>
+            <ul class="clearfix">
+                <li class="con_1">
+                    <div class="notice">공지사항</div>
+                    <div class="gallery">갤러리</div>
+                </li>
+                <li class="con_2">배너</li>
+                <li class="con_3">바로가기</li>
+            </ul>
+        </article><-- #contentBox
+-->
+        <div id="contentBox">
+            <div class="con_inner_01">
+                <h3 class="blind">공지사항/갤러리</h3>
+                <div class="tab_title_area">
+                    <ul>
+                        <li class="action">
+                            <button type="button">공지사항</button>
+                        </li>
+                        <li>
+                            <button type="button">갤러리</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab_content_area">
+                    <div class="tab_detail_01 action"></div>
+                    <div class="tab_detail_02"></div>
+                </div>
+            </div>
+            <div class="con_inner_02">
+                <h3 class="blind">배너</h3>
+            </div>
+            <div class="con_inner_03">
+                <h3 class="blind">바로가기</h3>
+                <div class="btn">
+                    <button type="button">상세보기</button>
+                </div>
+                <div class="modal">
+                    <div class="modal_message">
+                        <h4>modal title</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ea nihil ipsum praesentium voluptatem, voluptatibus assumenda modi laboriosam aperiam 
+                        </p>
+                        <div class="close">
+                            <button type="button" autofocus>닫기</button>
+                        </div>
+                    </div><!-- .modal_message -->
+                    <div class="modal_bg"></div>
+                </div><!-- .modal -->
+            </div><!-- con_inner_03 -->
+        </div><!-- contentBox -->
+
+
+        <footer id="footBox" class="clearfix">
+            <h2>company info</h2>
+            <address></address>
+            <div class="sns"></div>
+        </footer><!-- #footBox -->
+
+    </div><!-- wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

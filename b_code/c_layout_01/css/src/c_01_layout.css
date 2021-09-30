@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* c_01_layout.css */
+
+
+/* common.css 
+================================ */
+
+
+/* design
+--------------------------------------------------------- */
+
+#wrap {
+    width: 1200px; height:auto; min-height:500px;
+    margin:auto;
+}
+
+/* headBox
+--------------------------------------------------------------------- */
+#headBox {
+    width: 100%; height:100px;
+    box-sizing:border-box;  padding: 30px 20px;
+    background-color: #aaa;
+}
+    h1 {
+        float:left;
+        width: 200px; height: 40px;
+        background-color: #fff;
+    }
+    #navigation {
+        float:right;
+        width: 600px; height: 40px;
+    }
+
+        .gnb { width: 100%; height: 100%; }
+        .gnb li {
+            float:left;
+            width: 25%; height: 100%;
+            box-sizing:border-box; padding:0 5px;
+            text-align: center;
+            line-height:40px;
+            /* border-right:1px solid #666; */
+        }
+        /* .gnb li:last-child {border-right:0; } */
+        .gnb a {
+            display: block;
+            width: 100%; height: 100%;
+            background-color: #fff;
+        }
+
+/* viewBox
+--------------------------------------------------------------------- */
+#viewBox {
+    width: 100%; height:300px;
+    background-color: #777;
+}
+
+
+/* contentBox
+---------------------------------------------------------------------
+#contentBox {
+    width: 100%; height:200px;
+    background-color: #aaa;
+}
+#contentBox > ul {
+    width: auto; height: auto;
+}
+#contentBox li {
+    float:left;
+    width: 400px; height:200px;
+    background-color: #fff;
+}
+--------------------------------------------------------------------- */
+
+
+/* conBox
+--------------------------------------------------------------------- */
+#contentBox {
+    width: 100%; height:200px;
+}
+.con_inner_01 {
+    float:left;
+    width: 400px; height: 200px;
+    box-sizing:border-box; padding: 10px 20px;
+    background-color: #ccc;
+}
+    .tab_title_area {
+        width: 100%; height: 30px;
+        background-color: #eee;
+    }
+    .tab_title_area ul {
+        width: 100%; height: 100%;
+        box-sizing: border-box;
+        border-bottom:1px solid #333;
+    }
+    .tab_title_area li {
+        float:left;
+        width: 100px; height:100%;
+        box-sizing: border-box; padding: 0 5px;
+        text-align: center; line-height:30px;
+        background-color: #bbb;
+    }
+    .tab_title_area li.action { /* js 단계에서 사용해야하는 것 */
+        border:1px solid #333;
+        border-bottom: 0;
+    }
+    .tab_title_area button {
+        width: 100%; height: 100%;
+    }
+
+    .tab_content_area {
+        width: 100%; height: 150px;
+        background-color: #aaa;
+    }
+    .tab_content_area > div.action { display:block; }
+        .tab_detail_01 {
+            display:none;           
+            width: 100%; height: 100%;
+            background-color: #a55;
+        }
+        .tab_detail_02 {
+            display:none; 
+            width: 100%; height: 100%;
+            background-color: #55a;
+        }
+/* con_inner_02 ----------------------- */
+.con_inner_02 {
+    float:left;
+    width: 400px; height: 200px;
+    background-color: #bbb;
+}
+/* con_inner_03 ----------------------- */
+.con_inner_03 {
+    float:left;
+    width: 400px; height: 200px;
+    box-sizing: border-box; padding: 20px;
+    background-color: #aaa;
+}
+.con_inner_03 .btn {
+    width: 100%; height: 30px;
+}
+.con_inner_03 button {
+    width: 100%; height: 100%;
+    background-color: #fd8;
+}
+.con_inner_03 button:hover {
+    font-weight: 700;
+    background-color: #db8;
+}
+.con_inner_03 button:focus {
+    outline:0;
+    border-bottom:3px solid #a55;
+    box-shadow: 3px 3px 3px #333; /* x값 y값 blur color */
+}
+
+/* modal ------------------- */
+.modal {
+    display:none;
+    position:fixed;
+    top: 0; left: 0; z-index:1000;
+    width: 100%; height: 100%;
+}
+.modal_message {
+    position:absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin:auto;  /* margin-left: -250px; margin-top: -150px; */
+    width: 500px; height: 300px;
+    padding: 30px;
+    border:1px solid #333;
+    background-color: #faa;
+}
+.modal_bg {
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* footBox
+--------------------------------------------------------------------- */
+#footBox {
+    width: 100%; height:100px;
+    box-sizing: border-box; padding:25px 20px;
+    background-color: #777;
+}
+#footBox > h2 {
+    float:left;
+    width: 200px; height: 50px;
+    margin-right: 80px;
+    background-color: #fff;
+}
+address {
+    float:left;
+    width: 600px; height: 50px;
+    background-color: #fff;
+}
+.sns {
+    float:right;
+    width: 200px; height: 50px;
+    background-color: #fff;
+}
