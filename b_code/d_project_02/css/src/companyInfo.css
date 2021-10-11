@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* companyInfo.css */
+
+/* common
+------------------------------------------------------------ */
+#wrap {
+    --color-blue:rgba(0,26,114,1);
+    --color-red:rgba(200,16,46,1);
+    --color-yellow:rgba(254,219,0,1);
+    --color-gray1:rgba(220,220,220,1);
+    --color-gray2:rgba(176,176,176,1);
+    --color-gray3:rgba(123,123,123,1);
+    --color-gray4:rgba(74,74,74,1);
+    --color-black:rgba(30,30,30,1);
+}
+
+/* design
+------------------------------------------------------------ */
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 1280px; height:auto; min-height:500px;
+}
+h2 { font-size:36px; }
+p { font-size:18px; }
+
+/* headBox
+------------------------------------------------------------ */
+#headBox {
+    width: 100%; height: 260px;
+    box-sizing: border-box; padding: 40px 166px;
+    background-color: rgba(254,219,0,1);
+}
+    .head_inner {
+        width: 948px; height: 220px;
+    }
+    h1 {
+        float:left;
+        width: 128px; height: 124px;
+        margin-left:414px;
+    }
+        h1 img {
+            width: 128px; height:auto;
+        }
+    .unb {
+        float:right; position:relative;
+        width: 40px; height: 40px;
+        margin-top: 0;
+    }
+        .unb img {
+            width: 40px; height:auto;
+        }
+        .unb_list {
+            display:none;
+            position: absolute; top: 45px; left: -22.5px;
+            width: 90px; height:auto; 
+            background-color: #fff; border-radius: 2px;
+        }
+        .unb_list li {
+            width: 90px; height: 35px;
+            text-transform: uppercase;
+        }
+        .unb_list li:first-child { border-bottom: 1px solid rgba(123,123,123,1);}
+        .unb_list a {
+            width: 100%; height: 100%;
+            text-align: center; line-height: 30px; 
+        }
+        .unb_list a:hover { font-weight: bold; }
+        .unb:hover .unb_list { display:block; }
+
+    .gnb {
+        float:right;
+        width: 948px; height: 52px;
+        margin-top:44px;
+    }
+        .gnb > ul {
+            width: 100%; height:auto;
+        }
+        .gnb > ul > li {
+            float: left;
+            width: 158px; height: auto;
+            box-sizing:border-box;
+            border-right:1px solid rgba(30,30,30,1);
+        }
+
+        .gnb > ul > li:last-child { border:0; }
+
+        .gnb_title { width: 100%; height: 52px; }
+        .gnb_title a {
+            display:block;
+            width: 100%; height: 100%;
+            text-align: center; line-height: 52px;
+        }
+        .gnb_title a:hover {
+            color:rgba(200,16,46,1);
+            font-size:1.1rem;
+            box-sizing: border-box;
+            border-bottom:3px solid rgba(200,16,46,1);
+        }
+
+        .gnb_list {
+            display:none; position:absolute; z-index: 200;
+            width: auto; height: auto; min-height:260px;
+            background-color:#fff;
+        }
+        .gnb_list li {
+            width: 158px; height: 52px;
+        }
+        .gnb_list a {
+            display: block; width: 100%; height:100%;
+            text-align: center; line-height: 52px;
+        }
+        .gnb_list a:hover {
+            color:rgba(200,16,46,1); font-weight: bold;
+        }
+
+        .gnb:hover .gnb_list { display:block; }
+        
+        
+/* viewBox
+------------------------------------------------------------- */
+#viewBox {
+    width: 100%; height: 260px;
+    background-color: #ddd;
+}
+
+
+/* navBox
+------------------------------------------------------------- */
+#navBox {
+    width: 100%; height: 66px;
+    background-color: #aaa;
+}
+
+
+/* companyBox
+------------------------------------------------------------- */
+#companyBox {
+    width: 100%; height: 100px;
+    background-color: #ddd;
+}
+
+
+/* foodBox
+------------------------------------------------------------- */
+#foodBox {
+    width: 100%; height: 100px;
+    background-color: #aaa;
+}
+
+
+/* factoryBox
+------------------------------------------------------------- */
+#factoryBox {
+    width: 100%; height: 100px;
+    background-color: #ddd;
+}
+
+
+
+        
+
+/* menuBox
+------------------------------------------------------------ */
+#menuBox {
+    width: 100%; height: 66px;
+    box-sizing: border-box; padding-left: 146px;
+    background-color: rgba(0,26,114,1);
+}
+    .menu_inner {
+        width: 966px; height: 66px;
+    }
+    .menu_tab {
+        float:left;
+        width: auto; height: auto;
+    }
+    .menu_tab li {
+        float:left;
+        width: 184px; height: 66px;
+        box-sizing: border-box; border-right:1px solid #fff;
+        text-align: center; line-height: 66px;
+        color:#fff; 
+    }
+    .menu_tab li:last-child { border: 0; }
+    .menu_tab li:hover { font-size:1.1rem; }
+
+    .menu_sns {
+        float:right;
+        width: auto; height: auto;
+    }
+    .menu_sns li {
+        float:left;
+        width: 35px; height: 35px;
+        margin-right: 20px; margin-top: 15px;
+        border-radius:100%;
+    }
+    .menu_sns li:nth-child(2) { margin-top: 20px; }
+    .menu_sns li:last-child { margin-top: 18px; margin-right: 0; }
+
+
+/* footBox
+------------------------------------------------------------ */
+#footBox {
+    width: 100%; height: 240px;
+    box-sizing: border-box; padding: 50px 170px;
+    background-color: #fff;
+}
+    .foot_inner {
+        width: 942px; height: 132px;
+    }
+    .foot_inner h2 {
+        float:right;
+        width: 128px; height: 124px;
+    }
+        .foot_inner h2 img {
+            width: auto; height: 115px;
+        }
+    address {
+        float:left;
+        width: 576px; height: 132px;
+        line-height:140%;
+    }

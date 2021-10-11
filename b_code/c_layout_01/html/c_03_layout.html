@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- c_03_layout.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/c_03_layout.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>세번째</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       
+
+        <header id="headBox">
+            <h1><a href="./a_00_content.html">웹</a></h1>
+            <nav class="gnb">
+                <h2 class="blind">네비게이션</h2>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><a href="#">제목_01</a></dt>
+                            <dd>
+                                <a href="#">sub_title_01</a>
+                                <a href="#">sub_title_02</a>
+                                <a href="#">sub_title_03</a>
+                                <a href="#">sub_title_04</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#">제목_02</a></dt>
+                            <dd>
+                                <a href="#">sub_title_01</a>
+                                <a href="#">sub_title_02</a>
+                                <a href="#">sub_title_03</a>
+                                <a href="#">sub_title_04</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#">제목_03</a></dt>
+                            <dd>
+                                <a href="#">sub_title_01</a>
+                                <a href="#">sub_title_02</a>
+                                <a href="#">sub_title_03</a>
+                                <a href="#">sub_title_04</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="#">제목_04</a></dt>
+                            <dd>
+                                <a href="#">sub_title_01</a>
+                                <a href="#">sub_title_02</a>
+                                <a href="#">sub_title_03</a>
+                                <a href="#">sub_title_04</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+        </header><!-- #headBox -->
+        
+        <section id="viewBox" class="container">
+            <h2 class="blind">이미지 슬라이드</h2>
+        </section><!-- #viewBox -->
+        
+        <article id="conBox" class="container">
+            <h2 class="blind">본문내용</h2>
+            <div class="notice_gallery">
+                <h3 class="blind">공지사항 및 갤러리</h3>
+                <dl>
+                    <dt class="notice action">공지사항</dt>
+                    <dd class="notice">공지사항 내용</dd>
+
+                    <dt class="gallery">갤러리</dt>
+                    <dd class="gallery">갤러리 내용</dd>
+                </dl>
+            </div>
+            <div class="location_link">
+                <h3 class="blind">바로가기</h3>
+                <button type="button">모달 바로가기</button>
+                <div class="modal_area">
+                    <div class="modal_message">
+                        <h4>바로가기 기능 제목</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corrupti aliquam repellat debitis eum accusamus, quae ipsam architecto est exercitationem excepturi labore aliquid quos adipisci minus? Ullam sit nisi excepturi.</p>
+                        <div class="close">
+                            <button type="button">닫기</button>
+                        </div>
+                    </div>
+                    <div class="modal_bg"></div>
+                </div>
+            </div>
+        </article><!-- #conBox -->
+        
+        <footer id="footBox" class="container">
+            <h2 class="blind">footBox</h2>
+            <address></address>
+            <div class="family"></div>
+        </footer><!-- #footBox -->
+
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script>
+        const modalArea = document.querySelector('.modal_area');
+        const closeBtn = document.querySelector('.close');
+
+    closeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      modalArea.style.display = "none";
+    });
+    </script>
+</body>
+</html>

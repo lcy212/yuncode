@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* c_02_layout.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 1200px; height:auto; min-height:500px;
+    margin:auto; padding-top: 100px;
+}
+
+/* headBox
+-------------------------------------------------------------- */
+
+/* 
+header가 화면 꽉 채운채로 계속 따라오게 하는 방법 
+1. headBox { position:fixed; top:0; left:0; z-index: 1500; width:100%; }
+   - fixed에서 w100%주면 브라우저 꽉 채움
+   - 걸리는거없게하려고 z 줌. 단, modal의 z값 주의하기
+   head_wrapper { width:전체값px; height:안에있는요소값px; margin:auto; }
+   - 꽉 찬 w에서 요소가 중간에 위치하기위해 설정
+위 두가지를 설정하면 viewBox가 headBox와 겹쳐져 반만 보임
+해결방법
+1. wrap { padding-top:헤더값; } - 헤더가 불투명이면 스크롤 내렸을때 다 비침
+2. viewBox { margin-top:헤더값; } 
+3. viewBox { padding-top:헤더값; box-sizing:content-box; } - 컨텐츠박스 안하면 크기 줄어듬
+
+*/
+#headBox{
+    position:fixed; top:0; left:0; z-index: 1500;
+    width:100%; height:100px;
+    padding:0 20px; padding-top: 60px; box-sizing: border-box;
+    background-color: #ccc;
+}
+.head_wrapper {
+    width: 1200px; height: 40px;
+    margin:auto;
+}
+h1{
+    float:left; width: 200px; height: 40px;
+    background-color: #fff;
+}
+.navigation {
+    float:right; width: 600px; height: 30px; 
+    margin-top: 10px;
+    background-color: #ddd;
+}
+.navigation > ul {
+    width: 100%; height: auto;
+    background-color: #999;
+}
+.navigation > ul > li {
+    float:left;
+    width: 25%; height:auto;
+    padding:0 5px;
+}
+
+.nav_title { width: 100%; height:30px; }
+.nav_title a {
+    display: block;
+    width: 100%; height: 100%; 
+    text-align: center; line-height:30px;}
+
+.nav_list { 
+    display: none;
+    width: 100%; height: auto;
+    color:#fff;
+    background-color: #333;}
+.nav_list li{ width: 100%; height: 40px; margin-bottom:10px;}
+.nav_list a{
+    display: block; width: 100%; height:100%;
+    text-align: center; line-height: 40px;
+}
+
+.navigation:hover .nav_list {display: block;}
+.nav_title:hover {background-color: #333; color:#fff; }
+/* .navigation li:hover > .nav_list {display: block;} 각각 펼쳐짐 */
+/* .nav_title:hover + .nav_list { display: block;} 사용안됨 */
+
+/* viewBox
+-------------------------------------------------------------- */
+#viewBox {
+    width: 100%; height: 300px;
+    background-color: #aaa;
+    /* box-sizing:border-box; padding: 100px; */
+}
+/* contentBox
+-------------------------------------------------------------- */
+#contentBox {
+    width: 100%; height: 200px;
+    background-color: #ccc;
+}
+    .con_inner {
+        float:left;
+        width: 400px; height:100%;
+        box-sizing: border-box; padding: 10px 30px;
+        
+    }
+    .con_part {
+        width: 100%; height: 150px;
+        border:1px solid #fff
+    }
+    .con_part ul { width: 100%; height: 100%; }
+
+
+    .notice { background-color: #777; }
+    .notice ul {
+        list-style-type: decimal; /* ul에 숫자넣기 */
+        box-sizing: border-box; padding-left: 20px; /* 안하면 숫자가 밖으로 나감 */
+    }
+    .notice li {
+        width: 100%; height: 25px;
+        margin-bottom: 10px;
+    }
+
+
+    .gallery { 
+        counter-reset:gal_li; 
+        background-color: #666; 
+    }
+    .gallery li:before {
+        counter-increment: gal_li;
+        content:counter(gal_li) ". ";
+    }
+    .gallery ul { display:flex; justify-content: space-between ;} 
+    /* float대신 사용가능하지만 구형브라우저 적용안됨 */
+    .gallery li {
+        /* float:left; */
+        width: 100px; height: 150px;
+        /* margin-right: 10px; */
+        background-color: #fff;
+    }
+    /* .gallery li:last-child { margin:0; } */
+
+
+    .banner { background-color: #888; }
+
+    /* 탭 메뉴 설정 가이드 */
+    .con_part {
+        display:none;
+    }
+    .con_inner > h3:hover + .con_part {display: block;}
+
+/* otherBox
+-------------------------------------------------------------- */
+#otherBox {
+    width: 900px; height: 800px;
+    margin: 30px auto;
+    background-image: linear-gradient(#aaf, #faa);
+}
+
+
+/* footBox
+-------------------------------------------------------------- */
+#footBox {
+    width: 100%; height: 100px;
+    box-sizing: border-box; padding: 30px;
+    background-color: #ddd;
+}
+    #footBox h2 {
+        float:left;
+        width: 200px; height: 40px;
+        margin-right: 120px;
+        background-color: #fff;
+    }
+    address {
+        float:left;
+        width: 500px; height: 40px;
+        margin-right: 120px;
+        background-color: #fff;
+    }
+
+    .familySite {
+        float:left;
+        width: 200px; height: 40px;
+        background-color: #fff;
+    }

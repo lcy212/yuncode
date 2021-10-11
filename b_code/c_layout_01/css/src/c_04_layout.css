@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* c_04_layout.css */
+
+/* common
+------------------------------------------------------------ */
+.blind_wrap a > span,
+.blind_wrap button > span,
+.blind {
+    display:block; position:absolute; z-index: -1;
+    clip:rect(0 0 0 0);
+    width: 0; height: 0; overflow: hidden;
+}
+.blind_wrap a {
+    display: block; 
+    width: 100%; height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.none { display:none }
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 1000px; height:auto; min-height:500px;
+}
+
+/* headBox
+------------------------------------------------------------ */
+#headBox {
+    float:left;
+    width: 220px; height: 650px;
+    box-sizing: border-box; padding: 10px;
+    background-color: #aaa;
+}
+    h1 {
+        width: 200px; height: 40px;
+        background-color: #fff;
+    }
+    .navigation ul {
+        width: 100%; height: 100%;
+        margin-top: 10px; margin-left: 10px;
+    }
+    .navigation li {
+        width: 180px; height: 40px;
+        border:1px solid #333;
+    }
+    .nav_title a {
+        display: block;
+        width: 100%; height: 100%;
+        text-align:center; line-height: 40px;
+        background-color: #eee;
+    }
+    .nav_title a:hover {
+        color:#fff; background-color: #444;
+    }
+    .nav_list {
+        display:none; transform: translate(-6%);
+        width: 100%; height:auto;
+    }
+    .nav_list li { width: 100%; height: 40px; }
+    .nav_list li a {
+        display: block;
+        width: 100%; height: 100%;
+        text-align: center; line-height:40px;
+        background-color: #fff;
+    }
+    .nav_list li a:hover { color:#fff; background-color: #444; }
+    .navigation li:hover > .nav_list {display: block;}
+
+/* viewBox
+------------------------------------------------------------ */
+#viewBox {
+    float:left;
+    width: 780px; height: 350px;
+    padding: 10px 50px;
+    background-color: #ccc;
+}
+
+.view_area {
+    overflow:hidden;
+    width: 100%; height: 100%;
+    border:1px solid #333;
+}
+
+/* 
+가로형 슬라이드 배너
+
+.view_wrapper { 변수사용하는법
+    --slide-len:3;
+    width:calc(100% * var(--slide-len)); 
+}
+.view_wrapper {
+    width:300%; height:100%;
+    margin-left: -100%;  퍼센트 조절하면서 광고 넘어감
+}
+.view_content { float:left; width: 33.333333%; height: 100%; }  
+*/
+
+/* 같은자리에서 변환되는 배너 
+    기준요소에 relative
+    보여줄요소에 absolute, z-index로 순서에 맞게 조정
+    첫번째, 두번째(필요에따라)외의 요소는 none
+*/
+
+.view_wrapper {
+    position: relative;
+    width: 100%; height: 100%;
+}
+.view_content {
+    position:absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.view_01 { z-index: 10; background-color: #BA147Caa; }
+.view_02 { z-index: 9; background-color: #0BCC36aa; }
+.view_03 { background-color: #8E9A08aa; }
+
+/* conBox
+------------------------------------------------------------ */
+#conBox {
+    float:left;
+    width: 780px; height: auto;
+}
+.notice_gallery {
+    float:left; padding: 10px;
+    width: 50%; height: 200px;
+    background-color: #888;
+}
+.tab_title { width: 100%; height: 30px; background-color: #888;}
+.tab_title li { float:left; width: 100px; height: 30px; }
+.tab_title button { width: 100%; height: 100%; background-color: #fff; }
+.tab_title button:hover { background-color: #aaa; text-decoration: underline;}
+.tab_title li.action > button { background-color: #333; color:#fff; font-weight: 700;}
+
+.tab_content { width: 100%; height: 150px; border-top:1px solid #333; background-color: #aaa;}
+.tab_content > div {width: 100%; height: 100%; padding: 5px; }
+
+
+/* .notice
+.gallery */
+.notice h3 { width: 100%; height:auto; padding-bottom: 5px; }
+.notice ul { width: 100%; height:auto; max-height: 120px;}
+.notice li { width: 100%; height: 18px; margin-bottom: 3px; line-height: 18px; color:#555; }
+.notice li:before { 
+    content:"\f54b"; font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; font-size: 0.5rem; 
+    color:#008; margin-right: 3px; 
+}
+.notice a:focus { outline:0; text-decoration: underline; text-decoration-color:#008; color:#008; }
+/* .notice a  { } */
+
+.sub_view {
+    float:left;
+    width: 25%; height: 200px;
+    background-color: #666;
+}
+.location_link {
+    float:left;
+    width: 25%; height: 200px;
+    background-color: #888;
+}
+
+/* footBox
+------------------------------------------------------------ */
+#footBox {
+    float:left; width: 780px; height: 100px;
+    background-color: #ddd;
+}
+#footBox h2 {
+    float:left; width: 130px; height: 100px;
+    background-color: #fff;
+}
+.foot_menu {
+    float:left; width: 650px; height: 50px;
+    background-color: #ddd;
+}
+address {
+    float:left; width: 650px; height: 50px;
+    background-color: #aaa;
+}
+
+

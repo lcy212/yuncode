@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root{
+    font-size:16px;
+    /* color */
+    --color-white:#fff;
+    --color-black:#333;
+    --color-gray1:#eee;
+    --color-gray2:#ccc;
+    --color-gray3:#aaa;
+    --color-gray4:#777;
+    --color-primary:#f06;
+    --color-hover:#0af;
+    --color-focus:#057;
+
+    /* font */
+    --font-h2:40px;
+    --font-h3:36px;
+    --font-point:60px;
+    --font-p1:16px;
+    --font-p2:14px;
+    --font-title1:24px;
+    --font-title2:20px;
+
+
+    /* size */
+    --width-1:1px;
+    
+    /* border */
+    --border-l1:var(--width-1) solid var(--color-black);
+    --border-l2:var(--width-1) solid var(--color-primary);
+}
+
+
+@supports (width:1rem) {
+    /* 1rem이라는 단위를 인지하면 (true)실행 */
+    :root {
+        /* color */
+        --color-white:#fff;
+        --color-black:#333;
+        --color-gray1:#eee;
+        --color-gray2:#ccc;
+        --color-gray3:#aaa;
+        --color-gray4:#777;
+        --color-primary:#f06;
+        --color-hover:#0af;
+        --color-focus:#057;
+    
+        /* font */
+        --font-h2:40px;
+        --font-h3:36px;
+        --font-point:60px;
+        --font-p1:16px;
+        --font-p2:14px;
+        --font-title1:24px;
+        --font-title2:20px;
+    
+    
+        /* size */
+        --width-1:1px;
+        
+        /* border */
+        --border-l1:var(--width-1) solid var(--color-black);
+        --border-l2:var(--width-1) solid var(--color-primary);
+    }
+}

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* b_06_font.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+p {
+    font-family: 'IBM Plex Sans KR', 'Cafe24Oneprettynight', 'Yeon Sung', cursive;
+}
+p:nth-of-type(1) { font-weight:300; }
+p:nth-of-type(2) { font-weight:800; }
+

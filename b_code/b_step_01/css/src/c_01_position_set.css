@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* c_01_position_set.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 800px; height: 2500px;
+    padding-top: 100px;
+    background-color: #eee;
+}
+
+h1 {
+    position:fixed; top: 0; left: 0; z-index: 100;
+    width: 100%; height: auto;
+    padding: 20px; text-align: center;
+    background-color: #faa;
+}
+/* 
+fixed만 주면 width값 100%와 auto가 부모기준으로 값을 가진다(임시).
+top, left에 값을 주면 브라우저기준으로 바뀐다. 
+*/
+
+/* 
+.part {
+    position:sticky; top: 0;
+    width: 95%; height: 600px;
+    margin:auto;
+    border:1px solid #777;
+}
+sticky: 자기위치에 있다가 설정한값에 도달하면 그때부터 붙어서 같이 스크롤됨(=fixed) */
+
+.part {
+    position:relative; z-index: 200;
+    width: 95%; height: 600px;
+    margin:auto; margin-top: 30px;
+    padding: 50px; box-sizing: border-box;
+    border:1px solid #777;
+    background-color: #faa;
+    background-clip: content-box;
+}
+/*  relative의 top, left 0은 본인위치 그대로임(기본값)
+    역할 : absolute의 기준이 됨, z값을 주기위해
+*/
+
+.btn {
+    position:absolute; right: 0; bottom: 0; 
+    width: 200px; height: 60px;
+    background-color: #add;
+}
+/*  absolute
+    부모의 border값이 위치값에 영향이간다(padding은 영향없음) */
+.btn > button { 
+    /* position:absolute; right: 0; bottom: 0; 여기에 position주면 .part기준으로 w,h값 인식됨  */
+    width: 100%; height: 100%; box-sizing: border-box; }
+.btn > button:hover { background-color: #9aa; }
+.btn > button:focus { outline:5px solid #333; }
+
+
+/* .card 
+--------------------------------------------------------------------------------------- */
+.card {
+    position:relative;
+    width: 250px; height: 340px;
+    margin-top: 50px;
+    background-color: #ddd;
+    box-shadow: 3px 3px 3px #333;
+}
+
+.card a {
+    display: block;
+    width: 100%; height: 100%;
+    padding: 10px; box-sizing: border-box;
+}
+.view_card { 
+    width: 100%; height: 100%; 
+    color:#fff;
+    background-color: rgba(0,50,50,0.85);
+}
+.blind_card {
+    display: none;
+    position:absolute; top: 0; left: 0;
+     width: 100%; height: 100%; 
+    color:#fff; font-weight: 900;
+    background-color: rgba(0,50,50,0.85);
+}
+
+.card > a:hover .blind_card,
+.card > a:focus .blind_card {
+    display: block;
+}
+
+/* .line
+--------------------------------------------------------------------------------------- */
+
+.line {
+    width: auto; height: auto;
+    margin-top: 50px; margin-left: 10px;
+}
+.line ul {
+    width: 100%; height: 100%;
+    background-color: #ddd;
+}
+.line li:nth-child(2n-1) {
+    float:left;
+    width: auto; height: 40px;
+    text-align: center; line-height: 40px;
+}
+.line li:nth-child(2n) { 
+    float:left;
+    width: 1px; height: 10px; 
+    margin: 0 10px; margin-top: 15px; 
+    background-color: #333;
+}
+.line li a {
+    width: 100%; height: 100%;
+}
+.line a:hover {
+    color:#f55;
+}
+
+
+
+/* nav_list
+--------------------------------------------------------------------------------------- */
+.nav_list {
+    width: 600px; height: 100px;
+    margin: auto; margin-top: 100px;
+    border:1px solid #333;
+    background-color: #fff;
+}
+.nav_list ul {
+    width: 100%; height: 30px;
+}
+.nav_list li {
+    float:left; position:relative;
+    width: auto; height: auto;
+    margin-right:10px;
+}
+.nav_list li:last-child { margin-right: 0; }
+
+/* 방법 1 - span 사용
+.bar {
+    float:left;
+    width: 1px; height: 10px;
+    margin-left:-5px;
+    background-color: #777;
+}  
+*/
+
+/* 방법 2
+.nav_list li:before,
+.nav_list li::before {
+    content:""; float:left; 
+    width: 1px; height: 10px; 
+    margin-left: -5px; margin-top: 5px;
+    background-color: #59a;
+}
+.nav_list li:nth-child(1):before,
+.nav_list li:nth-child(1)::before { display: none; } 
+*/
+
+/* 방법 3
+.nav_list li:after,
+.nav_list li::after {
+    content:""; display:block;
+    position:absolute; top: 0; bottom:0; right: -5px;
+    margin: auto;
+    width: 0; height: 10px; 
+    border-right:1px solid #e3a;
+}
+.nav_list li:last-child:after,
+.nav_list li:last-child::after { display: none; } 
+*/
+
+/* 방법 4 */
+.nav_list li {
+    height: 10px;
+    padding-right: 10px; margin-right: 10px;
+    border-right:1px solid #f99;
+}
+.nav_list li:last-child { border:0; padding-right: 0; }
+
+.nav_list a {
+    width: 100px; height: 50px;
+    background-color: #fd5;
+}

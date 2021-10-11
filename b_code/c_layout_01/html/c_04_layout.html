@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- c_04_layout.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/c_04_layout.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>네번째</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+        <heaeder id="headBox">
+            <h1><a href="./a_00_content.html">웹</a></h1>
+            <div class="btn">
+                <button type="button">
+                    <i class="fas fa-bars" aria-hidden="true"></i>메뉴
+                </button>
+            </div>
+            <nav class="navigation">
+                <h2 class="blind">네비게이션</h2>
+                <ul role="menu">
+                    <li role="listitem">
+                        <div class="nav_title"><a href="#">탭 제목_01</a></div>
+                        <ul class="nav_list">
+                            <li><a href="#">탭 소제목_01</a></li>
+                            <li><a href="#">탭 소제목_02</a></li>
+                            <li><a href="#">탭 소제목_03</a></li>
+                        </ul>
+                    </li>
+                    <li role="listitem">
+                        <div class="nav_title"><a href="#">탭 제목_02</a></div>
+                        <ul class="nav_list">
+                            <li><a href="#">탭 소제목_01</a></li>
+                            <li><a href="#">탭 소제목_02</a></li>
+                            <li><a href="#">탭 소제목_03</a></li>
+                        </ul>
+                    </li>
+                    <li role="listitem">
+                        <div class="nav_title"><a href="#">탭 제목_03</a></div>
+                        <ul class="nav_list">
+                            <li><a href="#">탭 소제목_01</a></li>
+                            <li><a href="#">탭 소제목_02</a></li>
+                            <li><a href="#">탭 소제목_03</a></li>
+                        </ul>
+                    </li>
+                    <li role="listitem">
+                        <div class="nav_title"><a href="#">탭 제목_04</a></div>
+                        <ul class="nav_list">
+                            <li><a href="#">탭 소제목_01</a></li>
+                            <li><a href="#">탭 소제목_02</a></li>
+                            <li><a href="#">탭 소제목_03</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </heaeder><!-- #headBox -->
+        
+        <section id="viewBox">
+            <h2 class="blind">광고영역</h2>
+            <div class="view_btn"></div>
+            <div class="view_indicator"></div>
+
+            <div class="view_area"> <!-- 영역 위치를 잡기위한 틀 -->
+                <div class="view_wrapper"> <!-- 광고영역 나열 시 범위 -->
+                    <div class="view_content view_01">광고_01</div>
+                    <div class="view_content view_02">광고_02</div>
+                    <div class="view_content view_03">광고_03</div>
+                </div>
+            </div>
+
+        </section><!-- #viewBox -->
+        
+        <article id="conBox" class="clearfix">
+            <h2 class="blind">본문내용</h2>
+            <div class="notice_gallery">
+                <ul class="tab_title">
+                    <li class="action"><button type="button">공지사항</button></li>
+                    <li><button type="button">갤러리</button></li>
+                </ul>
+                <div class="tab_content">
+                    <div class="notice">
+                        <h3>공지사항</h3>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        </ul>
+                    </div>
+                    <div class="gallery" hidden>갤러리</div>
+                </div>
+            </div>
+            <div class="sub_view">
+            </div>
+            <div class="location_link">
+            </div>
+
+        </article><!-- #conBox -->
+        
+        <footer id="footBox">
+            <h2>company info</h2>
+            <div class="foot_menu">하단 메뉴</div>
+            <address>
+                <p>사이트명</p>
+                <p>사이트주소</p>
+                <dl>
+                    <dt>연락처 : </dt><dd>02-000-0000</dd>
+                </dl>
+                <p>
+                    <em>팩스</em>:<span>02-000-0000</span>
+                </p>
+                <span class="blind">copyright</span> &copy; web tutorial
+            </address>
+
+        </footer><!-- #footBox -->
+
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>
