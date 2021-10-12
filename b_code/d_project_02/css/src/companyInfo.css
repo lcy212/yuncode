@@ -14,8 +14,11 @@
     --color-black:rgba(30,30,30,1);
 }
 
-/* design
------------------------------------------------------------- */
+a {
+    display:block;
+    width: 100%; height: 100%;
+}
+
 /* design
 ------------------------------------------------------------ */
 #wrap {
@@ -23,6 +26,7 @@
 }
 h2 { font-size:36px; }
 p { font-size:18px; }
+dl { font-size:18px; }
 
 /* headBox
 ------------------------------------------------------------ */
@@ -47,12 +51,15 @@ p { font-size:18px; }
         width: 40px; height: 40px;
         margin-top: 0;
     }
+    .unb button {
+        width: 100%; height: 100%;
+    }
         .unb img {
             width: 40px; height:auto;
         }
         .unb_list {
             display:none;
-            position: absolute; top: 45px; left: -22.5px;
+            position: absolute; top: 45px; left: -23px;
             width: 90px; height:auto; 
             background-color: #fff; border-radius: 2px;
         }
@@ -77,13 +84,21 @@ p { font-size:18px; }
             width: 100%; height:auto;
         }
         .gnb > ul > li {
-            float: left;
+            float: left; position: relative;
             width: 158px; height: auto;
             box-sizing:border-box;
-            border-right:1px solid rgba(30,30,30,1);
         }
 
-        .gnb > ul > li:last-child { border:0; }
+        .gnb > ul > li:after,
+        .gnb > ul > li::after {
+            content:""; display:block;
+            position:absolute; top: 0; bottom:0; right: 0;
+            margin: auto;
+            width: 0; height: 20px; 
+            border-right:1px solid rgba(30,30,30,1);
+        }
+        .gnb > ul > li:last-child:after,
+        .gnb > ul > li:last-child::after { display: none; } 
 
         .gnb_title { width: 100%; height: 52px; }
         .gnb_title a {
@@ -93,7 +108,7 @@ p { font-size:18px; }
         }
         .gnb_title a:hover {
             color:rgba(200,16,46,1);
-            font-size:1.1rem;
+            font-size:1.1rem; font-weight: bold;
             box-sizing: border-box;
             border-bottom:3px solid rgba(200,16,46,1);
         }
@@ -104,10 +119,10 @@ p { font-size:18px; }
             background-color:#fff;
         }
         .gnb_list li {
-            width: 158px; height: 52px;
+            width: 100%; height: 100%;
         }
         .gnb_list a {
-            display: block; width: 100%; height:100%;
+            display: block;  width: 158px; height: 52px;
             text-align: center; line-height: 52px;
         }
         .gnb_list a:hover {
@@ -115,47 +130,195 @@ p { font-size:18px; }
         }
 
         .gnb:hover .gnb_list { display:block; }
+     
         
-        
-/* viewBox
+/* titleBox
 ------------------------------------------------------------- */
-#viewBox {
-    width: 100%; height: 260px;
+#titleBox {
+    width: 100%; height: 400px;
+    padding: 155px;
     background-color: #ddd;
 }
+    .title_inner {
+        width: 570px; height: 90px;
+        margin:auto;
+        background-color: #888;
+    }
+    .title_inner h2 {
+        margin-bottom: 20px; margin-left: 216px;
+    }
 
 
-/* navBox
+/* companyInfo_navBox
 ------------------------------------------------------------- */
-#navBox {
+#companyInfo_navBox {
     width: 100%; height: 66px;
+    padding-left: 170px;
     background-color: #aaa;
 }
+    .info_inner {
+        width: 400px; height: 66px;
+        background-color: #888;
+    }
+    .info_inner > ul {
+        width: 100%; height: 100%;
+    }
+    .info_inner > ul > li {
+        float:left; position:relative;
+        width:auto; min-width:80px; height: 100%;
+        padding: 0 36px;
+        text-align: center; line-height: 66px;
+    }
+    .info_inner > ul > li:first-child { 
+        margin: 0;
+        border-left:1px solid #fff; border-right:1px solid #fff; 
+    }
+    .info_inner > ul > li:nth-child(2):after,
+    .info_inner > ul > li:nth-child(2)::after {
+        content:">"; display:block;
+        position:absolute; top: 0; bottom:0; right: -10px;
+        margin: auto;
+    }
+    /* .info_title { } */
+    .info_list {
+        width: 100%; height: 100%;
+    }
+    .info_list li {
+        display: none;
+        width:120px; height: 50px;
+        line-height: 50px;
+        background-color: #fff;
+    }
+    
 
+
+/* ottogi_navBox
+------------------------------------------------------------- */
+#ottogi_navBox {
+    width: 100%; height: 100px;
+    padding-top:20px;
+    background-color: #eee ;
+}
+    .ottogi_inner {
+        width: 936px; height: 80px;
+        margin: auto;
+        background-color: #888;
+    }
+    .ottogi_inner ul {
+        width: 100%; height: auto;
+    }
+    .ottogi_inner li {
+        float:left; position:relative;
+        width: 312px; height: 100%;
+        text-align: center; line-height: 80px;
+        background-color: #fff;
+    }
+    .ottogi_inner li:after,
+    .ottogi_inner li::after {
+        content:""; display:block;
+        position:absolute; top: 0; bottom:0; right: 0;
+        margin: auto;
+        width: 0; height: 36px; 
+        border-right:1px solid rgba(176,176,176,1);
+    }
+    .ottogi_inner li:last-child:after,
+    .ottogi_inner li:last-child::after { display: none; } 
 
 /* companyBox
 ------------------------------------------------------------- */
 #companyBox {
-    width: 100%; height: 100px;
+    width: 100%; height: 718px;
+    padding-top: 180px;
     background-color: #ddd;
 }
+    .company_inner {
+        width: 1130px; height: 440px;
+        margin:auto;
+        background-color: #888;
+    }
+    .company_title {
+        width: 1130px; height: 140px;
+        text-align: center;
+        background-color: #fff;
+    }
+    .company_title dt {
+        font-size:36px; margin-bottom: 58px;
+    }
+    /* .company_title dd */
+
+    .company_con {
+        width: 940px; height: 236px;
+        margin: auto; margin-top: 64px;
+    }
+    .company_con li {
+        float:left;
+        width: 25%; height: 236px;
+        background-color: #aaa;
+    }
+    .company_con dl {
+        width: 100%; height: 100%;
+        padding: 48px 0;
+        text-align: center;
+        background-color: #ccc;
+    }
+    .company_con dt {
+        font-size: 24px;
+        margin-bottom: 36px;
+    }
+    /* .company_con dd */
+
 
 
 /* foodBox
 ------------------------------------------------------------- */
 #foodBox {
-    width: 100%; height: 100px;
+    width: 100%; height: 938px;
+    padding-top: 78px;
     background-color: #aaa;
 }
-
+    .food_inner {
+        width: 940px; height: 764px;
+        margin:auto;
+        background-color: #888;
+    }
+    .food_title {
+        width: 476px; height: 38px;
+        margin:auto; margin-bottom: 70px;
+    }
+    .food_title em {
+        font-size:36px;
+    }
+    .food_con_area {
+        width: 940px; height: 658px;
+        background-color: #ccc;
+    }
+    .food_con {
+        float:left; 
+        margin-right: 20px; margin-bottom: 60px;
+        width: 300px; height: 300px;
+        background-color: #666;
+    }
+    .food_con:nth-child(3n) { margin-right: 0; }
+    .food_img {
+        width: 300px; height: 218px;
+        background-color: #fff;
+    }
+    .food_con dl {}
+    .food_con dt {}
+    .food_con dd {}
 
 /* factoryBox
 ------------------------------------------------------------- */
 #factoryBox {
-    width: 100%; height: 100px;
+    width: 100%; height: 746px;
+    padding-top: 84px;
     background-color: #ddd;
 }
-
+    .factory_inner {
+        width: 1000px; height: 490px;
+        margin:auto;
+        background-color: #888;
+    }
 
 
         
@@ -175,27 +338,41 @@ p { font-size:18px; }
         width: auto; height: auto;
     }
     .menu_tab li {
-        float:left;
+        float:left; position:relative;
         width: 184px; height: 66px;
-        box-sizing: border-box; border-right:1px solid #fff;
+    }
+    .menu_tab li:after,
+    .menu_tab li::after {
+        content:""; display:block;
+        position:absolute; top: 0; bottom:0; right: 0;
+        margin: auto;
+        width: 0; height: 20px; 
+        border-right:1px solid #fff;
+    }
+    .menu_tab li:last-child:after,
+    .menu_tab li:last-child::after { display: none; } 
+
+    .menu_tab li a {
         text-align: center; line-height: 66px;
         color:#fff; 
     }
-    .menu_tab li:last-child { border: 0; }
-    .menu_tab li:hover { font-size:1.1rem; }
+    .menu_tab li a:hover { font-size:1.1rem; font-weight: bold; }
 
     .menu_sns {
         float:right;
         width: auto; height: auto;
+        padding-top: 15px;
     }
     .menu_sns li {
         float:left;
         width: 35px; height: 35px;
-        margin-right: 20px; margin-top: 15px;
-        border-radius:100%;
+        margin-right: 20px;
     }
-    .menu_sns li:nth-child(2) { margin-top: 20px; }
-    .menu_sns li:last-child { margin-top: 18px; margin-right: 0; }
+    .menu_sns li:nth-child(2) { padding-top: 5px; }
+    .menu_sns li:last-child { padding-top: 3px; margin-right: 0; }
+    .menu_sns li a {
+        width: auto; height: auto;
+    }
 
 
 /* footBox
@@ -218,5 +395,14 @@ p { font-size:18px; }
     address {
         float:left;
         width: 576px; height: 132px;
-        line-height:140%;
     }
+        address p {
+            line-height:140%;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        address p:last-child { margin-bottom: 0; }
+        address span {
+            text-transform: uppercase;
+        }
+
