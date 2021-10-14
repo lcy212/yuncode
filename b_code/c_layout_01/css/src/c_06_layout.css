@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/* c_06_layout.css */
+
+/* variable.css
+------------------------------------------------------------ */
+/* 변수명을 숫자로 하는 것은 권장하지않음 */
+:root {
+    /* color */
+    --color-white   : #fff;
+    --color-black   : #171717;
+    --color-facebook: #221f20;
+    --color-yellow1 : #fff30d;
+    --color-yellow2 : #baa50c;
+    --color-grey1   : #adadad;
+    --color-grey2   : #7d7d7d;
+    --color-grey3   : #505050;
+    --color-grey4   : #757575;
+
+    /* font */
+    --font-small  : 0.75rem;
+    --font-regular: 0.875rem;
+    --font-normal : 1rem;
+    --font-title  : 2rem;
+    --font-point  : 3.125rem;
+} 
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+
+#wrap {
+    position:relative;
+    width: 61.25rem; height: 53.125rem;
+    width: 61.25rem; height: 53.125rem;
+    padding-top: 1.875rem;
+}
+/* padding-top으로 asideBox자리 비워둔것 */
+
+
+/* headBox
+------------------------------------------------------------ */
+#headBox {
+    float:left;
+    width: 15.625rem; height: 44.375rem;
+    padding-top: 3.5rem; padding-left: 2.75rem;
+    background-color: #757575; background-color: var(--color-grey4);
+}
+.head_inner {
+    width: 9.625rem; height: 34.375rem;
+}
+    h1 {
+        width: 100%; height: 6.5rem;
+        margin-bottom: 1rem;
+        background-color: #ddd;
+    }
+    h1 a {
+        background-image: url(../../img/gcass/logo.png);
+        background-size:contain;
+    }
+    .gnb {
+        width: 100%; height:auto; min-height:18.75rem;
+        font-size:var(--font-title);
+        color:var(--color-white);
+        text-transform: uppercase;
+        line-height:1;
+        letter-spacing: -0.0625rem;
+        /* -webkit-font-stretch: condensed; 
+        -moz-font-stretch: condensed; 
+        -ms-font-stretch: conensed; 
+        -o-font-stretch: condensed; 
+        font-stretch: condensed; 브라우저에서 적용 잘 안됨 */
+    }
+        .gnb > ul {
+            width: 100%; height: auto;
+        }
+        .gnb li {
+            width: 8.4375rem; height: 2.5rem;
+            margin-bottom: 1.5rem; padding-bottom: 0.3125rem;
+            border-bottom:0.25rem solid var(--color-white);
+        }
+        .gnb a {
+            display: block;
+            width: 100%; height: 100%;
+            padding: 0.1875rem 0.5625rem; padding-right: 0.25rem; box-sizing: border-box;
+        }
+        .gnb a:hover {
+            text-decoration: none;
+        }
+        .gnb i {
+            float:right; font-size:var(--font-normal);
+            line-height: 1.9375rem;
+        }
+        .gnb li:nth-last-child(2) { margin-bottom: 0.5rem;}
+        .gnb li:last-of-type {
+            width: 6.875rem; height: 6.875rem;
+            margin-left: 1.25rem; margin-bottom: 0;
+            border:0;
+            font-size:var(--font-point);
+            color:var(--color-grey4);
+            text-align: center;
+            line-height: 6rem;
+            letter-spacing: -0.0625rem;
+        }
+        .gnb li:last-of-type a {
+            padding: 0.1875rem;
+            border-radius: 100%;
+            background-color: var(--color-white);
+        }
+        .gnb li:last-of-type span {
+            font-size:var(--font-title);
+        }
+
+/* viewBox
+------------------------------------------------------------ */
+#viewBox {
+    float:right;
+    width: 45.625rem; width: calc( 100% - 15.625rem ); height: 44.375rem;
+    /* padding-top: 7.75rem; padding-left: 6.75rem; */
+    background-color: #ddd;
+}
+#viewBox:before {
+    content:""; display:block; 
+    width: 100%; height: 3.125rem;
+    background-color: #fff;
+}
+.view_inner {
+    position:relative; top: 4.625rem; left: 6.75rem;
+    width: 35.875rem; height: 32.5rem;
+}
+    .view_img {
+        position: absolute; top: 0; left: 0; z-index: 10;
+        width: 20.5rem; height: 32.5rem;
+        background-color: #aaaa;
+    }
+    .view_content {
+        position:absolute; top: 1.5rem; right: 0;
+        width: 18.375rem; height: 27.75rem;
+        background-color: #aaaa;
+    }
+    /* computer, school 등 직접적인 이름보다 나중에 바뀔 가능성을 대비하여 포괄적인 이름 짓기 */
+
+    /* asideBox
+------------------------------------------------------------ */
+#asideBox {
+    position:absolute; top: 0; left: 0;
+    width: 100%; height: 1.875rem;
+    background-color: var(--color-grey2);
+}
+.aside_inner {
+    float:right;
+    width: 27.1875rem; height: 100%;
+}
+    .unb {
+        width: auto; height: 100%;
+        text-transform: uppercase;
+    }
+    .unb li {
+        float:left;
+        width: 5.9375rem; height: 100%;
+        padding: 3px;
+        color:#fff; text-align: center;
+    }
+    .unb li:last-child {
+        position: relative;
+        width: 15.3125rem; 
+        text-align: left; color:#333; text-indent: 1.125rem;
+    }
+    .unb li:last-child span {
+        display: block; position:absolute; right: 48px; top: 50%; z-index: 10;
+        width: 56px; height: 1px;
+        background-color:var(--color-black)
+    }
+    .unb li:last-child span:after {
+        content:""; display: block; 
+        position:absolute; top: 0; right: 0;
+        width: 10px; height: 10px;
+        border:1px solid var(--color-black);
+        border-left:0; border-bottom:0;
+        transform:rotate(45deg) translate(-34%, -32%)
+    }
+    .home { background-color: var(--color-grey2); }
+    .study { background-color: var(--color-grey3); }
+    .education { background-color: var(--color-yellow1); }
+    .unb li a {
+        display:block;
+        width: 100%; height: 100%;        
+    }
+
+
+/* footBox
+------------------------------------------------------------ */
+#footBox {
+    clear:both;
+    width: 61.25rem; height: 6.875rem;
+    box-sizing: border-box;
+    padding-top: 0.3125rem; padding-left: 2.5rem;
+    border-top:0.0625rem solid #bbb;
+    background-color: var(--color-white);
+}
+.foot_inner {
+    width: 56.125rem; height: 5rem;
+}
+    .foot_inner h2 {
+        float:left;
+        width: 4.875rem; height: 3.375rem;
+        margin-top: 0.375rem; margin-right: 2.8125rem;
+        background-color: #fff;
+    }
+    .link_img {
+        float:left;
+        width: 4.6875rem; height: 2.125rem;
+        margin-top: 1.625rem; margin-right: 1.875rem;
+    }
+        .map_img {
+            float:left;
+            width: 1.5625rem; height: 2.125rem;
+            margin-right: 1.25rem;
+            background-color: #888;
+        }
+        .facebook_img {
+            float:left;
+            width: 1.875rem; height: 1.875rem;
+            margin-top: 0.25rem;
+            background-color: #888;
+        }
+    address {
+        float:left;
+        width: 21.25rem; height: 2.125rem;
+        margin-top: 1.375rem; margin-right: 1.875rem;
+        font-size:0.75rem;
+    }
+    .family {
+        float:left;
+        width: 18.75rem; height: 3.75rem;
+        line-height: 1.875rem;
+        color:#fff;
+    }
+        .family em { 
+            float:left; 
+            width: 5.9375rem; height: 1.875rem;
+            font-size:0.8125rem; text-indent: 0.625rem;
+            background-color: #777;
+        }
+        .family p { 
+            float:left;  
+            width: 12.8125rem; height: 1.875rem;
+            font-size:0.75rem; text-indent: 0.375rem;
+            background-color: #dd0;
+        }
+        .family p:nth-child(2) { background-color: #aa0;}
+        .family p:nth-child(4) { color:#777; }
+    .foot_inner > em {
+        float:right;
+        width: 12.8125rem; height: 0.75rem;
+        margin-top: 0.5rem; 
+        font-size:0.75rem;
+    }

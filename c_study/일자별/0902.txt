@@ -1,0 +1,31 @@
+
+1. 인터넷과 웹의 차이
+
+- 인터넷 : 전 세계의 컴퓨터가 서로 연결되어 정보를 교환할 수 있는, 하나의 거대한 컴퓨터 통신망
+
+- 웹 : World Wide Web의 줄임말로서 인터넷에 연결된 사용자들이 정보를 공유할 수 있는 공간
+     웹은 인터넷 서비스의 종류 중 하나
+
+
+2. 통신 프로토콜의 종류(원활한 통신을 위한 규약)
+ 
+- HTTP(Hyper Text Transfer Protocol) : 웹 서버와 웹 브라우저가 따르는 규약
+- HTTPS(Hyper Text Transfer Protocol Secure) : HTTP 보안관련 보완된 버전
+- FTP(File Transfer Protocol) : 인터넷을 통해 다른 컴퓨터로 파일을 전송할 수 있도록 함
+- Telnet:(Terminal Network) : 인터넷을 통해 원격지의 컴퓨터에 접속할 수 있게 지원해주는 프로토콜(원격 접속 서비스)
+- POP3(Post Office Protocol Version 3) : 메일 클라이언트가 메일을 자신의 PC로 다운로드할 수 있게 해주는 프로토콜. 대부분의 메일서버에서 사용
+- SMTP(Simple Mail Transfer Procotol)  : 인터넷 상에서 전자메일을 전송할 때 쓰이는 표준 프로토콜
+
+
+3. 웹 표준과 웹 접근성
+
+- 웹 표준 : www을 구현하기 위해 따라야 할 표준(규격), 웹 디자인과 개발에 영향을 준다.
+              웹표준을 준수한다는 것은 올바른 html, xhtml, css, java script을 사이트(페이지)가 가지고 있다는 것을 뜻한다.
+
+- 웹 접근성 : 장애인과 비장애인이 동등하게 서비스에 접근할 수 있게 표준 텍스트 파일, 동영상 자막 등 편의 제공 기술 방안을 마련해서 서비스를 제공해야 한다는 개념
+
+
+4. 마크다운(markdown)
+
+- 텍스트 기반의 마크업언어. html 변환 가능, 간단한 구조로 빠른 작성, 직관적 인식 가능
+- gidhub의 저장소 Repository에 관한 정보를 기록하는 README.md = 마크다운 문서

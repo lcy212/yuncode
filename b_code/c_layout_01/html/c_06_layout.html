@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- c_06_layout.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/c_06_layout.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>layout</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <!-- <h1><a href="./a_00_content.html">웹</a></h1> -->
+
+       <header id="headBox">
+           <div class="head_inner">
+               <h1 class="blind_wrap">
+                   <a href="./a_00_content.html"><span>gcass</span></a>
+                </h1>
+               <nav class="gnb">
+                   <h2 class="blind">전체메뉴</h2>
+                    <ul>
+                        <li><a href="#">about
+                            <i class="fas fa-caret-right"></i>
+                        </a></li>
+                        <li><a href="#">study
+                            <i class="fas fa-caret-right"></i>
+                        </a></li>
+                        <li><a href="#">photo
+                            <i class="fas fa-caret-right"></i>
+                        </a></li>
+                        <li><a href="#">blog
+                            <i class="fas fa-caret-right"></i>
+                        </a></li>
+                        <li><a href="#">press
+                            <i class="fas fa-caret-right"></i>
+                        </a></li>
+                        <li><a href="#"><abbr title="질의응답">
+                            Q<span>&amp;</span>A
+                        </abbr></a></li>
+                    </ul>
+                    <!-- <div class="qna_img"></div> 가능하면 텍스트로 넣는것이 좋음 -->
+                </nav>
+           </div>
+       </header><!-- #headBox -->
+
+       <section id="viewBox">
+           <h2 class="blind">메인광고</h2>
+           <div class="view_inner">
+               <div class="view_img">
+                   <!-- 광고용 이미지 -->
+               </div>
+               <div class="view_content">
+                   <!-- 광고용 이미지 -->
+                   <p class="blind">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, magnam. 간단한 내용설명 들어가면 좋음</p>
+               </div>
+           </div>
+       </section><!-- #viewBox -->
+
+       <aside id="asideBox">
+        <h2 class="blind">주요메뉴</h2>
+        <div class="aside_inner">
+            <ul class="unb">
+                <li class="home"><a href="#">home</a></li>
+                <li class="study"><a href="#">study</a></li>
+                <li class="education"><a href="#">education <span><!-- 화살표 아이콘 --></span></a></li>
+            </ul>
+        </div>
+    </aside><!-- #asideBox -->
+
+       <footer id="footBox" class="clearfix">
+           <div class="foot_inner">
+               <h2>gcass information</h2>
+               <div class="link_img">
+                   <h3 class="blind">회사위치 및 관련 sns</h3>
+                    <div class="map_img"></div>
+                    <div class="facebook_img"></div>
+               </div>
+               <address>
+                   <p>경기도 안양시 만안구 안양1동 599-21 만안빌딩2층</p>
+                   <p>copyright (c) 2021.  xidoweb . all right reserved.</p>
+               </address>
+               <div class="family">
+                   <h3 class="blind">familysite</h3>
+                    <em>webpage</em><p>http://xidoweb.co.kr</p>
+                    <em>portfolio</em><p>http://webportfolio.github.io</p>
+               </div>
+               <em>본 페이지는 학습용으로 제작되었습니다.</em>
+           </div>
+       </footer><!-- #footBox -->
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

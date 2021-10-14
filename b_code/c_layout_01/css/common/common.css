@@ -1,11 +1,13 @@
 /* common.css 
 -------------------------------------------------------------------------------- */
-
+.blind_wrap a > span,
+.blind_wrap button > span,
 .blind { 
-    display:block;
+    display:block; position:absolute; z-index: -1;
     width: 0; height: 0; 
     overflow: hidden; 
 }
+
 
 .clearfix { width:100%; height:auto;}
 .clearfix:after,
