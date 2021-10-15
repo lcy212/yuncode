@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* b_08_background.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 900px; height: auto;
+}
+
+.part {
+    width: 100%; height: 400px;
+    border:1px solid #333; 
+    box-sizing: border-box; margin-bottom: 50px;
+    background-color: #ddd;
+}
+
+.bg_01 {
+    background-image: url("../../img/icon/cherry.png");
+    background-repeat:no-repeat;
+    background-position:right;
+}
+
+.bg_02 {
+    background-image: url("../../img/background/background_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto 100%;
+}
+
+.bg_03 {
+    background-image: url("../../img/icon/fries.png");
+    background-repeat:no-repeat;
+    background-size:initial;
+    background-position: 50% 100%;
+}
+
+.bg_04 {
+    background-image: url("../../img/icon/plant.png");
+    background-repeat:no-repeat;
+    background-size:initial;
+    background-position: 800px 50%;
+}
+
+.bg_05 {
+    /* 
+    background-image: url("../../img/icon/next.svg"), 
+                      url("../../img/icon/cherry.png"), 
+                      url("../../img/icon/fries.png");
+    background-repeat:no-repeat, repeat-x, repeat-y;
+    background-position: 50% 0, 50% 50%, 100% 80%;
+    background-size:20px auto, 50px auto, auto 25px; 
+    */
+
+    background: url("../../img/icon/next.svg") no-repeat 50% 0,
+                url("../../img/icon/cherry.png") repeat-x 50% 50%,
+                url("../../img/icon/fries.png") repeat-y 100% 80%;
+    background-size:20px auto, 50px auto, auto 25px;
+}
+
+.bg_06 {
+    background-image:linear-gradient(45deg, #ddf 30%, #fda 40%, #fc0);
+}
+
+.bg_07 {
+    background-image:radial-gradient(#fa0, #77a);
+}
+
+.bg_08 {
+    background-image: url(../../img/background/background_04.jpg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+.bg_09 {
+    width: 125px; height: 125px;
+    background-image: url("../../img/icon/business_icons_title.jpg");
+    background-repeat: no-repeat;
+    background-position: -304px -200px;
+    background-size: initial;
+}
+
+/* ------------------------------------------------------------- */
+
+.people {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -20px -15px;
+    background-size: initial;
+}
+.people:hover {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -242px -15px;
+    background-size: initial;
+}
+.people:active {
+    width: 60px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -375px -15px;
+    background-size: initial;
+}
+
+/* ------------------------------------------------------------- */
+
+.home {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -20px -190px;
+    background-size: initial;
+}
+.home:hover {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -242px -190px;
+    background-size: initial;
+}
+.home:active {
+    width: 60px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -375px -190px;
+    background-size: initial;
+}
+
+/* ------------------------------------------------------------- */
+
+.map {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -20px -245px;
+    background-size: initial;
+}
+.map:hover {
+    width: 56px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -242px -245px;
+    background-size: initial;
+}
+.map:active {
+    width: 60px; height: 56px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position: -375px -245px;
+    background-size: initial;
+}
+
+/* -------------------------------------------------------- */
+/* 버튼 사이즈는 모두 동일하게하는것이 좋음. 중복되는 내용이 많으니 묶어서 */
+button {
+    width: 3.125rem; height: 3.125rem;
+    margin:1.875rem;
+    background-color: #fd0;
+    border-radius: 4px;
+    background-image: url("../../img/icon/istock_icon.jpg");
+    background-repeat: no-repeat;
+    background-position-x: -20px;
+}
+
+.test_1 { background-position-y: -19px; transition:all 300ms ease; }
+.test_1:hover { background-position-x: -240px;}
+.test_1:active { background-position-x: -380px;}
+
+.test_2 { background-position-y: -192px;}
+.test_2:hover { background-position-x: -240px;}
+.test_2:active { background-position-x: -380px;}
+
+.test_3 { background-position-y: -249px;}
+.test_3:hover { background-position-x: -240px;}
+.test_3:active { background-position-x: -380px;}
+
+.test_4 {
+    width: 104px; height: 104px; margin: 0;
+    background-color: #fd0;
+    border-radius: 4px;
+    background-image: url("../../img/icon/icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.test_4:hover { background-position: -104px 0;}
+.test_4:active { background-position:0 -104px;}

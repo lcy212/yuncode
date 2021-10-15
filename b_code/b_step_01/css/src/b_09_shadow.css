@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* b_09_shadow.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 56.25rem; height: auto;
+    padding-bottom: 62.5rem;
+    box-sizing: content-box;
+}
+
+.part {
+    width: 100%; height: 45rem;
+    border-bottom:0.0625rem solid #777;
+}
+
+/* ------------------------------------------------------------- */
+.box > div {
+    float:left;
+    width: 350px; height: 200px;
+    margin: 30px;
+    text-align: center; line-height: 200px;
+    background-color: #ddd;
+}
+
+.box_shadow_01 {
+     /* x y blur color */
+    box-shadow:5px 5px 5px #077;
+}
+
+.box_shadow_02 {
+    /* x y blur offset color */
+    box-shadow:0 0 5px 5px #077;
+}
+
+.box_shadow_03 {
+    /* x y blur color inset의 위치는 상관없음 */
+    box-shadow:inset 5px 5px 5px #077;
+}
+
+.box_shadow_04 {
+    box-shadow:0 0 5px #077, -5px -5px 5px #456, 10px 10px 10px #444,
+               inset 0 0 10px #777;
+}
+
+/* ---------------------------------------------------------- */
+.box > .star {
+    width: 3px; height: 3px;
+    box-shadow:15px 15px 0 3px #0af, 50px 80px 0 2px #f06, 140px 300px 0 2px #fa0,
+              -40px -20px #ddf, -200px -400px #171717;
+    position:fixed;
+    animation:star 3000ms normal infinite ease-in;
+}
+
+@keyframes star {
+    0% { top: 100px; right: -200px; opacity:0.8; }
+    100% {top: 100%; right: 100%; opacity:0; }
+}
+
+/* ---------------------------------------------------------- */
+.text > div {
+    width: 100%; height: 150px;
+    margin-bottom: 10px;
+    font-size:3rem; font-weight: 700;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.text_shadow_01 { 
+    /* x y blur color */
+    text-shadow:5px 5px 5px #777;
+}
+.text_shadow_02 { 
+    text-shadow:5px 5px 0 #47a, 10px 4px #fa0;
+    color:rgba(255,255,255,0.5);
+}
+.part .text_shadow_03 { 
+    background-image: url("../../img/background/background_05.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50% 50%;
+    color:#fff; font-size:5rem;
+    -webkit-background-clip:text;
+    background-clip:text; 
+    -webkit-text-fill-color:transparent;
+    /* text-fill-color:transparent; */
+}
+
+/* ---------------------------------------------------------- */
+.image > div {
+    float: left;
+    width: 200px; height: 200px;
+    margin: 50px;
+    border-radius: 100%;
+    /* background-color: #ddd; */
+    background-image: url("../../img/icon/next.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% 50%;
+}
+.img_shadow_01 {
+    /* 배경색상이 없어도 요소의 크기 기준으로 그림자가 생김 */
+    box-shadow:5px 5px 5px #333;
+}
+.img_shadow_02 {
+    /* 배경에 색상이 없다면 이미지에 맞는 그림자가 생김 */
+    filter:drop-shadow(5px 5px 5px #333);
+}
+.img_shadow_03 {
+    filter:blur(10px) grayscale(70%);
+    transition:all 200ms linear;
+}
+.img_shadow_03:hover {
+    filter:blur(0) grayscale(0);
+}
+.img_shadow_04 {
+    filter:hue-rotate(180deg);
+}
