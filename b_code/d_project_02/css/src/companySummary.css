@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* companyInfo.css */
+/* companySummaryo.css */
 
 /* common
 ------------------------------------------------------------ */
@@ -263,7 +263,13 @@ dl { font-size:18px; }
     }
     .company_con dt {
         font-size: 24px;
-        margin-bottom: 36px;
+        margin-bottom: 22px;
+    }
+    .company_con dt:after {
+        content:""; display: block;
+        width: 176px; height: 0;
+        margin: auto; margin-top: 14px;
+        border-bottom: 1px solid rgba(30,30,30,1);
     }
     /* .company_con dd */
 
@@ -315,10 +321,46 @@ dl { font-size:18px; }
     background-color: #ddd;
 }
     .factory_inner {
-        width: 1000px; height: 490px;
+        width: 1000px; height: 482px;
         margin:auto;
         background-color: #888;
     }
+    .factory_title {
+        width: 1000px; height: 186px;
+        text-align: center;
+        background-color: #fff;
+    }
+    .factory_title dt {
+        font-size:36px; margin-bottom: 60px;
+    }
+    /* .factory_title dd */
+
+    .factory_con {
+        width: 940px; height: 236px;
+        margin: auto; margin-top: 60px;
+    }
+    .factory_con li {
+        float:left;
+        width: 25%; height: 236px;
+        background-color: #aaa;
+    }
+    .factory_con dl {
+        width: 100%; height: 100%;
+        padding: 48px 0;
+        text-align: center;
+        background-color: #ccc;
+    }
+    .factory_con dt {
+        font-size: 24px;
+        margin-bottom: 22px;
+    }
+    .factory_con dt:after {
+        content:""; display: block;
+        width: 176px; height: 0;
+        margin: auto; margin-top: 14px;
+        border-bottom: 1px solid rgba(30,30,30,1);
+    }
+    /* .factory_con dd {} */
 
 
         
