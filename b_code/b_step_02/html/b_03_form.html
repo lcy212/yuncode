@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- b_03_form.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_03_form.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>form</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+       <hr> /
+
+       <h2>form</h2>
+       <p>입력, 선택, 자료를 전송하게 만드는 기능을 가진 요소</p>
+       <p>양방향 전송방식(입력 - 전송 - 수신 및 처리 - 결과 피드백)</p>
+       <p>검색, 로그인, 회원가입, 구매, 게시판이 이에 속함</p>
+
+       <ol>
+            <li>검색하려 단어/문장을 작성(글을 작성할 수 있는 영역)</li><!-- 아이디, 비밀번호 작성 -->
+            <li>검색버튼(전송버튼) 클릭(data를 보내는 능력을 가진 버튼 a)</li><!-- 로그인하기 클릭 -->
+            <li>데이터를 전송(어디로 보낼지, 공개 get/비공개 post 확인......)</li><!-- 데이터베이스로 전송됨 -->
+            <li>전송받은 곳에서 데이터 처리 수행(백엔드)</li><!-- 해당 데이터가 있는지, 일치하는지 수행 -->
+            <li>수행 결과를 피드백 받음</li><!-- 일치한다는 피드백 받음 -->
+            <li>피드백 받은 결과를 도출</li><!-- 로그인 완료 -->
+        </ol>
+
+        <hr />
+
+        <div class="content_input_area">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>각 영역별 기능 구분</legend>
+
+                    <label for="userName">사용자 이름</label>
+                    <input type="text" id="userName" value="" name="userName" /><!-- value는 값을 입력받는 상자역할 -->
+
+                    <label for="userPw">비밀번호</label>
+                    <input type="password" id="userPw" value="" name="userPw" />
+
+                    <label for="userGender">성별</label>
+                    <input type="text" id="userGender" value="" name="userGender" />
+
+                    <label for="userOld">나이<span class="blind">를 태어난 해를 기준으로 입력하세요.</span></label>
+                    <input type="text" id="userOld" value="" name="userOld" />
+
+                    <input type="submit" value="확인" />
+                </fieldset>
+                <!-- 
+                    userName : value에 입력된 값
+                    userGender : value에 입력된 값
+                    userOld : value에 입력된 값
+                -->
+
+                <fieldset>
+                    <legend>각 영역별 기능 구분</legend>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>각 영역별 기능 구분</legend>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>각 영역별 기능 구분</legend>
+
+                </fieldset>
+
+            </form>
+        </div>
+
+        <div class="naver">
+            <form action="#" method="POST">
+                <fieldset>
+                    <label for="userID" class="blind">아이디</label>
+                    <input type="text" id="userID" value="" placeholder="아이디" name="userID" />
+
+                    <label for="userPw" class="blind">비밀번호</label>
+                    <input type="password" id="userPw" value="" placeholder="비밀번호" name="userPw" />
+
+                    <input type="checkbox" id="loginKeep" value="" name="loginKeep" />
+                    <label for="loginKeep">로그인 상태유지</label>
+
+                    <input type="submit" value="로그인" />
+                </fieldset>
+            </form>
+            <ul>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            
+        </div>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>
+
+<!--  -->
