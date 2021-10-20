@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- b_04_form2.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_04_form2.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>form type 기초</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+
+        <h2>form의 이해</h2>
+       <form action="#" method="POST">
+           <fieldset>
+               <legend>입력형태, 특수형</legend>
+               <div><input type="hidden" name="sendName" value="난독화(암호화) 된 텍스트" /></div>
+               <div>
+                   <label for="idText">내용 작성</label>
+                   <input type="text" name="id__Text" id="idText" value="" placeholder="입력할 사항의 예시" maxlength="10" />
+               </div>
+               <div>
+                   <label for="pwText">숨겨지는 내용 작성</label>
+                   <input type="password" name="pw__Text" id="pwText" value="" placeholder="비밀번호 입력" maxlength="10" />
+               </div>
+            </fieldset>
+
+           <fieldset>
+               <legend>체크항목</legend>
+               <div>
+                   <h3>type-radio</h3>
+                   <p>다음 중 가장 쉬운 언어는 무엇일까?</p>
+                   <ul>
+                       <li>
+                           <input type="radio" id="radio_01" name="radio__select" value="javascript" checked />
+                           <label for="radio_01">javascript</label>
+                       </li>
+                       <li>
+                           <input type="radio" id="radio_02" name="radio__select" value="python" />
+                           <label for="radio_02">python</label>
+                       </li>
+                       <li>
+                           <input type="radio" id="radio_03" name="radio__select" value="java" />
+                           <label for="radio_03">java</label>
+                       </li>
+                       <li>
+                           <input type="radio" id="radio_04" name="radio__select" value="c++" />
+                           <label for="radio_04">c++</label>
+                       </li>
+                   </ul>
+               </div>
+               <div>
+                   <h3>type-checkbox</h3>
+                   <p>이번 주말에 먹고싶은 음식을 고르시오.</p>
+                   <ul>
+                       <li>
+                           <input type="checkbox" id="check_01" name="check__select" value="제육" />
+                           <label for="check_01">제육</label>
+                       </li>
+                       <li>
+                           <input type="checkbox" id="check_02" name="check__select" value="족발" />
+                           <label for="check_02">족발</label>
+                       </li>
+                       <li>
+                           <input type="checkbox" id="check_03" name="check__select" value="보쌈" />
+                           <label for="check_03">보쌈</label>
+                       </li>
+                       <li>
+                           <input type="checkbox" id="check_04" name="check__select" value="랍스타" />
+                           <label for="check_04">랍스타</label>
+                       </li>
+                   </ul>
+               </div>
+            </fieldset>
+
+           <fieldset>
+               <legend>버튼형식</legend>
+               <input type="reset" value="취소" /><br />
+               <input type="submit" value="확인" /><br />
+               <input type="image" src="../img/favicon.png" alt="확인" /><br />
+               <input type="button" value="다음 내용 보기" /><br />
+               <input type="file" name="send__file" value="" id="fileSelect" />
+               <label for="fileSelect">전송할 파일을 선택하세요.</label>
+            </fieldset>
+
+           <fieldset>
+               <legend>멀티형식</legend>
+               <div>
+                    <label for="multiLine">여러줄 작성가능한 요소 설명</label>
+                    <textarea name="multi__Line" id="multiLine" readonly></textarea>
+               </div>
+               <div>
+                    <label for="selectProduct">구매할 제품을 선택하세요.</label>
+                    <select name="select__Product" id="selectProduct">
+                        <option>선택하세요.</option>
+                        <option value="mouse">mouse</option>
+                        <option value="keyboard">keyboard</option>
+                        <option value="tablet">tablet</option>
+                    </select>
+
+                    <hr />
+                    <p>select 대안</p>
+                    <!-- <label for="mySelect">선택한 내용</label> -->
+                    <input type="hidden" id="mySelect" name="my__Select" value="" />
+                    <dl class="like_select">
+                        <dt>상품을 선택하세요.</dt>
+                        <dd>
+                            <ul>
+                                <li data-select="마우스">마우스</li>
+                                <li data-select="키보드">키보드</li>
+                                <li data-select="스마트폰">스마트폰</li>
+                                <li data-select="태블릿">태블릿</li>
+                                <li data-select="노트북">노트북</li>
+                            </ul>
+                        </dd>
+                    </dl>
+               </div>
+
+               <div>
+                   <button type="submit">확인</button>
+                   <button type="reset">취소</button>
+                   <button type="button">버튼</button>
+               </div>
+               <!-- input과 button은 같은 역할을 하기에 button을 사용하는것이 추세(form밖에서 사용가능해서) -->
+
+            </fieldset>
+       </form>
+
+       <div class="other">
+            <label for="year">태어난 연도를 선택하세요.</label>
+            <select name="select__year" id="year">
+                <!-- <option value="2021">2021</option> -->
+            </select>
+        </div>
+
+    </div><!-- #wrap -->
+
+    
+
+    <!-- script -->
+    <script>
+        /*
+        // var yearSel = document.getElementById('year'); 구형브라우저도 지원되는 구버전
+        var yearSelector = document.querySelector('#year'); // select 태그 생성
+        var createOption = document.createElement('option'); // option 태그 생성
+        var y = 2021; // 기본변수 y 생성
+        createOption.innerText = y + '년'; // option 태그에 담을 text 첨부. 문자는 무조건 '' 안에 작성해야함
+        // createOption.setAttribute('value', '2021'); 이 방법을 주로 사용하지만 아래처럼 간단하게 작성해도됨
+        createOption.value = y; // option 태그에 속성(value) 첨부
+        yearSelector.append(createOption); // option 태그를 select 태그 안에 담기
+        y = y-1;
+        */
+
+        // 하나의 행동 처리를 위한 틀 잡기
+        var yearSelector = document.querySelector('#year');
+        var y = 2021;
+        var createOption;
+        var makeFn = function(){
+            createOption = document.createElement('option');
+            createOption.innerText = y + '년';
+            createOption.value = y;
+            yearSelector.append(createOption);
+        };
+
+        // 틀 수행
+        // makeFn(); // 2021
+        // y=y-1;
+
+        // 반복수행
+        // for(최초값; 조건; 증감값){수행내용} 아래의 경우 최초값 y가 위에서 정의되었기에 따로 작성하지않음
+        for(; y > 1870; y=y-1 ){
+            makeFn(); 
+        }
+
+    </script>
+</body>
+</html>
