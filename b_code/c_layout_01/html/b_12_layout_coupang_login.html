@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- b_12_layout_coupang_login.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_12_layout_coupang_login.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>쿠팡 로그인</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+
+       <article class="loginBox">
+           <h2 class="blind">로그인 페이지</h2>
+
+           <form action="#" method="POST">
+               <fieldset class="account_area">
+                   <legend class="blind">아이디 및 비밀번호 입력</legend>
+                   <ul class="account_part">
+                       <li>
+                           <label for="userId" class="blind">아이디<span class="blind">를 입력하세요</span></label>
+                           <div class="input_part">
+                               <span><i class="far fa-envelope"></i></span>
+                                <input type="text" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" required />
+                           </div>
+                       </li>
+                       <li>
+                            <label for="userPw" class="blind">비밀번호<span class="blind">를 입력하세요</span></label>
+                            <div class="input_part">
+                                <span><i class="fas fa-lock"></i></span>
+                                <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호" required />
+                            </div>
+                       </li>
+                   </ul>
+               </fieldset>
+
+               <fieldset class="check_area">
+                   <legend class="blind">자동로그인, 아이디 및 비밀번호 찾기</legend>
+                   <ul class="check_part">
+                       <li>
+                           <input type="checkbox" id="loginAuto" name="login__Auto" value="auto_login" />
+                           <label for="loginAuto">자동로그인<span class="blind">을 원하시면 선택하세요</span></label>
+                       </li>
+                       <li>
+                           <a href="#">아이디(이메일)/비밀번호 찾기 &gt;</a>
+                       </li>
+                   </ul>
+               </fieldset>
+
+               <fieldset class="login_btn">
+                   <legend class="blind">로그인 버튼</legend>
+                   <input type="button" name="login" value="로그인" />
+               </fieldset>
+
+               <div class="join_btn">
+                   <a href="#">회원가입</a>
+               </div>
+           </form>
+           <address>©coupang corp. all rights reserved.</address><!-- 소문자로 변경 -->
+
+       </article>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

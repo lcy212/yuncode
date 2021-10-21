@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* b_11_layout_naver_signup_re.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+
+#wrap {
+    width: 100%; height: auto; min-height: 100%;
+    padding-top: 40px;
+    background-color: #f5f6f7;
+}
+
+h1 {
+    width: 160px; height: 40px;
+    margin: auto; margin-bottom: 30px;
+    text-align: center; line-height: 40px; font-size: 1.2rem;
+    margin-bottom: 30px;
+    background-color: #03c75a;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+#joinBox {
+    width: 500px; height: auto; min-height:500px;
+    padding: 20px; margin: auto; margin-bottom: 30px;
+}
+fieldset {
+    width: 100%; height: auto; min-height: 30px;
+    margin-bottom: 30px;
+}
+fieldset > ul { width: 100%; height: auto; }
+fieldset li { 
+    width: 100%; height: auto; min-height: 52px; 
+    margin-bottom: 12px;
+}
+fieldset li:last-child { margin-bottom: 0; }
+fieldset .full { width: 100%; height: 100%; background-color: transparent;}
+
+
+label { 
+    display: block; width: 100%; height: auto; 
+    margin-bottom: 2px; 
+    font-weight: 600; font-size:1.125rem;
+}
+
+.input_part {
+    width: 100%; height: 52px;
+    padding: 10px 14px;
+    border:1px solid #dadada;
+    background-color: #fff;
+}
+.input_part input { 
+    float:left; width: 328px; height: 100%; 
+    background-color: transparent;
+}
+
+
+.input_part span { 
+    float:right; width: auto; height: 100%; 
+    color:#8e8e8e; line-height: 30px;
+}
+
+.year_part { width: 100%; height: 52px; }
+.particle { 
+    float:left; width: 146px; height: 100%; 
+    margin-right: 10px; padding: 10px 14px;
+    border:1px solid #dadada;
+    background-color: #fff;
+}
+.particle:last-of-type { margin-right: 0; }
+.birth { width: 100%; height: 100%; }
+
+
+.tel_part {
+    float:left; width: 335px; height: 52px;
+    padding: 10px 14px;
+    border:1px solid #dadada;
+    background-color: #fff;
+}
+.tel_btn_part {
+    float:right; width: 115px; height: 52px;
+
+}
+
+
+fieldset li.action .input_part { 
+    outline:1px solid #7a7; border-color:transparent;
+    background-color: #efe;
+}
+input[type="button"], 
+input[type="submit"] { 
+    cursor: pointer;
+    color:#fff; background-color: #03c75a;
+}
+input[type="submit"] { width: 100%; height: 52px; }
+
+.disable { position:relative; z-index: 100; }
+.disable:before { 
+    cursor: pointer;
+    content:""; display: block; position:absolute; top: 0; left: 0; z-index: 10;
+    width: 100%; height: 100%; background-color: #f7f7f7; opacity: 0.5;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+
+#footBox {
+    width: 500px; height: 50px;
+    margin: auto;
+    padding-bottom: 10px; box-sizing:content-box;
+    background-color: #888;
+}
