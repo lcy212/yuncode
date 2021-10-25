@@ -213,8 +213,9 @@ p { font-size:18px; }
     }
     
     .link_inner em {
-        margin-top: 46px;
-        font-size:36px; text-align:center;
+        display: block;
+        padding-top: 60px;
+        font-size:36px; text-align:center; font-weight: bold;
     }
     .link_inner p {
         margin-top: 14px;
