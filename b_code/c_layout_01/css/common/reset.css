@@ -35,7 +35,10 @@ table,tr,td,th,thead,tbody,tfoot {
 
 select, input { margin: 0; padding: 0; border:0; box-sizing: border-box; }
 input[type="text"], input[type="password"], input[type="tel"] { text-indent:0.5rem; }
-select, input, textarea { cursor: pointer; }
+select, input { cursor: pointer; }
+legend { width: 0; height: 0; padding: 0; border: 0; overflow: hidden;}
+textarea { resize:none; cursor:text; }
 
 header, article, nav, section, footer, aside,
 main, figure, figcaption, hgroup { display:block; }
+

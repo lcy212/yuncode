@@ -17,7 +17,8 @@ p, pre, blockquote, address,
 ul, ol, li, dl, dt, dd,
 hr, button, img, div,
 header, article, nav, section, footer, aside,
-main, figure, figcaption, hgroup {
+main, figure, figcaption, hgroup,
+form, fieldset, textarea {
     margin:0; padding:0; border:0; font-size:100%;
     box-sizing:border-box;
 }
@@ -35,3 +36,10 @@ table,tr,td,th,thead,tbody,tfoot {
 
 header, article, nav, section, footer, aside,
 main, figure, figcaption, hgroup { display:block; }
+
+/* select, input { margin: 0; padding: 0; border:0; box-sizing: border-box; }
+input[type="text"], input[type="password"], input[type="tel"] { text-indent:0.5rem; }
+select, input, textarea { cursor: pointer; } */
+
+legend { width: 0; height: 0; padding: 0; border: 0; overflow: hidden;}
+textarea { resize:none; cursor:text; }
