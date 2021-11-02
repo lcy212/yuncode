@@ -2,9 +2,24 @@
 
 /* (width : 768px ~ 959px) / 디자인 기준 : 768px */
  @media all and (min-width:768px) and (max-width:959px) {
-    #headBox { height: 60px; }
+
+    /* #headBox----------------------------------------------------------------- */
+    #headBox { height: 60px; padding: 0 15px; padding-top: 10px; }
+        #headBox > .container { padding: 10px 15px;}
+        /* h1 { } */
+        #navigation { width: 80px;; }
+        .gnb { width: 40px; height: 34px; }
+        /* .unb {  } */
+
+    /* #viewBox-------------------------------------------------------------------- */
     #viewBox { height: 450px; padding-top: 60px; }
-    #contentBox { height: 210px; }    
+
+    /* #contentBox------------------------------------------------------------------ */
+    #contentBox { height: 210px; }  
+
+    /* #infoBox------------------------------------------------------------------ */  
     #infoBox { height: 540px; }
-    #footBox { height: 40px; }
+
+    /* #footBox------------------------------------------------------------------ */
+    #footBox { height: 120px; }
 }/* (width : 768px ~ 959px) / 디자인 기준 : 768px */
