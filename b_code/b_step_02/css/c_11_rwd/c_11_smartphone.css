@@ -1,0 +1,23 @@
+/* c_11_smartphone.css */
+
+/* 360px ~ 480px  */
+@media all and (max-width:480px) {
+    #wrap { width: 100%; min-width: 360px; }
+
+    #headBox { position: relative; height: 100px;}
+        h1 { width: 100%; }
+        .gnbBox { 
+            position:absolute; top: 28px; right: 28px;
+            width: 45px; height: 45px;
+            background-color: #fff; 
+        }
+        .nav_btn { width: 100%; height: 100%; }
+        .nav_btn > button { width: 100%; height: 100%; }
+    #viewBox { height: 400px; }
+    #conBox { height: 400px;}
+        #conBox li { width: 50%; height: 200px; }
+    /* #plusBox {  } */
+    /* #infoBox {  } */
+    /* #footBox { } */
+        h2 { width: 50%; margin: auto; }
+}/* 360px ~ 480px  */
