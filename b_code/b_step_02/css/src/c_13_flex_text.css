@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* c_13_flex_text.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+#wrap {
+    width: 900px; height: auto;
+    padding-bottom: 500px;
+}
+#wrap > div { 
+    width: 100%; height: auto;
+    margin-bottom: 100px; padding: 10;
+    border:1px solid #333; 
+}
+h3 { width: 150px; height: 80px; background-color: #ccc; }
+.navi { width: 600px; height: 50px; margin-top: 30px; background-color: #eee; }
+.gnb { width: 400px; height: 40px; background-color: #acf; }
+.gnb ul { width: 100%; height: 100%; }
+.gnb li { border:1px solid #7d7;  background-color: #fff;  }
+.unb { width: 150px; height: 40px; background-color: #fdd; }
+
+/* .header_01
+------------------------------------------------------------- */
+.header_01 { position:relative; }
+.header_01:after { content:""; display: block; clear:both; }
+.header_01 > h3 { float: left; }
+.header_01 > .navi { float:right; }
+/* .header_01 .gnb { float: left; margin-left: 100px; } */
+.header_01 .gnb { position:absolute; top: 10px; left: 50%; transform:translateX(-50%); }
+.header_01 .gnb li { float:left; margin-right: 10px;}
+.header_01 .gnb li:last-child { margin-right: 0; }
+
+.header_01 .unb { float:right; }
+.header_01 .unb > a {
+    float: left; width: 450px;
+    margin-left: 5px; font-size: 0.7rem;
+    background-color: #fff;
+}
+.header_01 .unb > a:first-child {
+    float:right;
+}
+.header_01 .unb > a:nth-of-type(2) { margin-left: 0; }
+
+/* .header_02
+------------------------------------------------------------- */
+.header_02 { display: flex; justify-content: space-between; align-items: flex-end; }
+.header_02 .gnb ul { display: flex; justify-content: space-around; }
+
+
+/* ----------------------------------------------------------- */
+.part {
+    display: flex; justify-content: space-between;
+    width: 800px; height: 500px; 
+    background-color: #eee; 
+}
+.part ul { 
+    display:flex; flex-wrap: wrap; align-content: flex-end;
+    width: 350px; height: 300px; 
+    border:1px solid #333; 
+}
+.part ol { 
+    display:flex; justify-content: space-around; align-items: flex-end;
+    width: 350px; height: 300px; 
+    border:1px solid #f06; 
+}
+.part li { 
+    width: 80px; height: 50px; 
+    background-image: linear-gradient(45deg, #dff, #fd7);
+}
+
+/* inline-flex:inline-block과 같은 효과이며 요소간에 생기는 여백 문제는 처리못함 */
