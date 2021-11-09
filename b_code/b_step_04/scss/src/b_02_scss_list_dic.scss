@@ -1,0 +1,74 @@
+// b_02_scss_list_dic.scss
+/* b_02_scss_list_dic.scss */
+
+// color ---------------------------------
+$yellow :#fa0;
+$blue : (#00f, #0af, #0df, #7af, #adf); // list
+$psuedoCode:(
+    "hover":#87f, 
+    "focus":#4f3, 
+    "active":#fda, 
+    "selected":#dfd
+    ); // dic(map)
+
+// ---------------------------------------
+#wrap {
+    width: 100%; height: 100%;
+    background-color:lighten($yellow, 30%);
+}
+
+.list_area {
+    width: 100%; height: auto;
+    & > li {
+        width: 100%;
+        background-color: nth($blue,2); // list형식 : nth(변수명, 순번)
+
+        &:hover{ background-color:map-get($psuedoCode, "hover"); }
+        &:focus{ background-color:map-get($psuedoCode, "focus"); }
+    }// li
+}// list_area
+
+$coffee:("esspresso", "latte", "choco", "vanila", "other");
+// #{기능(변수명/숫자)} : 인터폴레이션 기법(보간법), 내용(기능)을 제대로 담을 수 있게 처리해줌
+.coffee_#{nth($coffee,1)} { width: 100%; }
+.coffee_#{02} { width: 100%; }
+
+// scss 반복문 for(변수명 in 배열){}
+//@for $변수명 from 시작숫자 through 마지막숫자 {}
+// length(변수명) : 변수있는만큼 알아서
+@for $key from 1 through length($coffee) { 
+    .coffee_#{nth($coffee, $key)} { width:$key * 10%; background-color: nth($blue,$key);}
+}
+// 계산식에 calc쓰면 css에선 변수명을 숫자가 아닌 이름 그대로를 인식함
+// calc 쓰려면 변수명을 보간법으로 사용해야함
+$device:768;
+#viewBox {
+    width: 100%; height: 500/$device*100vw; 
+}
+
+/* ---------------------------------------------------------------------- */
+
+// 변수 - $변수명:값
+// 중첩 - #box{ >li{} }
+// @mixin, @include
+
+@mixin blind(){
+    display: block; width: 0; height: 0;
+    position:absolute; z-index: -1; clip:rect(0 0 0 0); overflow: hidden;
+}
+@mixin bar(){
+    &:after, &::after { content:""; display: block; clear:both; }
+}
+@mixin full(){
+    display: block; width: 100%; height: 100%;
+    @content; // 변수() { 변경/추가내용 }을 가능하게 함
+    & > span { @include blind(); }
+}
+
+.nav_area {
+    float:right; width: 960px; height: auto;
+    li { float:left; width: auto; height: 30px; }
+    a { @include full(){ background-color: $yellow;}; }
+    // span { @include blind(); }
+    @include bar();
+} // nav_area
