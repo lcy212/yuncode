@@ -2,13 +2,35 @@
 #wrap {
   width: 1440px;
   height: auto;
-  margin: auto;
 }
 
+/* headBox ------------------------------------------------------ */
+.headBox {
+  width: 100%;
+  height: 100px;
+  padding: 20px 160px 0 170px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  float: left;
+  width: 120px;
+  height: 70px;
+  background-color: #ccc;
+}
+
+.navigation {
+  float: right;
+  width: 530px;
+  height: 70px;
+  background-color: #ccc;
+}
+
+/* titleBox ------------------------------------------------------ */
 .titleBox {
   width: 100%;
   height: 250px;
-  margin: auto;
   padding-top: 92px;
   background-color: #888;
 }
@@ -33,6 +55,7 @@ dd {
   margin: 0;
 }
 
+/* conBox ------------------------------------------------------ */
 .conBox {
   width: 1100px;
   height: 1735px;
@@ -131,4 +154,41 @@ dd {
   border: 1px solid #ccc;
   border-radius: 3px;
   text-transform: uppercase;
+}
+
+/* footBox ------------------------------------------------------ */
+.footBox {
+  width: 100%;
+  height: 450px;
+  padding-top: 68px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #444;
+}
+
+.foot_inner {
+  width: 940px;
+  height: 300px;
+  margin: auto;
+  background-color: #ccc;
+}
+.foot_inner h2 {
+  float: left;
+  width: 120px;
+  height: 70px;
+  margin-right: 800px;
+  margin-bottom: 45px;
+  background-color: #fff;
+}
+.foot_inner address {
+  float: left;
+  width: 460px;
+  height: 184px;
+  background-color: #fff;
+}
+.foot_inner .sns_family {
+  float: right;
+  width: 160px;
+  height: 135px;
+  background-color: #fff;
 }
