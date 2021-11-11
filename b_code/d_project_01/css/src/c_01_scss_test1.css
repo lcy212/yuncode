@@ -1,0 +1,134 @@
+/* c_01_scss_test1.scss */
+#wrap {
+  width: 1440px;
+  height: auto;
+  margin: auto;
+}
+
+.titleBox {
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  padding-top: 92px;
+  background-color: #888;
+}
+
+.title_inner {
+  width: 944px;
+  height: 127px;
+  margin: auto;
+}
+
+dt {
+  width: 100%;
+  height: 58px;
+  margin-bottom: 17px;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+dd {
+  width: 100%;
+  height: 52/2px;
+  margin: 0;
+}
+
+.conBox {
+  width: 1100px;
+  height: 1735px;
+  margin: auto;
+  margin-top: 175px;
+}
+
+.con_tab {
+  width: 100%;
+  height: 57px;
+  margin-bottom: 38px;
+  padding: 0 147px;
+  border-bottom: 1px solid #333;
+}
+.con_tab ul {
+  width: 100%;
+  height: 100%;
+}
+.con_tab li {
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  line-height: 57px;
+  border-right: 1px solid #333;
+}
+.con_tab li:last-child {
+  border-right: 0;
+}
+
+.con_area {
+  width: 100%;
+  height: 1640px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.con_area > li {
+  float: left;
+  width: 240px;
+  height: 350px;
+  padding: 10px 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.con_area .img {
+  height: 220px;
+  margin-bottom: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.con_area dl {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.con_area .title {
+  height: 28px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #333;
+  font-size: 22px;
+}
+
+.con_area .text {
+  height: 20px;
+  font-size: 12px;
+}
+
+.con_area .info {
+  height: 22px;
+  margin-top: 10px;
+}
+.con_area .info > div {
+  float: left;
+  width: auto;
+  height: 100%;
+  margin-right: 5px;
+  padding: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
