@@ -92,5 +92,24 @@ console.log(pc, clonePc);
 
 // 위처험 똑같이 복사, 하나 추가
 var cookie = ['초코칩', '칙촉', '빼빼로', '호빵', '촉촉한 초코칩', '칸초', '홈런볼', '엄마손'];
+var cloneCookie = [];
+var c = 0;
+var cLen = cookie.length;
+for(; c<cLen; c+=1){
+    cloneCookie[c] = cookie[c];
+}
+cookie.push('마가렛트');
+cloneCookie.push('초코파이');
+console.log(cookie, cloneCookie);
+
 var snack = {'농심' : '새우깡', '해태' : '맛동산', '오리온' : '고래밥', '크라운' : '산도'};
+var cloneSnack = {};
+for(var data in snack){
+    // console.log(data);
+    cloneSnack[data] = snack[data];
+}
+snack['허쉬'] = '초코';
+cloneSnack['롯데'] = '초코파이';
+console.log(snack, cloneSnack);
+
 var ice = [{'롯데' : ['폴라포', '수박바']}, {'해태':'브라보'}, {'허쉬':'민트초코'}, {'빙그레':'투게더'}];
