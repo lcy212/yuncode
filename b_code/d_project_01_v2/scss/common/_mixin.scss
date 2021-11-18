@@ -18,68 +18,42 @@
 	box-shadow:0px 4px 4px rgba(0,0,0,0.250);
 }
 
-/* 다음을 font-set, text_option으로 표현함
-@mixin text_style_title_02 {
-	font-size:40px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_03 {
-	font-size:36px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_04 {
-	font-size:28px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_05 {
-	font-size:22px;
-	font-weight:$font_weight_bolder;
-}
 
-@mixin text_style_content_01 {
-	font-size:22px;
-	font-weight:$font_weight_bold;
-}
-@mixin text_style_content_02 {
-	font-size:18px;
-	font-weight:$font_weight_bold;
-}
-@mixin text_style_content_03 {
-	font-size:16px;
-	font-weight:$font_weight_bold;
-}
-@mixin text_style_content_04 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
-}
-@mixin text_style_content_04_1 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
-}
-@mixin text_style_button_text {
-	font-size:22px;
-	font-weight:$font_weight_$font_weight_bolder;
-}
+// image --------------------------------------------------------------------
 
 
-@mixin text_style_style_code_01 {
-	font-size:9px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-@mixin text_style_style_code_02 {
-	font-size:10px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-@mixin text_style_style_code_03 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-*/
 
+// size --------------------------------------------------------------------
+$baseSize:16;
 
-// image
+// unit --------------------------------------------------------------------
+@mixin remUnit($name, $unit){
+    #{$name}:#{$unit} + px;
+    #{$name}:#{$unit / $baseSize} + rem;
+}
+// 작성예시 : div { @include remUnit(width, 16) }
 
-// size
+// @media query --------------------------------------------------------------------
+
+#wrap { min-width:$mobile; }
+@mixin mobile(){
+    @media all and (max-width:#{$tablet - 1}){
+        @content;
+    }
+}
+
+@mixin tablet(){
+    @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}){
+        @content;
+    }
+}
+@mixin laptop(){
+    @media all and (min-width:$laptop) and (max-width:#{$pc - 1}){
+        @content;
+    }
+}
+@mixin pc(){
+    @media all and (min-width:$pc){
+        @content;
+    }
+}

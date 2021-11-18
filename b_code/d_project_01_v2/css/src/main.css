@@ -1,67 +1,117 @@
-@charset "UTF-8";
 /* main.css */
-/* 다음을 font-set, text_option으로 표현함
-@mixin text_style_title_02 {
-	font-size:40px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_03 {
-	font-size:36px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_04 {
-	font-size:28px;
-	font-weight:$font_weight_bolder;
-}
-@mixin text_style_title_05 {
-	font-size:22px;
-	font-weight:$font_weight_bolder;
+#wrap {
+  min-width: 320px;
 }
 
-@mixin text_style_content_01 {
-	font-size:22px;
-	font-weight:$font_weight_bold;
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  background-color: #ddd;
 }
-@mixin text_style_content_02 {
-	font-size:18px;
-	font-weight:$font_weight_bold;
+@media all and (max-width: 599px) {
+  #wrap {
+    min-width: 320px;
+    background-color: #fda;
+  }
 }
-@mixin text_style_content_03 {
-	font-size:16px;
-	font-weight:$font_weight_bold;
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #wrap {
+    background-color: #adf;
+  }
 }
-@mixin text_style_content_04 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #wrap {
+    background-color: #fdf;
+  }
 }
-@mixin text_style_content_04_1 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
+@media all and (min-width: 1440px) {
+  #wrap {
+    background-color: #dfd;
+  }
 }
-@mixin text_style_button_text {
-	font-size:22px;
-	font-weight:$font_weight_$font_weight_bolder;
-}
-
-
-@mixin text_style_style_code_01 {
-	font-size:9px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-@mixin text_style_style_code_02 {
-	font-size:10px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-@mixin text_style_style_code_03 {
-	font-size:12px;
-	font-weight:$font_weight_bold;
-    @include text_option();
-}
-*/
-body {
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 50;
   background-color: #fff;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #headBox {
+    height: 50px;
+    height: 3.125rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #headBox {
+    height: 100px;
+    height: 6.25rem;
+  }
+}
+@media all and (min-width: 1440px) {
+  #headBox {
+    height: 100px;
+    height: 6.25rem;
+  }
+}
+
+#slideBox {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50;
+  background-color: #dff;
+}
+@media all and (max-width: 599px) {
+  #slideBox {
+    padding-top: 50;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #slideBox {
+    padding-top: 50;
+    height: 450px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #slideBox {
+    padding-top: 100;
+    height: 600px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #slideBox {
+    padding-top: 100;
+    height: 600px;
+  }
+}
+
+#newBox {
+  width: 100%;
+  height: 100vh;
+  background-color: #add;
+}
+@media all and (max-width: 599px) {
+  #newBox {
+    min-height: 600px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #newBox {
+    height: 600px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #newBox {
+    height: 700px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #newBox {
+    height: 700px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
