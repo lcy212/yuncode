@@ -1,0 +1,18 @@
+// _snsBox.scss
+
+#snsBox {
+  width: 100%;
+  background-color: $color_white;
+  @include mobile { @include remUnit(height, 804); padding-top: 72px; }
+  @include tablet { @include remUnit(height, 550); padding-top: 72px; }
+  @include laptop { @include remUnit(height, 620); padding-top: 84px; }
+  @include pc { @include remUnit(height, 620); padding-top: 84px; }
+}// #snsBox
+
+.sns_inner {
+  margin: auto; background-color: #ddd;
+  @include mobile { width: 220px; height: 655px; }
+  @include tablet { width: 700px; height: 380px; }
+  @include laptop { width: 940px; height: 402px; }
+  @include pc { width: 940px; height: 402px; }
+}

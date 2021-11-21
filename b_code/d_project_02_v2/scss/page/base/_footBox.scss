@@ -1,0 +1,18 @@
+// _footBox.scss
+
+#footBox {
+  width: 100%;
+  background-color: $color_white;
+  @include mobile { @include remUnit(height, 124); padding-top: 37px; }
+  @include tablet { @include remUnit(height, 238); padding-top: 60px; }
+  @include laptop { @include remUnit(height, 240); padding-top: 50px; }
+  @include pc { @include remUnit(height, 240); padding-top: 50px; }
+}// #footBox
+
+.foot_inner {
+  margin: auto; background-color: #ddd;
+  @include mobile { width: 248px; height: 65px; }
+  @include tablet { width: 518px; height: 132px; }
+  @include laptop { width: 942px; height: 132px; }
+  @include pc { width: 942px; height: 132px; }
+}

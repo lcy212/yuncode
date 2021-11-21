@@ -20,14 +20,15 @@ $headH2:0px;
     @include tablet { background-color: #adf; }
     @include laptop { background-color: #fdf; }
     @include pc { background-color: #dfd; }
-    // ---------------------------------------------------
-    @import "../page/base/headBox";
-    @import "../page/main/slideBox";
-    @import "../page/main/newBox";
-    @import "../page/main/commercialBox";
-    @import "../page/main/bestBox";
-    @import "../page/main/galleryBox";
-    @import "../page/main/sponsorBox";
-    @import "../page/base/footBox";
+
 } // #wrap
-    
+
+// ---------------------------------------------------
+@import "../page/base/headBox";
+@import "../page/main/slideBox";
+@import "../page/main/newBox";
+@import "../page/main/commercialBox";
+@import "../page/main/bestBox";
+@import "../page/main/galleryBox";
+@import "../page/main/sponsorBox";
+@import "../page/base/footBox";

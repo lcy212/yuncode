@@ -1,4 +1,5 @@
 // _mixin.scss
+@use "sass:math";
 
 // font --------------------------------------------------------------------
 @mixin font-set(){
@@ -20,18 +21,46 @@
 
 
 // image --------------------------------------------------------------------
+$imgPath:'../img/';
+
+@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:initial){
+  background: {
+    image: url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position:$position;
+    size: $size;
+  } 
+  & > span{
+    display: block; 
+    position: absolute; z-index:-1; clip:rect(0 0 0 0);
+    width: 0; height: 0; overflow: hidden;
+  }
+  @content;
+}
 
 
-
-// size --------------------------------------------------------------------
-$baseSize:16;
+// // size --------------------------------------------------------------------
+@mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial){
+    display:block; width:100%; height:100%;
+    
+    @if ($file) {
+      @include img($file, $repeat, $position, $size){      @content;    }
+    }
+  }
+  
+  // a{  
+  //   @include full('file.jpg');  // @include img('image_01.png');
+  // } 
 
 // unit --------------------------------------------------------------------
+$baseSize: 16;
 @mixin remUnit($name, $unit){
     #{$name}:#{$unit} + px;
-    #{$name}:#{$unit / $baseSize} + rem;
+    #{$name}:math.div($unit, $baseSize) + rem;
 }
 // 작성예시 : div { @include remUnit(width, 16) }
+
+
 
 // @media query --------------------------------------------------------------------
 

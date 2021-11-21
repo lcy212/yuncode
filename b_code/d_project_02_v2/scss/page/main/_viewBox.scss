@@ -1,0 +1,35 @@
+// _viewBox.scss
+
+#viewBox {
+  position:relative; width: 100%;
+  background-color: $color_gray_01;
+  @include mobile { @include remUnit(height, 300);  }
+  @include tablet { @include remUnit(height, 360);  }
+  @include laptop { @include remUnit(height, 500);  }
+  @include pc { @include remUnit(height, 500);  }
+}// #viewBox
+
+.view_btn_area {
+  position:absolute; top: 50%; left: 0; right: 0;
+  width: 95%; height: auto;
+  margin: auto; transform: translateY(-50%);
+  button { width: 60px; height: 100px; background-color: $color_gray_04; }
+  .next { float:right; }
+  .prev { float:left; }
+  @include mobile { display: none; }
+  @include tablet { display: none; }
+}
+
+.indicator {
+  position:absolute; left: 0; right: 0;
+  width: 190px; height: 32px; margin: auto;
+  background-color:$color_gray_04;
+  border-radius: 20px;
+  @include mobile { bottom: 14px; }
+  @include tablet { bottom: 20px; }
+  @include laptop { bottom: 45px; }
+  @include pc { bottom: 45px; }
+}
+
+.view_area { width: 100%; height: 100%; }
+

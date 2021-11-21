@@ -1,0 +1,54 @@
+// _headBox.scss
+
+#headBox {
+  width: 100%;
+  background-color: $color_ottogi_yellow; box-sizing: border-box;
+  @include mobile { @include remUnit(height, 100); padding-top: 19px; }
+  @include tablet { @include remUnit(height, 100); padding-top: 19px; }
+  @include laptop { @include remUnit(height, 260); padding-top: 48px; }
+  @include pc { @include remUnit(height, 260); padding-top: 48px; }
+}// #headBox
+
+.head_inner {
+  position:relative; margin: auto; background-color: #ddd;
+  @include mobile { width: 270px; height: 62px; }
+  @include tablet { width: 616px; height: 62px; }
+  @include laptop { width: 946px; height: 212px; }
+  @include pc { width: 946px; height: 212px; }
+}//. head_inner
+
+h1 {
+  position:absolute; top: 0; left: 0; right: 0; 
+  margin: auto; background-color: #fff;
+  @include mobile { width: 64px; height: 62px; }
+  @include tablet { width: 64px; height: 62px; }
+  @include laptop { width: 128px; height: 124px; }
+  @include pc { width: 128px; height: 124px; }
+}
+.gnb_area { width: auto; height: auto; 
+  .gnb_btn {
+    position:absolute; top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 34px; height: 26px; background-color: #fff;
+    @include laptop { display: none; }
+    @include pc { display: none; }
+  }
+  ul {
+    position:absolute; bottom: 0; right: 0; 
+    width: 100%; background-color: #fff;
+    @include mobile { display: none; }
+    @include tablet { display: none; }
+    @include laptop { height: 52px; }
+    @include pc { height: 52px; }
+  }
+}
+.unb_area { width: auto; height: auto; 
+  .unb_btn { 
+    position:absolute;  right: 0;  
+    background-color: #fff;
+    @include mobile { top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
+    @include tablet { top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
+    @include laptop { width: 40px; height: 40px; }
+    @include pc { width: 40px; height: 40px; }
+  }
+}

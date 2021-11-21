@@ -1,0 +1,11 @@
+// sponsorBox.scss
+
+#sponsorBox {
+    width: 100%; height: 400px; 
+    background-color: $color_white;
+
+    @include mobile { height:400px;  }
+    @include tablet { height:300px; }
+    @include laptop { height:100px;}
+    @include pc { height:100px;}
+} // #sponsorBox 

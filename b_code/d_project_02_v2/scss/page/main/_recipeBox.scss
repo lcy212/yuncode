@@ -1,0 +1,18 @@
+// _recipeBox.scss
+
+#recipeBox {
+  width: 100%;
+  background-color: $color_ottogi_red;
+  @include mobile { @include remUnit(height, 540); padding-top: 68px; }
+  @include tablet { @include remUnit(height, 540); padding-top: 68px; }
+  @include laptop { @include remUnit(height, 420); padding-top: 104px; }
+  @include pc { @include remUnit(height, 420); padding-top: 104px; }
+}// #recipeBox
+
+.recipe_inner {
+  margin: auto; background-color: #ddd;
+  @include mobile { width: 170px; height: 407px; }
+  @include tablet { width: 648px; height: 415px; }
+  @include laptop { width: 872px; height: 244px; }
+  @include pc { width: 872px; height: 244px; }  
+}

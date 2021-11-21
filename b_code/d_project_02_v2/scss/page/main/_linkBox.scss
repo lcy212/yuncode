@@ -1,0 +1,40 @@
+// _linkBox.scss
+
+#linkBox {
+  width: 100%;
+  background-color: $color_white;
+  @include mobile { @include remUnit(height, 480); padding-top:65px;   }
+  @include tablet { @include remUnit(height, 406); padding-top:98px;   }
+  @include laptop { @include remUnit(height, 320); padding-top:55px;   }
+  @include pc { @include remUnit(height, 320); padding-top:55px;   }
+}// #linkBox
+
+.link_inner {
+  height: 210px; margin: auto;
+  @include mobile { width: 280px; height: 350px; }
+  @include tablet { width: 700px; }
+  @include laptop { width: 940px; }
+  @include pc { width: 940px; }
+}// .link_inner
+
+.link_con {
+  width: 100%; height: 100%;
+  
+  li {
+    float:left;
+    width: 220px; height: 100%; margin-right: 20px;
+    background-color: #888; border-radius: 4px;
+    &:nth-child(4) { margin-right: 0; }
+    @include mobile {
+      width: 280px; height: 100px; margin-right: 0; margin-bottom: 25px;
+      &:nth-child(3) { margin-bottom: 0; } 
+      &:last-child { display: none;} 
+    }
+    @include tablet { 
+      &:nth-child(3) { margin-right: 0; } 
+      &:last-child { display: none;} 
+    }
+    @include laptop {}
+    @include pc {}
+  }
+}

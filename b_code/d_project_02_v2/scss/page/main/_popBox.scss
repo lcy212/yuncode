@@ -1,0 +1,18 @@
+// _popBox.scss
+
+#popBox {
+  width: 100%;
+  background-color: $color_white;
+  @include mobile { @include remUnit(height, 560); padding-top: 74px; }
+  @include tablet { @include remUnit(height, 560); padding-top: 74px; }
+  @include laptop { @include remUnit(height, 660); padding-top: 97px; }
+  @include pc { @include remUnit(height, 660); padding-top: 97px; }
+}// #popBox
+
+.pop_inner {
+  margin: auto; background-color: #ddd;
+  @include mobile { width: 292px; height: 400px;  }
+  @include tablet { width: 733px; height: 394px;}
+  @include laptop { width: 1056px; height: 455px; }
+  @include pc { width: 1056px; height: 455px; } 
+}
