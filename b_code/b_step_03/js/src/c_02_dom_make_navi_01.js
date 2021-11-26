@@ -38,3 +38,10 @@ naviBtn.addEventListener('click', function(event){
   var checkClassName = navArea.classList.contains(navOn);
   (checkClassName) ? navArea.classList.remove(navOn) : navArea.classList.add(navOn);
 });
+
+
+// 모든영역이 아래로 밀리며 덮어놨던 네비게이션 영역이 보이고, 위로 올리오며 네비게이션 영역 위를 덮는 느낌
+// 버튼을 클릭하면 head외 모든 영역이 아래로 내려가거나 위로 올라오게 만들기
+// 1. 메뉴클릭 .navi_btn > button 클릭
+// 2. 메뉴가 나오면 head외 모든영역이 아래로 밀리고, 메뉴가 사라지면 head외의 모든 영역이 위로 올라옴
+// 3. 메뉴가 보이지않을때는 focus처리되면 안됨
