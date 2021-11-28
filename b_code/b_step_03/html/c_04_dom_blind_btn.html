@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="../css/src/c_04_dom_blind_btn.css">
 
     <title>블라인드 형식의 슬라이드</title>
-
+  <style>
+    #wrap {
+      width: 70%; min-width: 500px; min-width: 1200px;
+      width: clamp(500px, 70%,1200px);
+    }
+  </style>
 </head>
 <body>
     <!-- layout -->
@@ -38,7 +43,9 @@
     </div><!-- #wrap -->
 
     <!-- script -->
-    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/src/c_04_dom_blind_btn.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="../js/src/c_04_dom_blind_btn.js"></script> -->
+    <script src="../js/src/c_04_dom_blind_btn2.js"></script>
+
 </body>
 </html>
