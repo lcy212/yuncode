@@ -60,6 +60,11 @@ $baseSize: 16;
 }
 // 작성예시 : div { @include remUnit(width, 16) }
 
+$deviceBase : 400px;
+@function makeVw($size, $deviceWidth:$deviceBase){
+    @return (math.div($size, $deviceWidth)* 100)+ vw;
+}
+
 
 
 // @media query --------------------------------------------------------------------
