@@ -24,18 +24,68 @@
 
         <nav class="unb_area">
           <div class="unb_btn">
-            <button type="button">lang 아이콘</button>
+            <button type="button">아이콘</button>
           </div>
-          <!-- 버튼 누르면 리스트 펼쳐지게 -->
+          <ul class="unb_list">
+            <li><a href="./main.html">한국어</a></li>
+            <li><a href="#">english</a></li>
+          </ul>
         </nav><!-- unb_area -->
 
         <nav class="gnb_area">
           <h2 class="blind">global navigation</h2>          
           <div class="gnb_btn">
-            <button type="button">gnb 아이콘</button>
+            <button type="button">아이콘</button>
           </div>
-          <!-- 버튼 누르면 리스트 펼쳐지게 -->
-          <ul></ul>
+          <ul>
+            <li>
+              <div class="gnb_title"><a href="#">회사소개</a></div>
+              <ul class="gnb_list">
+                <li><a href="./companySummary.html">(주)오뚜기</a></li>
+                <li><a href="#">지속가능경영</a></li>
+                <li><a href="#">인재 채용</a></li>
+                <li><a href="#">사업장 소개</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="gnb_title"><a href="#">제품정보</a></div>
+              <ul class="gnb_list">
+                <li><a href="#">제품연혁</a></li>
+                <li><a href="#">제품정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="gnb_title"><a href="#">o&rsquo;kitchen</a></div>
+              <div class="gnb_list">
+                <a href="#">레시피</a>
+              </div>
+            </li>
+            <li>
+              <div class="gnb_title"><a href="#">홍보센터</a></div>
+              <ul class="gnb_list">
+                <li><a href="#">오뚜기 뉴스</a></li>
+                <li><a href="#">오뚜기 광고</a></li>
+                <li><a href="#">즐거운 오뚜기</a></li>
+                <li><a href="#">국제 심포지엄</a></li>
+                <li><a href="#">투자정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="gnb_title"><a href="#">고객서비스</a></div>
+              <ul class="gnb_list">
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#">고객 한마디</a></li>
+                <li><a href="#">공장 견학</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="gnb_title"><a href="#">오뚜기몰</a></div>
+              <div class="gnb_list">
+                <a href="#">오뚜기몰</a>
+              </div>
+            </li>
+          </ul>
         </nav><!-- gnb_area -->
       </div>
     </header><!-- #headBox -->
@@ -45,18 +95,78 @@
         <button type="button" class="next">next 아이콘</button>
         <button type="button" class="prev">prev 아이콘</button>
       </div>
-      <div class="indicator"></div>
-      <div class="view_area"><!-- 광고이미지 삽입 --></div>
+      <div class="indicator">
+        <ul class="blind_wrap">
+					<li class="action">
+						<a href="#view_01"><span>view_01광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_02"><span>view_02광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_03"><span>view_03광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_04"><span>view_04광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_05"><span>view_05광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_06"><span>view_06광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_07"><span>view_07광고에 대한 간략한 설명</span></a>
+					</li>
+					<li>
+						<a href="#view_08"><span>view_08광고에 대한 간략한 설명</span></a>
+					</li>
+				</ul>
+      </div>
+      <div class="view_area">
+        <div id="view_01">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_02">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_03">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_04">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_05">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_06">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_07">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+      <div id="view_08">
+        <p>내용</p>
+        <a href="#">자세히보기</a>
+      </div>
+    </div>
     </section><!-- #viewBox -->
 
     <nav id="linkBox">
       <div class="link_inner">
         <h2 class="blind">주요 메뉴 바로가기</h2>
         <ul class="link_con">
-          <li>사회공헌</li>
-          <li>인재채용</li>
-          <li>투자정보</li>
-          <li>오뚜기 뉴스</li>
+          <li><a href="#">사회공헌</a></li>
+          <li><a href="#">인재채용</a></li>
+          <li><a href="#">투자정보</a></li>
+          <li><a href="#">오뚜기 뉴스</a></li>
         </ul>
       </div>
     </nav><!-- #linkBox -->
@@ -65,12 +175,12 @@
       <div class="new_inner">
         <div class="new_title"><h2>신제품</h2></div>
         <ul class="new_con">
-          <li>new_01</li>
-          <li>new_02</li>
-          <li>new_03</li>
+          <li><a href="#">new_01</a></li>
+          <li><a href="#">new_02</a></li>
+          <li><a href="#">new_03</a></li>
         </ul>
         <div class="new_btn">
-          <button type="button" class="more">더보기</button>
+          <a href="#">더보기</a>
         </div>
       </div>
     </article><!-- #newBox -->
@@ -78,7 +188,7 @@
     <article id="popBox">
       <div class="pop_inner">
         <div class="pop_title_area">
-          <h2>오뚜기 인기상품</h2>
+          <h2><span>오뚜기</span> 인기상품</h2>
           <p>오뚜기의 인기상품을 소개합니다.</p>
         </div>
         <div class="pop_btn_area">
@@ -88,7 +198,7 @@
         <ul class="pop_con">
           <li>
 						<a href="#">
-							<div class="pop_img">인기상품_01div>
+							<div class="pop_img">인기상품_01</div>
 							<div class="pop_text">
 								<p class="pop_name">상품이름</p><p>상품분류 &gt; 분류</p>
 							</div>
@@ -131,26 +241,105 @@
     </article><!-- #popBox -->
 
     <article id="recipeBox">
-      <div class="recipe_inner">
-
+      <div class="recipe_inner clearfix">
+        <div class="recipe_title"><h2>o&rsquo;kitchen</h2></div>
+        <div class="recipe_con">
+          <ul>
+            <li>
+              <a href="#">
+                <p class="sub_title">분류_1</p>
+                <div class="recipe_img">레시피_01</div>
+                <p class="recipe_name">레시피명_1</p>                       
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p class="sub_title">분류_2</p>
+                <div class="recipe_img">레시피_02</div>
+                <p class="recipe_name">레시피명_2</p>                       
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p class="sub_title">분류_3</p>
+                <div class="recipe_img">레시피_03</div>
+                <p class="recipe_name">레시피명_3</p>                       
+              </a>
+            </li>
+          </ul>
+        </div><!-- .recipe_con -->
+        <div class="recipe_btn">
+          <a href="#">더보기</a>
+        </div>
       </div>
     </article><!-- #recipeBox -->
 
     <article id="snsBox">
-      <div class="sns_inner">
-        
+      <div class="sns_inner clearfix">
+        <div class="sns_title">
+					<h2>오뚜기 SNS</h2>
+					<p>소셜미디어를 통해 오뚜기 스토리를 전해드립니다.</p>
+				</div>
+        <div class="sns_con">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="sns_img">게시글_01</div>
+                <p>게시글_제목_01</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="sns_img">게시글_02</div>
+                <p>게시글_제목_02</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="sns_img">게시글_03</div>
+                <p>게시글_제목_03</p>
+              </a> 
+            </li>
+            <li>
+              <a href="#">
+                <div class="sns_img">게시글_04</div>
+                <p>게시글_제목_04</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </article><!-- #snsBox -->
 
     <footer>
       <div id="menuBox">
+        <h2 class="blind">기타메뉴</h2>
         <div class="menu_inner">
-
+          <ul class="menu_tab">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객상담</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+          </ul>
+          <ul class="menu_sns clearfix">
+            <li><a href="#">페이스북</a></li>
+            <li><a href="#">유튜브</a></li>
+            <li><a href="#">인스타그램</a></li>
+            <li><a href="#">블로그</a></li>
+          </ul>
         </div>
       </div>
       <div id="footBox">
         <div class="foot_inner">
-
+          <h2>logo</h2>
+          <address>
+            <p>
+              (주)오뚜기 사업자등록번호 : 138-81-03238 대표이사 : 황성만<br>
+              주소 : (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)<br>
+              오뚜기 고객상담실 : 080-024-2311<br>
+              오뚜기라면 고객상담실 : 080-088-1212 (월~금, 08:30~17:00)
+            </p>
+            <p>ⓒ <span>ottogi corporation</span>.,ltd all rights reserved.</p>
+          </address>
         </div>
       </div>
     </footer><!-- footer -->

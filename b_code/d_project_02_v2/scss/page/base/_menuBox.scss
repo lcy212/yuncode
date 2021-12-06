@@ -10,9 +10,37 @@
 }// #menuBox
 
 .menu_inner {
-  height: 100%; margin: auto; background-color: #ddd;
+  height: 100%; margin: auto;
   @include mobile { width: 100%; }
   @include tablet { width: 620px }
   @include laptop { width: 965px; }
   @include pc { width: 965px; }
+}
+
+.menu_tab { 
+  float:left; width: auto; height: auto; 
+  li { float:left; position:relative; width: 184px; height: 66px; text-align: center;
+  
+  &:after, &::after {
+    content:""; display:block;
+    position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+    width: 0; height: 20px; border-right:1px solid #fff;
+  }
+  &:last-child:after, &:last-child::after { display: none; } 
+
+  a { text-align: center; line-height: 66px; color:#fff; }
+  a:hover { font-size:1.1rem; font-weight: bold; }
+  }
+}
+
+
+.menu_sns {
+  float:right; width: auto; height: auto; padding-top: 15px;
+
+  li {
+    float:left; width: 35px; height: 35px; margin-right: 20px; background-color: #fff;
+  }
+  li:nth-child(2) { padding-top: 5px; }
+  li:last-child { padding-top: 3px; margin-right: 0; }
+  li a { width: auto; height: auto; }
 }

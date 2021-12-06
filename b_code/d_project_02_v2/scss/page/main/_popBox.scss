@@ -1,7 +1,7 @@
 // _popBox.scss
 
 #popBox {
-  width: 100%;
+  position:relative; width: 100%;
   background-color: $color_white;
   @include mobile { @include remUnit(height, 560); padding-top: 74px; }
   @include tablet { @include remUnit(height, 560); padding-top: 74px; }
@@ -10,9 +10,51 @@
 }// #popBox
 
 .pop_inner {
-  margin: auto; background-color: #ddd;
-  @include mobile { width: 292px; height: 400px;  }
-  @include tablet { width: 733px; height: 394px;}
-  @include laptop { width: 1056px; height: 455px; }
-  @include pc { width: 1056px; height: 455px; } 
+  height: auto; margin:auto; 
+  @include mobile { width: 180px;  }
+  @include tablet { width: 612px;}
+  @include laptop { width: 936px; }
+  @include pc { width: 936px; } 
+}
+.pop_title_area {
+  width: auto; height: auto; margin: auto; text-align: center; 
+  h2 {
+    font-size: 36px;
+    @include title_line($margin:20px);
+    span { 
+      @include mobile { @include blind; }
+      @include tablet { @include blind; }
+    }
+  }
+  p {       
+    @include mobile { @include blind; }
+    @include tablet { @include blind; } 
+  }
+}
+ 
+.pop_btn_area {
+  position:absolute; top: 360px; right: 0; left: 0; margin:auto; height: 0;
+  @include mobile { top: 280px; width: 294px; }
+  @include tablet { top: 280px; width: 726px; }
+  @include laptop { width: 1050px}
+  @include pc { width: 1050px}
+  button { width: 36px; height: 70px; background-color: $color_gray_03; }
+  .next { float:right; }
+  .prev { float:left; }
+}
+
+.pop_con {
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  width:auto; height:auto; margin-top: 58px;
+  li { width: 180px; height: 290px; background-color: #fff; 
+  @include mobile { &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {display: none;} }
+  @include tablet { &:nth-child(4), &:nth-child(5) {display: none;} }
+  }
+  a { display: block; width: 100%; height: 100%; }
+.pop_img { width: 180px; height: 174px; border:1px solid $color_gray_02; }
+.pop_text { width: 180px; height: 116px; padding: 16px; border:1px solid $color_gray_02;
+  .pop_name { text-align:center; font-size: 24px; margin-bottom: 36px; }
+  p {}
+}
+
 }
