@@ -18,11 +18,16 @@
 }
 
 .recipe_title {
-  width: 156px; height: 36px; color:#fff; text-align: center; font-size: 36px;
-  @include mobile { margin: auto; @include title_line($color:$color_white, $margin:20px); }
-  @include tablet { margin: auto; @include title_line($color:$color_white, $margin:20px); }
+  width: 156px; height: auto;  text-align: center;
+  @include mobile { margin: auto;  }
+  @include tablet { margin: auto;  }
   @include laptop { float:right; margin-top: 46px; margin-left: 6px; }
   @include pc { float:right; margin-top: 46px; margin-left: 6px; }
+  h2 {
+    color:#fff; font-size: 36px; text-transform: uppercase;
+    @include mobile { @include title_line($color:$color_white, $margin:20px); }
+    @include tablet { @include title_line($color:$color_white, $margin:20px); }
+  }
 }
 
 .recipe_con {
@@ -63,11 +68,11 @@
 .recipe_btn {   
   @include mobile { 
     width: 120px; height: 36px;
-    margin: auto; padding-top: 50px; box-sizing: content-box; 
+    margin: auto; padding-top: 30px; box-sizing: content-box; 
   }
   @include tablet { 
     width: 120px; height: 36px;
-    margin: auto; padding-top: 50px; box-sizing: content-box; 
+    margin: auto; padding-top: 30px; box-sizing: content-box; 
   }
   @include laptop { position:absolute; top: 110px; right: 105px; }
   @include pc { position:absolute; top: 110px; right: 105px; }

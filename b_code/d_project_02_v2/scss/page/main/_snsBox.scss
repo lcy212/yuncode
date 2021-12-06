@@ -18,14 +18,10 @@
 }
 
 .sns_title {
-  width: auto; margin:auto; text-align: center; background-color: #fff; 
-  @include mobile { height: 36px; }
-  @include tablet { height: 36px; }
-  @include laptop { height: auto; }
-  @include pc { height: auto; }
+  width: auto; height: auto; margin:auto; text-align: center; background-color: #fff; 
 
   & > h2 { 
-    width: 100%;  height: auto; font-size: 36px;
+    width: 100%;  height: auto; font-size: 36px; text-transform: uppercase;
     @include title_line($margin:20px); 
   }
   & > p {

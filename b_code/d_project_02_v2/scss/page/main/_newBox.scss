@@ -19,12 +19,17 @@
 }
 
 .new_title { 
-  width: auto; height: 36px;text-align: center; font-size: 36px;
+  width: auto; height: auto; text-align: center; font-size: 36px;
   
-  @include mobile { margin: auto; @include title_line(); }
-  @include tablet { margin: auto; @include title_line(); }
+  @include mobile { margin: auto; }
+  @include tablet { margin: auto; }
   @include laptop { float:left; margin-top: 46px; margin-left: 6px; }
   @include pc { float:left; margin-top: 46px; margin-left: 6px; }
+
+  h2 {
+    @include mobile { @include title_line(); }
+    @include tablet { @include title_line(); }
+  }
  }
 
 .new_con { 

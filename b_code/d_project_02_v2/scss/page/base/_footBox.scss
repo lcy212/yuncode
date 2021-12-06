@@ -25,10 +25,14 @@
 }
 
 
-address { float:left; width: 576px; height: 132px; 
+address { 
+  float:left; width: 517px; height: 132px; 
+  @include mobile { float:none; width: 248px; }
   p { 
     margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
     &:last-child { margin-bottom: 0; }
     span { text-transform: uppercase; }
+    @include mobile { word-break: break-all;
+      &:nth-child(1) { display: none;} }
   }
 }
