@@ -1,8 +1,10 @@
 // _viewBox.scss
 
+$imgPath:'../../multi/img/main/viewBox/';
+
 #viewBox {
   position:relative; width: 100%;
-  background-color: $color_gray_01;
+  @include img('view_bg.png',$size:cover); // 임시
   @include mobile { @include remUnit(height, 300);  }
   @include tablet { @include remUnit(height, 360);  }
   @include laptop { @include remUnit(height, 500);  }
@@ -14,8 +16,8 @@
   width: 95%; height: auto;
   margin: auto; transform: translateY(-50%);
   button { width: 60px; height: 100px; background-color: $color_gray_04; }
-  .next { float:right; }
-  .prev { float:left; }
+  .next { float:right; @include img('view_next.png'); }
+  .prev { float:left; @include img('view_prev.png'); }
   @include mobile { display: none; }
   @include tablet { display: none; }
 }

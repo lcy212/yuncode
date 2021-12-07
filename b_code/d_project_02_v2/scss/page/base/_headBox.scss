@@ -1,5 +1,7 @@
 // _headBox.scss
 
+$imgPath:'../../multi/img/base/headBox/';
+
 #headBox {
   width: 100%;
   background-color: $color_ottogi_yellow; box-sizing: border-box;
@@ -10,7 +12,7 @@
 }// #headBox
 
 .head_inner {
-  position:relative; margin: auto; background-color: #ddd;
+  position:relative; margin: auto;
   @include mobile { width: 270px; height: 62px; }
   @include tablet { width: 616px; height: 62px; }
   @include laptop { width: 946px; height: 212px; }
@@ -18,13 +20,12 @@
 }//. head_inner
 
 h1 {
-  position:absolute; top: 0; left: 0; right: 0; 
-  margin: auto; background-color: #fff;
+  position:absolute; top: 0; left: 0; right: 0; margin: auto;
   @include mobile { width: 64px; height: 62px; }
   @include tablet { width: 64px; height: 62px; }
   @include laptop { width: 128px; height: 124px; }
   @include pc { width: 128px; height: 124px; }
-  a { display: block; width: 100%; height: 100%; }
+  a { display: block; width: 100%; height: 100%; @include img('logo_pc.png',$size:cover); }
 }
 // gnb --------------------------------------------------------------------------------------
 
@@ -34,8 +35,8 @@ h1 {
     .gnb_btn {
       position:absolute; top: 50%; left: 0;
       transform: translateY(-50%);
-      width: 34px; height: 26px; background-color: #fff;
-      > button { width: 100%; height: 100%; }
+      width: 34px; height: 26px;
+      > button { width: 100%; height: 100%; @include img('gnb_menu.png',$size:cover);}
     }
     & > ul {
       display: none; 
@@ -59,8 +60,8 @@ h1 {
     .gnb_btn {
       position:absolute; top: 50%; left: 0;
       transform: translateY(-50%);
-      width: 34px; height: 26px; background-color: #fff;
-      > button { width: 100%; height: 100%; }
+      width: 34px; height: 26px;
+      > button { width: 100%; height: 100%; @include img('gnb_menu.png',$size:cover);}
     }
     & > ul {
       display: none; 
@@ -84,7 +85,7 @@ h1 {
     .gnb_btn { display: none; }
     & > ul {
       position:absolute; bottom: 0; right: 0; 
-      width: 100%; height: 52px; background-color: #fff;
+      width: 100%; height: 52px; 
   
       & > li {
         float: left; position: relative;
@@ -127,7 +128,7 @@ h1 {
     .gnb_btn { display: none; }
     & > ul {
       position:absolute; bottom: 0; right: 0; 
-      width: 100%; height: 52px; background-color: #fff;
+      width: 100%; height: 52px; 
   
       & > li {
         float: left; position: relative;
@@ -170,12 +171,12 @@ h1 {
 .unb_area { 
   width: auto; height: auto; 
   .unb_btn { 
-    position:absolute;  right: 0; background-color: #fff;
+    position:absolute;  right: 0;
     @include mobile { top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
     @include tablet { top: 50%; transform: translateY(-50%); width: 36px; height: 36px; }
     @include laptop {  width: 40px; height: 40px; }
     @include pc {  width: 40px; height: 40px; }
-    & > button { width: 100%; height: 100%; }
+    & > button { width: 100%; height: 100%; @include img('unb_lang.png',$size:cover) }
   }
 }
 .unb_list {

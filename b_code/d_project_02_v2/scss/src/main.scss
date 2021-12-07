@@ -4,14 +4,7 @@
 @import "../common/variable", "../common/mixin";
 
 #wrap {
-  width: 100%; height: auto; min-height: 800px;
-  background-color: #ddd;
-  @include mobile { min-width:320px; background-color: #fda; }
-  @include tablet { background-color: #adf; }
-  @include laptop { background-color: #fdf; }
-  @include pc { background-color: #dfd; }
-
-} // #wrap
+  width: 100%; height: auto; min-height: 800px; } // #wrap
 
 // ---------------------------------------------------
 @import "../page/base/headBox";

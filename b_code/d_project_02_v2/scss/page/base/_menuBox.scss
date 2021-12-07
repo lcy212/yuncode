@@ -1,5 +1,7 @@
 // _menuBox.scss
 
+$imgPath:'../../multi/img/base/menuBox/';
+
 #menuBox {
   width: 100%;
   background-color: $color_ottogi_blue;
@@ -94,12 +96,19 @@
 
 // sns --------------------------------------------------------------------
 
+.menu_sns {
+  li:nth-child(1) { @include img('facebook.png')}
+  li:nth-child(2) { @include img('youtube.png')}
+  li:nth-child(3) { @include img('instagram.png')}
+  li:nth-child(4) { @include img('blog.png')}
+}
+
 @include mobile {
   .menu_sns {
     width: auto; height: auto; margin: auto; padding-top: 15px;
     ul { width: 100%; height: auto;}
     li {
-      float:left; width: 35px; height: 35px; margin-right: 30px; background-color: #fff;
+      float:left; width: 35px; height: 35px; margin-right: 30px; 
     }
     li:nth-child(2) { padding-top: 5px; }
     li:last-child { padding-top: 3px; margin-right: 0; }
@@ -111,7 +120,7 @@
     width: auto; height: auto; margin: auto; padding-top: 15px;
     ul { width: 100%; height: auto;}
     li {
-      float:left; width: 35px; height: 35px; margin-right: 100px; background-color: #fff;
+      float:left; width: 35px; height: 35px; margin-right: 100px; 
     }
     li:nth-child(2) { padding-top: 5px; }
     li:last-child { padding-top: 3px; margin-right: 0; }
@@ -123,7 +132,7 @@
     float:right; width: auto; height: auto; padding-top: 15px;
     ul { width: 100%; height: auto; }
     li {
-      float:left; width: 35px; height: 35px; margin-right: 20px; background-color: #fff;
+      float:left; width: 35px; height: 35px; margin-right: 20px; 
     }
     li:nth-child(2) { padding-top: 5px; }
     li:last-child { padding-top: 3px; margin-right: 0; }
@@ -135,7 +144,7 @@
     float:right; width: auto; height: auto; padding-top: 15px;
     ul { width: 100%; height: auto; }
     li {
-      float:left; width: 35px; height: 35px; margin-right: 20px; background-color: #fff;
+      float:left; width: 35px; height: 35px; margin-right: 20px; 
     }
     li:nth-child(2) { padding-top: 5px; }
     li:last-child { padding-top: 3px; margin-right: 0; }

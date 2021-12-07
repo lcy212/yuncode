@@ -1,5 +1,7 @@
 // _popBox.scss
 
+$imgPath:'../../multi/img/main/';
+
 #popBox {
   position:relative; width: 100%;
   background-color: $color_white;
@@ -33,14 +35,14 @@
 }
  
 .pop_btn_area {
-  position:absolute; top: 360px; right: 0; left: 0; margin:auto; height: 0;
-  @include mobile { top: 280px; width: 294px; }
-  @include tablet { top: 280px; width: 726px; }
+  position:absolute; top: 380px; right: 0; left: 0; margin:auto; height: 0;
+  @include mobile { top: 300px; width: 294px; }
+  @include tablet { top: 300px; width: 726px; }
   @include laptop { width: 1050px}
   @include pc { width: 1050px}
-  button { width: 36px; height: 70px; background-color: $color_gray_03; }
-  .next { float:right; }
-  .prev { float:left; }
+  button { width: 36px; height: 70px; }
+  .next { float:right; @include img('pop_next.png'); }
+  .prev { float:left; @include img('pop_prev.png'); }
 }
 
 .pop_con {
@@ -51,7 +53,7 @@
   @include tablet { &:nth-child(4), &:nth-child(5) {display: none;} }
   }
   a { display: block; width: 100%; height: 100%; }
-.pop_img { width: 180px; height: 174px; border:1px solid $color_gray_02; }
+.pop_img { width: 180px; height: 174px; border:1px solid $color_gray_02; @include img('pop.png',$size:cover);  }
 .pop_text { width: 180px; height: 116px; padding: 16px; border:1px solid $color_gray_02;
   .pop_name { text-align:center; font-size: 24px; margin-bottom: 36px; }
   p {}

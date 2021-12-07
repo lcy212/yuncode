@@ -7,28 +7,6 @@
   width: 100%;
   height: auto;
   min-height: 800px;
-  background-color: #ddd;
-}
-@media all and (max-width: 767px) {
-  #wrap {
-    min-width: 320px;
-    background-color: #fda;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  #wrap {
-    background-color: #adf;
-  }
-}
-@media all and (min-width: 1280px) and (max-width: 1439px) {
-  #wrap {
-    background-color: #fdf;
-  }
-}
-@media all and (min-width: 1440px) {
-  #wrap {
-    background-color: #dfd;
-  }
 }
 
 #headBox {
@@ -68,7 +46,6 @@
 .head_inner {
   position: relative;
   margin: auto;
-  background-color: #ddd;
 }
 @media all and (max-width: 767px) {
   .head_inner {
@@ -101,7 +78,6 @@ h1 {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #fff;
 }
 @media all and (max-width: 767px) {
   h1 {
@@ -131,6 +107,19 @@ h1 a {
   display: block;
   width: 100%;
   height: 100%;
+  background-image: url(../../multi/img/base/headBox/logo_pc.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+h1 a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media all and (max-width: 767px) {
@@ -145,11 +134,23 @@ h1 a {
     transform: translateY(-50%);
     width: 34px;
     height: 26px;
-    background-color: #fff;
   }
   .gnb_area .gnb_btn > button {
     width: 100%;
     height: 100%;
+    background-image: url(../../multi/img/base/headBox/gnb_menu.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .gnb_area .gnb_btn > button > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   .gnb_area > ul {
     display: none;
@@ -202,11 +203,23 @@ h1 a {
     transform: translateY(-50%);
     width: 34px;
     height: 26px;
-    background-color: #fff;
   }
   .gnb_area .gnb_btn > button {
     width: 100%;
     height: 100%;
+    background-image: url(../../multi/img/base/headBox/gnb_menu.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .gnb_area .gnb_btn > button > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   .gnb_area > ul {
     display: none;
@@ -261,7 +274,6 @@ h1 a {
     right: 0;
     width: 100%;
     height: 52px;
-    background-color: #fff;
   }
   .gnb_area > ul > li {
     float: left;
@@ -348,7 +360,6 @@ h1 a {
     right: 0;
     width: 100%;
     height: 52px;
-    background-color: #fff;
   }
   .gnb_area > ul > li {
     float: left;
@@ -428,7 +439,6 @@ h1 a {
 .unb_area .unb_btn {
   position: absolute;
   right: 0;
-  background-color: #fff;
 }
 @media all and (max-width: 767px) {
   .unb_area .unb_btn {
@@ -461,6 +471,19 @@ h1 a {
 .unb_area .unb_btn > button {
   width: 100%;
   height: 100%;
+  background-image: url(../../multi/img/base/headBox/unb_lang.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.unb_area .unb_btn > button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .unb_list {
@@ -500,7 +523,19 @@ h1 a {
 #viewBox {
   position: relative;
   width: 100%;
-  background-color: #dcdcdc;
+  background-image: url(../../multi/img/main/viewBox/view_bg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#viewBox > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 @media all and (max-width: 767px) {
   #viewBox {
@@ -544,9 +579,35 @@ h1 a {
 }
 .view_btn_area .next {
   float: right;
+  background-image: url(../../multi/img/main/viewBox/view_next.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.view_btn_area .next > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .view_btn_area .prev {
   float: left;
+  background-image: url(../../multi/img/main/viewBox/view_prev.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.view_btn_area .prev > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 @media all and (max-width: 767px) {
   .view_btn_area {
@@ -694,8 +755,20 @@ h1 a {
   width: 220px;
   height: 100%;
   margin-right: 20px;
-  background-color: #888;
+  background-image: url(../../multi/img/main/link.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
   border-radius: 4px;
+}
+.link_con li > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .link_con li:nth-child(4) {
   margin-right: 0;
@@ -726,7 +799,29 @@ h1 a {
   display: block;
   width: 100%;
   height: 100%;
+  padding-top: 60px;
   border-radius: 4px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+@media all and (max-width: 767px) {
+  .link_con li a {
+    padding-top: 12px;
+  }
+}
+.link_con li a > span {
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 18px;
+  margin-top: 18px;
+  font-weight: normal;
+}
+@media all and (max-width: 767px) {
+  .link_con li a > span {
+    margin-top: 4px;
+  }
 }
 
 #newBox {
@@ -752,6 +847,7 @@ h1 a {
     height: 420px;
     height: 26.25rem;
     padding-top: 105px;
+    border-radius: 0 200px 200px 0;
   }
 }
 @media all and (min-width: 1440px) {
@@ -759,6 +855,7 @@ h1 a {
     height: 420px;
     height: 26.25rem;
     padding-top: 105px;
+    border-radius: 0 200px 200px 0;
   }
 }
 
@@ -881,6 +978,19 @@ h1 a {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  background-image: url(../../multi/img/main/new.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.new_con li a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media all and (max-width: 767px) {
@@ -1061,7 +1171,7 @@ h1 a {
 
 .pop_btn_area {
   position: absolute;
-  top: 360px;
+  top: 380px;
   right: 0;
   left: 0;
   margin: auto;
@@ -1069,13 +1179,13 @@ h1 a {
 }
 @media all and (max-width: 767px) {
   .pop_btn_area {
-    top: 280px;
+    top: 300px;
     width: 294px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .pop_btn_area {
-    top: 280px;
+    top: 300px;
     width: 726px;
   }
 }
@@ -1092,13 +1202,38 @@ h1 a {
 .pop_btn_area button {
   width: 36px;
   height: 70px;
-  background-color: #7b7b7b;
 }
 .pop_btn_area .next {
   float: right;
+  background-image: url(../../multi/img/main/pop_next.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.pop_btn_area .next > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .pop_btn_area .prev {
   float: left;
+  background-image: url(../../multi/img/main/pop_prev.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.pop_btn_area .prev > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .pop_con {
@@ -1133,6 +1268,19 @@ h1 a {
   width: 180px;
   height: 174px;
   border: 1px solid #b0b0b0;
+  background-image: url(../../multi/img/main/pop.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.pop_con .pop_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .pop_con .pop_text {
   width: 180px;
@@ -1168,6 +1316,7 @@ h1 a {
     height: 420px;
     height: 26.25rem;
     padding-top: 104px;
+    border-radius: 200px 0 0 200px;
   }
 }
 @media all and (min-width: 1440px) {
@@ -1175,6 +1324,7 @@ h1 a {
     height: 420px;
     height: 26.25rem;
     padding-top: 104px;
+    border-radius: 200px 0 0 200px;
   }
 }
 
@@ -1318,6 +1468,24 @@ h1 a {
   text-align: center;
   line-height: 66px;
   background-color: #fff;
+}
+.recipe_con li .recipe_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url(../../multi/img/main/recipe.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.recipe_con li .recipe_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .recipe_con li .recipe_name {
   position: absolute;
@@ -1534,7 +1702,19 @@ h1 a {
   width: 100%;
   height: 220px;
   border-radius: 5%;
-  background-color: #777;
+  background-image: url(../../multi/img/main/sns.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.sns_con li a .sns_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .sns_con li a p {
   margin-top: 5px;
@@ -1776,6 +1956,67 @@ h1 a {
     font-weight: bold;
   }
 }
+.menu_sns li:nth-child(1) {
+  background-image: url(../../multi/img/base/menuBox/facebook.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.menu_sns li:nth-child(1) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.menu_sns li:nth-child(2) {
+  background-image: url(../../multi/img/base/menuBox/youtube.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.menu_sns li:nth-child(2) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.menu_sns li:nth-child(3) {
+  background-image: url(../../multi/img/base/menuBox/instagram.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.menu_sns li:nth-child(3) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.menu_sns li:nth-child(4) {
+  background-image: url(../../multi/img/base/menuBox/blog.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+.menu_sns li:nth-child(4) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 @media all and (max-width: 767px) {
   .menu_sns {
     width: auto;
@@ -1792,7 +2033,6 @@ h1 a {
     width: 35px;
     height: 35px;
     margin-right: 30px;
-    background-color: #fff;
   }
   .menu_sns li:nth-child(2) {
     padding-top: 5px;
@@ -1822,7 +2062,6 @@ h1 a {
     width: 35px;
     height: 35px;
     margin-right: 100px;
-    background-color: #fff;
   }
   .menu_sns li:nth-child(2) {
     padding-top: 5px;
@@ -1852,7 +2091,6 @@ h1 a {
     width: 35px;
     height: 35px;
     margin-right: 20px;
-    background-color: #fff;
   }
   .menu_sns li:nth-child(2) {
     padding-top: 5px;
@@ -1882,7 +2120,6 @@ h1 a {
     width: 35px;
     height: 35px;
     margin-right: 20px;
-    background-color: #fff;
   }
   .menu_sns li:nth-child(2) {
     padding-top: 5px;

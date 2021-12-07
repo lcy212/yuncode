@@ -1,5 +1,7 @@
 // _linkBox.scss
 
+$imgPath:'../../multi/img/main/';
+
 #linkBox {
   width: 100%;
   background-color: $color_white;
@@ -23,10 +25,10 @@
   li {
     float:left;
     width: 220px; height: 100%; margin-right: 20px;
-    background-color: #888; border-radius: 4px;
+    @include img('link.png'); border-radius: 4px;
     &:nth-child(4) { margin-right: 0; }
     @include mobile {
-      width: 280px; height: 100px; margin-right: 0; margin-bottom: 25px;
+      width: 280px; height: 100px; margin-right: 0; margin-bottom: 25px; 
       &:nth-child(3) { margin-bottom: 0; } 
       &:last-child { display: none;} 
     }
@@ -36,6 +38,13 @@
     }
     @include laptop {}
     @include pc {}
-    a { display: block; width: 100%; height: 100%; border-radius: 4px; }
+    a { 
+      display: block; width: 100%; height: 100%;  padding-top: 60px;
+      border-radius: 4px; font-size: 36px; font-weight: bold; text-align: center;
+      @include mobile { padding-top: 12px; }
+     > span { display: block; width: 100%; height: 20px; font-size: 18px; margin-top: 18px; font-weight: normal;
+      @include mobile { margin-top: 4px; }
+    }
+    }
   }
 }
