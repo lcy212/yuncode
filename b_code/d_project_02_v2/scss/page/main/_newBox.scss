@@ -48,7 +48,10 @@ $imgPath:'../../multi/img/main/';
       &:nth-child(2), &:nth-child(3) { display: none; }
     
     }
-    a { display: block; width: 100%; height: 100%; border-radius: 100%; @include img('new.png',$size:cover) ; }
+    a { 
+      display: block; width: 100%; height: 100%; border-radius: 100%; @include img('new.png',$size:cover) ; 
+      &:hover { box-shadow:0 0 4px  $color_ottogi_red; }
+    }
   }// li
 }
 
@@ -63,7 +66,7 @@ $imgPath:'../../multi/img/main/';
   }
   @include laptop { position:absolute; top: 110px; left: 10px; }
   @include pc { position:absolute; top: 110px; left: 10px; }
-
+  
   a {
     display: block; width: 100%; height: 100%;
     @include mobile {      
@@ -74,7 +77,10 @@ $imgPath:'../../multi/img/main/';
       background-color: #fff;  border-radius:20px;
       text-align: center; line-height:36px;
     }
-    @include laptop {}
-    @include pc {}
-  }
+    &:hover { 
+      font-weight: bold; 
+      @include mobile { transform: scale(1.05); }
+      @include tablet { transform: scale(1.05); }
+    }
+  }// a
 } 

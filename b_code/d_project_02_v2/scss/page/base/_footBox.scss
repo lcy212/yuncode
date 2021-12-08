@@ -1,5 +1,7 @@
 // _footBox.scss
 
+$imgPath:'../../multi/img/base/headBox/';
+
 #footBox {
   width: 100%;
   background-color: $color_white;
@@ -16,7 +18,8 @@
   @include laptop { width: 942px; height: 132px; }
   @include pc { width: 942px; height: 132px; }
 
-  h2 {  
+  h2 {
+    @include img('logo_pc.png',$size:cover);
     @include mobile { @include blind; }
     @include tablet { @include blind; }
     @include laptop { float:right; width: 128px; height: 124px; }

@@ -13,142 +13,77 @@ $imgPath:'../../multi/img/base/menuBox/';
 
 .menu_inner {
   height: 100%; margin: auto;
-  @include mobile { display: flex; justify-content: start; flex-direction: column-reverse; }
-  @include tablet { display: flex; justify-content: start; flex-direction: column-reverse; }
+  @include mobile { display: flex; justify-content: start; flex-direction: column; }
+  @include tablet { display: flex; justify-content: start; flex-direction: column; }
   @include laptop { width: 965px; }
   @include pc { width: 965px; }
 }
 
 // menu -------------------------------------------------
 
-@include mobile {
-  .menu_tab { 
-    width: 100%; height:  100px; background-color: $color_gray_01;border-bottom: 1px solid $color_gray_02;
-    ul { width: 100%; height: auto; margin:auto; }
-   li { float:left; position:relative; width: 50%; height: 50px; 
-   &:nth-child(1) { width: 100%; border-bottom: 1px solid $color_gray_02; }
-   &:after, &::after {
-     content:""; display:block;
-     position:absolute; top: 0; bottom:0; right: 0; margin: auto;
-     width: 0; height: 20px; border-right:1px solid $color_black;
-   }
-   &:last-child:after, &:last-child::after { display: none; } 
- 
-   a { display: block; width: 100%; height: 80%; text-align: center; line-height: 50px; color:$color_black; }
-   a:hover { font-size:1.1rem; font-weight: bold; }
-   }
- }
-}
-@include tablet {
-  .menu_tab { 
-     width: 100%; height:  66px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02;
-     ul { width: 552px; height: auto; margin:auto; }
-    li { float:left; position:relative; width: 184px; height: 66px; text-align: center;
+.menu_tab { 
     
+  @include mobile { width: 100%; height: 100px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; }
+  @include tablet { width: 100%; height: 66px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; }
+  @include laptop { float:left; width: auto; height: auto; }
+  @include pc { float:left; width: auto; height: auto; }
+
+  ul { 
+    width: 100%; height: auto; 
+    @include mobile { margin:auto; }
+    @include tablet { width: 552px; margin:auto; }
+  }
+ li { 
+    float:left; position:relative; height: 66px; text-align: center;
+    @include mobile { width: 50%; height: 50px;}
+    @include tablet { width: 184px; }
+    @include laptop { width: 184px; }
+    @include pc { width: 184px; }
+
+    &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
     &:after, &::after {
-      content:""; display:block;
-      position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+      content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
       width: 0; height: 20px; border-right:1px solid $color_black;
+      @include laptop { border-right:1px solid $color_white; }
+      @include pc { border-right:1px solid $color_white; }
     }
+    &:nth-child(1):after, &:nth-child(1)::after { @include mobile { display: none; } }
     &:last-child:after, &:last-child::after { display: none; } 
-  
-    a { text-align: center; line-height: 66px; color:$color_black; }
-    a:hover { font-size:1.1rem; font-weight: bold; }
+
+    a { 
+      display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_black;
+      @include mobile { line-height: 50px; }
+      @include laptop { color:$color_white; }
+      @include pc { color:$color_white; } 
+      &:hover { font-size:1.1rem; font-weight: bold; }
     }
-  }
-}
-@include laptop {
-  .menu_tab { 
-    float:left; width: auto; height: auto; 
-    ul { width: 100%; height: auto; }
-    li { float:left; position:relative; width: 184px; height: 66px; text-align: center;
-    
-    &:after, &::after {
-      content:""; display:block;
-      position:absolute; top: 0; bottom:0; right: 0; margin: auto;
-      width: 0; height: 20px; border-right:1px solid #fff;
-    }
-    &:last-child:after, &:last-child::after { display: none; } 
-  
-    a { text-align: center; line-height: 66px; color:#fff; }
-    a:hover { font-size:1.1rem; font-weight: bold; }
-    }
-  }
-}
-@include pc {
-  .menu_tab { 
-    float:left; width: auto; height: auto; 
-    ul { width: 100%; height: auto; }
-    li { float:left; position:relative; width: 184px; height: 66px; text-align: center;
-    
-    &:after, &::after {
-      content:""; display:block;
-      position:absolute; top: 0; bottom:0; right: 0; margin: auto;
-      width: 0; height: 20px; border-right:1px solid #fff;
-    }
-    &:last-child:after, &:last-child::after { display: none; } 
-  
-    a { text-align: center; line-height: 66px; color:#fff; }
-    a:hover { font-size:1.1rem; font-weight: bold; }
-    }
-  }
-}
+
+  }// li
+}// menu_tab
+
 
 // sns --------------------------------------------------------------------
 
 .menu_sns {
-  li:nth-child(1) { @include img('facebook.png')}
-  li:nth-child(2) { @include img('youtube.png')}
-  li:nth-child(3) { @include img('instagram.png')}
-  li:nth-child(4) { @include img('blog.png')}
-}
+  width: auto; height: auto;
+  @include mobile { margin: auto;}
+  @include tablet { margin: auto;}
+  @include laptop { float:right;  padding-top: 15px;}
+  @include pc { float:right;  padding-top: 15px;}
 
-@include mobile {
-  .menu_sns {
-    width: auto; height: auto; margin: auto; padding-top: 15px;
-    ul { width: 100%; height: auto;}
-    li {
-      float:left; width: 35px; height: 35px; margin-right: 30px; 
-    }
-    li:nth-child(2) { padding-top: 5px; }
-    li:last-child { padding-top: 3px; margin-right: 0; }
-    li a { width: auto; height: auto; }
-  }
-}
-@include tablet {
-  .menu_sns {
-    width: auto; height: auto; margin: auto; padding-top: 15px;
-    ul { width: 100%; height: auto;}
-    li {
-      float:left; width: 35px; height: 35px; margin-right: 100px; 
-    }
-    li:nth-child(2) { padding-top: 5px; }
-    li:last-child { padding-top: 3px; margin-right: 0; }
-    li a { width: auto; height: auto; }
-  }
-}
-@include laptop {
-  .menu_sns {
-    float:right; width: auto; height: auto; padding-top: 15px;
-    ul { width: 100%; height: auto; }
-    li {
-      float:left; width: 35px; height: 35px; margin-right: 20px; 
-    }
-    li:nth-child(2) { padding-top: 5px; }
-    li:last-child { padding-top: 3px; margin-right: 0; }
-    li a { width: auto; height: auto; }
-  }
-}
-@include pc {
-  .menu_sns {
-    float:right; width: auto; height: auto; padding-top: 15px;
-    ul { width: 100%; height: auto; }
-    li {
-      float:left; width: 35px; height: 35px; margin-right: 20px; 
-    }
-    li:nth-child(2) { padding-top: 5px; }
-    li:last-child { padding-top: 3px; margin-right: 0; }
-    li a { width: auto; height: auto; }
-  }
+  ul { width: 100%; height: auto;}
+  li {
+    float:left; width: 35px; height: 35px; 
+    @include mobile { margin-right: 35px; }
+    @include tablet { margin-right: 100px; }
+    @include laptop { margin-right: 20px; }
+    @include pc { margin-right: 20px; }
+    &:nth-child(4) { margin-right: 0; }
+    &:nth-child(1) a { @include img('facebook.png'); }
+    &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
+    &:nth-child(3) a { @include img('instagram.png'); }
+    &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+    a { display: block; width: 100%; height: 100%; }
+  }// li
 }
 

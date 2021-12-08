@@ -1,0 +1,21 @@
+.menu_sns {
+  width: auto; height: auto;  padding-top: 15px;
+  @include mobile {margin: auto;}
+  @include tablet {margin: auto;}
+  @include laptop {float:right;}
+  @include pc {float:right;}
+
+  ul { width: 100%; height: auto;}
+  li {
+    float:left; width: 35px; height: 35px; 
+    @include mobile {margin-right: 30px;}
+    @include tablet {margin-right: 100px;}
+    @include laptop {margin-right: 20px;}
+    @include pc {margin-right: 20px;}
+    &:nth-child(1) { @include img('facebook.png'); }
+    &:nth-child(2) { @include img('youtube.png'); padding-top: 5px; }
+    &:nth-child(3) { @include img('instagram.png'); }
+    &:nth-child(4) { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+    a { width: auto; height: auto; }
+  }
+}
