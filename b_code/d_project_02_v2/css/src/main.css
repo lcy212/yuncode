@@ -192,57 +192,6 @@ h1 a > span {
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  .gnb_area {
-    width: auto;
-    height: auto;
-  }
-  .gnb_area .gnb_btn {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 34px;
-    height: 26px;
-  }
-  .gnb_area .gnb_btn > button {
-    width: 100%;
-    height: 100%;
-    background-image: url(../../multi/img/base/headBox/gnb_menu.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-  .gnb_area .gnb_btn > button > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .gnb_area > ul {
-    display: none;
-    position: absolute;
-    top: 81px;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 438px;
-    background-color: #c8102e;
-  }
-  .gnb_area > ul > li {
-    width: 100%;
-    height: 74px;
-    border-bottom: 1px solid #fff;
-    font-size: 24px;
-    color: #fff;
-    line-height: 72px;
-    text-indent: 8px;
-  }
-  .gnb_area > ul > li:last-child {
-    border-bottom: 0;
-  }
   .gnb_area > ul > li .gnb_title {
     width: 100%;
     height: 72px;
@@ -261,43 +210,6 @@ h1 a > span {
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  .gnb_area {
-    width: auto;
-    height: auto;
-  }
-  .gnb_area .gnb_btn {
-    display: none;
-  }
-  .gnb_area > ul {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 52px;
-  }
-  .gnb_area > ul > li {
-    float: left;
-    position: relative;
-    width: 16.6666666667%;
-    height: auto;
-    box-sizing: border-box;
-  }
-  .gnb_area > ul > li:after, .gnb_area > ul > li::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 0;
-    height: 20px;
-    border-right: 1px solid #1e1e1e;
-  }
-  .gnb_area > ul > li:last-child:after, .gnb_area > ul > li:last-child::after {
-    display: none;
-  }
-
   .gnb_title {
     width: 100%;
     height: 52px;
@@ -805,6 +717,9 @@ h1 a > span {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
+}
+.link_con li a:hover {
+  transform: scale(1.1);
 }
 @media all and (max-width: 767px) {
   .link_con li a {
@@ -1378,7 +1293,7 @@ h1 a > span {
 }
 
 .recipe_title {
-  width: 156px;
+  width: auto;
   height: auto;
   text-align: center;
 }
@@ -1409,7 +1324,7 @@ h1 a > span {
 .recipe_title h2 {
   color: #fff;
   font-size: 36px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 @media all and (max-width: 767px) {
   .recipe_title h2 {
@@ -1482,6 +1397,7 @@ h1 a > span {
   border-radius: 100%;
 }
 .recipe_con li a:hover {
+  transform: scale(1.05);
   font-weight: bold;
 }
 .recipe_con li .sub_title {
@@ -1515,9 +1431,10 @@ h1 a > span {
 }
 .recipe_con li .recipe_name {
   position: absolute;
-  top: 250px;
+  top: 210px;
   left: 50%;
-  margin: -45px;
+  transform: translateX(-50%);
+  color: #ffffff;
 }
 
 @media all and (max-width: 767px) {
@@ -1722,6 +1639,9 @@ h1 a > span {
   height: 100%;
 }
 @media all and (max-width: 767px) {
+  .sns_con li:nth-child(1) {
+    margin-bottom: 40px;
+  }
   .sns_con li:nth-child(3), .sns_con li:nth-child(4) {
     display: none;
   }
@@ -1983,36 +1903,36 @@ h1 a > span {
   }
 }
 .menu_sns ul {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: auto;
 }
-.menu_sns li {
-  float: left;
-  width: 35px;
-  height: 35px;
-}
 @media all and (max-width: 767px) {
-  .menu_sns li {
-    margin-right: 35px;
+  .menu_sns ul {
+    width: 100vw;
+    min-width: 250px;
+    max-width: 440px;
+    padding: 0 20px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  .menu_sns li {
-    margin-right: 100px;
+  .menu_sns ul {
+    width: 440px;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  .menu_sns li {
-    margin-right: 20px;
+  .menu_sns ul {
+    width: 220px;
   }
 }
 @media all and (min-width: 1440px) {
-  .menu_sns li {
-    margin-right: 20px;
+  .menu_sns ul {
+    width: 220px;
   }
 }
-.menu_sns li:nth-child(4) {
-  margin-right: 0;
+.menu_sns li {
+  width: 35px;
+  height: 35px;
 }
 .menu_sns li:nth-child(1) a {
   background-image: url(../../multi/img/base/menuBox/facebook.png);

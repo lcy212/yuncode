@@ -71,14 +71,16 @@ $imgPath:'../../multi/img/base/menuBox/';
   @include laptop { float:right;  padding-top: 15px;}
   @include pc { float:right;  padding-top: 15px;}
 
-  ul { width: 100%; height: auto;}
+  ul { display: flex; justify-content: space-between; height: auto;
+    
+  @include mobile { width: 100vw; min-width: 250px; max-width: 440px; padding: 0 20px; }
+  @include tablet { width: 440px; }
+  @include laptop { width: 220px; }
+  @include pc { width: 220px; }
+  }
   li {
-    float:left; width: 35px; height: 35px; 
-    @include mobile { margin-right: 35px; }
-    @include tablet { margin-right: 100px; }
-    @include laptop { margin-right: 20px; }
-    @include pc { margin-right: 20px; }
-    &:nth-child(4) { margin-right: 0; }
+    width: 35px; height: 35px; 
+    // &:nth-child(4) { margin-right: 0; }
     &:nth-child(1) a { @include img('facebook.png'); }
     &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
     &:nth-child(3) a { @include img('instagram.png'); }

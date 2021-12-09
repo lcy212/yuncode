@@ -39,12 +39,13 @@ $imgPath:'../../multi/img/main/';
     @include laptop {}
     @include pc {}
     a { 
+      &:hover { transform:scale(1.1); }
       display: block; width: 100%; height: 100%;  padding-top: 60px; box-sizing:border-box;
       border-radius: 4px; font-size: 36px; font-weight: bold; text-align: center;
       @include mobile { padding-top: 12px; }
-     > span { display: block; width: 100%; height: 20px; font-size: 18px; margin-top: 18px; font-weight: normal;
-      @include mobile { margin-top: 4px; }
-    }
-    }
-  }
+      > span { display: block; width: 100%; height: 20px; font-size: 18px; margin-top: 18px; font-weight: normal;
+        @include mobile { margin-top: 4px; }
+      }
+    }// a
+  }// li
 }
