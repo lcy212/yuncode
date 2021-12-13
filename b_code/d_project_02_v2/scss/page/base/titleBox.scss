@@ -1,0 +1,20 @@
+// titleBox.scss
+/* titleBox.css */
+
+
+#titleBox {
+  width: 100%; background-color: #ddd;
+  @include mobile { height: 225px; padding-top: 60px;}
+  @include tablet { height: 340px; padding-top: 130px;}
+  @include laptop { height: 400px; padding-top: 164px;}
+  @include pc { height: 400px; padding-top: 164px; }
+}
+.title_inner { 
+  width: 570px; height: 90px; margin:auto; text-align: center;
+  @include mobile { width: 280px; height: 105px; }
+  @include tablet {}
+  @include laptop {}
+  @include pc {}
+  h2 { margin-bottom: 25px; font-size: 36px;  }
+}
+  
