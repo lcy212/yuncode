@@ -1,0 +1,26 @@
+// c_13_dom_oction.scss
+
+#wrap { width: 100%; height: auto; min-height: 500px; background-color: #ddd; }
+#headBox { width: 100%; height: 154px; }
+#viewBox { 
+  position:relative;
+  width: 100%; height: 387px;
+  .btn_area {
+    position:absolute; top: 50%; left: 50%; z-index: 50;  transform: translate(-50%);
+    width: 90%; height: 0; margin: auto;
+    & > button { width: 35px; height: 40px; background-color: #888; 
+      &.next { float:right; }
+      &.prev { float:left; }
+    }
+  }// .btn_area
+  .view_area {
+    width: 100%; height: 100%; 
+    li { 
+      position:absolute; top: 0; left: 0; width: 100%; height: 100%;
+      &:nth-child(1) { background-color: #adf; }
+      &:nth-child(2) { z-index: -8; background-color: #daf; }
+      &:nth-child(3) { z-index: -9; background-color: #fad; }
+      &:nth-child(4) { z-index: -10; background-color: #fda; }
+    }
+  }
+}
