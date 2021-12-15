@@ -10,11 +10,11 @@
   @include pc { padding-left: 170px; }
 }
 
-.info_inner { height: 66px; 
+.info_inner { height: 66px; margin: auto;
   @include mobile { width: 320px; }
-  @include tablet { width: 350px; }
-  @include laptop { width: 430px; }
-  @include pc { width: 430px; }
+  @include tablet { min-width: 768px; width:auto; max-width:1100px; }
+  @include laptop { width: 1100px; }
+  @include pc { width: 1100px; }
 }
 
 .info_tab { 

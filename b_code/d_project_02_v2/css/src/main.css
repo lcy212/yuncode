@@ -46,18 +46,11 @@
 .head_inner {
   position: relative;
   margin: auto;
-}
-@media all and (max-width: 767px) {
-  .head_inner {
-    width: 270px;
-    height: 62px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1279px) {
-  .head_inner {
-    width: 616px;
-    height: 62px;
-  }
+  min-width: 270px;
+  max-width: 1000px;
+  height: 62px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
   .head_inner {
@@ -254,7 +247,7 @@ h1 a > span {
 .gnb_btn {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 50px;
   transform: translateY(-50%);
   width: 34px;
   height: 26px;
@@ -409,7 +402,7 @@ h1 a > span {
 }
 .unb_area .unb_btn {
   position: absolute;
-  right: 0;
+  right: 50px;
 }
 @media all and (max-width: 767px) {
   .unb_area .unb_btn {
@@ -460,8 +453,8 @@ h1 a > span {
 .unb_list {
   display: none;
   position: absolute;
-  top: 47px;
-  right: -23px;
+  top: 60px;
+  right: 22px;
   z-index: 10;
   width: 90px;
   height: auto;
