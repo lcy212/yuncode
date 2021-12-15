@@ -1,0 +1,33 @@
+
+/* ottogi_navBox
+------------------------------------------------------------- */
+#ottogi_navBox {  width: 100%; height: 100px; padding-top:20px; font-size:22px;  background-color: #fff; border-bottom: 1px solid $color_gray_02; 
+@include mobile { padding-top: 0; border-bottom: 0; }
+}
+
+.ottogi_inner { 
+  min-width:320px; max-width: 940px; height: 80px; margin: auto; 
+
+  ul {
+    width: 100%; height: auto; 
+    li {
+      float:left; position:relative; width: 25%; height: 80px;
+      @include mobile { width: 50%; border-bottom: 1px solid $color_gray_02; }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto; 
+        width: 0; height: 36px; border-right:1px solid $color_gray_02; }
+      &:nth-child(2):after, &:nth-child(2)::after { @include mobile { display: none;} }
+      &:last-child { 
+        text-transform: uppercase; 
+        &:after, &::after { display: none; } }
+      &.action { color:rgba(200,16,46,1); font-weight: bold; border-bottom: 2px solid rgba(200,16,46,1); }
+
+      a { 
+        display: block; width: 100%; height: 100%;
+        text-align: center; line-height: 80px; background-color: transparent; 
+        &:hover { color:rgba(200,16,46,1); font-weight: bold; border-bottom: 2px solid rgba(200,16,46,1); }
+        
+      }// a
+    }// li
+  }// ul
+}// .ottogi_inner

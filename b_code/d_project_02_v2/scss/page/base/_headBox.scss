@@ -82,8 +82,8 @@ h1 {
     }// li
   }// ul
 }// gnb_area
-@include mobile {.gnb_area:hover ul { display: block; }}
-@include tablet {.gnb_area:hover ul { display: block; }}
+@include mobile {.gnb_btn:hover + ul { display: block; }}
+@include tablet {.gnb_btn:hover + ul { display: block; }}
 
 
 .gnb_btn {
