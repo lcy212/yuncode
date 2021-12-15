@@ -168,5 +168,5 @@ arrayList2.forEach( (d,i) => {
 const otherArr2 = arrayList.filter((el)=>{
   return el !== arrayList2[selectI];
 });
-console.log( otherArr );
-console.log( otherArr2 );
+// console.log( otherArr );
+// console.log( otherArr2 );
