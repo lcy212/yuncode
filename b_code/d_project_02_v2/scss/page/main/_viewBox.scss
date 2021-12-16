@@ -34,8 +34,8 @@ $imgPath:'../../multi/img/main/viewBox/';
   ul { width: 190px; height: 32px;padding: 7px 8px; 
     li { float:left; margin-right: 4px; width: 18px; height: 18px; 
       &:last-child { margin-right: 0; }
-      a { border-radius:100%; background-color: rgba(176,176,176,1); }
-      &.action > a { background-color: #fff; }
+      a { border-radius:100%; background-color: $color_gray_02; }
+      &.action > a { background-color: $color_white; }
     }
   }
 }

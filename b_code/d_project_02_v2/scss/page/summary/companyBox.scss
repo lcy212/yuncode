@@ -2,9 +2,9 @@
 
 $imgPath:'../../multi/img/sub/';
 
-#companyBox { width: 100%; height: 840px; padding-top: 180px; background-color: #fff; 
+#companyBox { width: 100%; height: 840px; padding-top: 180px; background-color: $color_white; 
   @include mobile {  height:950px; }
-  @include tablet {  height:1200px; }
+  @include tablet {  height:1100px; }
 }
 
 .company_inner { width:auto;  height: 440px; margin:auto; 
@@ -24,17 +24,15 @@ $imgPath:'../../multi/img/sub/';
 }
 
 .company_con {
-  max-width: 940px; width: auto; min-width: 470px; height: 236px; margin: auto; margin-top: 70px;
+  max-width: 940px; width: auto; height: 236px; margin: auto; margin-top: 70px;
   @include mobile { width: 238px; height: 510px; }
   @include tablet {  height: auto; }
-  @include laptop {}
-  @include pc {}
   li { 
-    float:left; width: 235px; height: 236px; background-color: #aaa; 
+    float:left; width: 235px; height: 236px;
     &:nth-of-type(1), &:nth-of-type(3) { @include img('factoryBox.png',$size:cover); }
-    &:nth-of-type(2)  { background-color: rgba(254,219,0,1); }
-    &:nth-of-type(4)  { background-color: rgba(200,16,46,1); color:#fff;  
-                        & dt:after, & dt::after  { border-bottom: 1px solid #fff; } }
+    &:nth-of-type(2)  { background-color: $color_ottogi_yellow; }
+    &:nth-of-type(4)  { background-color: $color_ottogi_red; color:$color_white;  
+                        & dt:after, & dt::after  { border-bottom: 1px solid $color_white; } }
 
     @include mobile {
       float:none; 
@@ -49,7 +47,7 @@ $imgPath:'../../multi/img/sub/';
   }// li
   dl { width: 100%; height: 100%; padding: 48px 0; text-align: center; }
   dt { font-size: 24px; font-weight: bold; 
-    &:after, &::after { content:""; display: block; width: 176px; height: 0; margin: 18px auto; border-bottom: 1px solid rgba(30,30,30,1); }
+    &:after, &::after { content:""; display: block; width: 176px; height: 0; margin: 18px auto; border-bottom: 1px solid $color_black; }
   }
   // dd
 }

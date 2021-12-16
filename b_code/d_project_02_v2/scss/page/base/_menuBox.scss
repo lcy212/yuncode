@@ -2,90 +2,135 @@
 
 $imgPath:'../../multi/img/base/menuBox/';
 
-#menuBox {
-  width: 100%;
-  background-color: $color_ottogi_blue;
-  @include mobile { @include remUnit(height, 166); }
-  @include tablet { @include remUnit(height, 132); }
-  @include laptop { @include remUnit(height, 66); }
-  @include pc { @include remUnit(height, 66); }
-}// #menuBox
-
-.menu_inner {
-  height: 100%; margin: auto;
-  @include mobile { display: flex; justify-content: start; flex-direction: column; }
-  @include tablet { display: flex; justify-content: start; flex-direction: column; }
-  @include laptop { width: 965px; }
-  @include pc { width: 965px; }
-}
-
-// menu -------------------------------------------------
-
-.menu_tab { 
-    
-  @include mobile { width: 100%; height: 100px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; }
-  @include tablet { width: 100%; height: 66px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; }
-  @include laptop { float:left; width: auto; height: auto; }
-  @include pc { float:left; width: auto; height: auto; }
-
-  ul { 
-    width: 100%; height: auto; 
-    @include mobile { margin:auto; }
-    @include tablet { width: 552px; margin:auto; }
+@include mobile {
+  #menuBox { width: 100%; @include remUnit(height, 166); background-color: $color_ottogi_blue; }
+  .menu_inner { display: flex; height: 100%; margin: auto; justify-content: start; flex-direction: column; }
+  .menu_tab { 
+    width: 100%; height: 100px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; 
+   ul { width: 100%; height: auto; margin:auto; }
+   li { 
+      float:left; position:relative; width: 50%; height: 50px; text-align: center; 
+      &:nth-child(1) { width: 100%; border-bottom: 1px solid $color_gray_02; }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_black; }
+      &:nth-child(1):after, &:nth-child(1)::after { display: none; }
+      &:last-child:after, &:last-child::after { display: none; }  
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 50px; color:$color_black;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      } 
+    }// li
+  }// menu_tab
+  .menu_sns {
+    width: auto; height: auto; margin: auto;
+    ul { display: flex; justify-content: space-between; height: auto;
+        width: 100vw; min-width: 250px; max-width: 440px; padding: 0 20px; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(1) a { @include img('facebook.png'); }
+      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
+      &:nth-child(3) a { @include img('instagram.png'); }
+      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      a { display: block; width: 100%; height: 100%; }
+    }// li
   }
- li { 
-    float:left; position:relative; height: 66px; text-align: center;
-    @include mobile { width: 50%; height: 50px;}
-    @include tablet { width: 184px; }
-    @include laptop { width: 184px; }
-    @include pc { width: 184px; }
+}// mobile
 
-    &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
-    &:after, &::after {
-      content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
-      width: 0; height: 20px; border-right:1px solid $color_black;
-      @include laptop { border-right:1px solid $color_white; }
-      @include pc { border-right:1px solid $color_white; }
-    }
-    &:nth-child(1):after, &:nth-child(1)::after { @include mobile { display: none; } }
-    &:last-child:after, &:last-child::after { display: none; } 
-
-    a { 
-      display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_black;
-      @include mobile { line-height: 50px; }
-      @include laptop { color:$color_white; }
-      @include pc { color:$color_white; } 
-      &:hover { font-size:1.1rem; font-weight: bold; }
-    }
-
-  }// li
-}// menu_tab
-
-
-// sns --------------------------------------------------------------------
-
-.menu_sns {
-  width: auto; height: auto;
-  @include mobile { margin: auto;}
-  @include tablet { margin: auto;}
-  @include laptop { float:right;  padding-top: 15px;}
-  @include pc { float:right;  padding-top: 15px;}
-
-  ul { display: flex; justify-content: space-between; height: auto;
-    
-  @include mobile { width: 100vw; min-width: 250px; max-width: 440px; padding: 0 20px; }
-  @include tablet { width: 440px; }
-  @include laptop { width: 220px; }
-  @include pc { width: 220px; }
+@include tablet {
+  #menuBox { width: 100%; @include remUnit(height, 132); background-color: $color_ottogi_blue; }
+  .menu_inner { display: flex; height: 100%; margin: auto; justify-content: start; flex-direction: column; }
+  .menu_tab {  width: 100%; height: 66px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02;
+    ul { width: 552px; height: auto; margin:auto; }
+   li { float:left; position:relative; width: 184px; height: 66px; text-align: center;  
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_black;
+      }
+      &:last-child:after, &:last-child::after { display: none; } 
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_black;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+    }// li
+  }// menu_tab
+  .menu_sns {
+    width: auto; height: auto; margin: auto;
+    ul { display: flex; justify-content: space-between; width: 440px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(1) a { @include img('facebook.png'); }
+      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
+      &:nth-child(3) a { @include img('instagram.png'); }
+      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      a { display: block; width: 100%; height: 100%; }
+    }// li
   }
-  li {
-    width: 35px; height: 35px; 
-    // &:nth-child(4) { margin-right: 0; }
-    &:nth-child(1) a { @include img('facebook.png'); }
-    &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
-    &:nth-child(3) a { @include img('instagram.png'); }
-    &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
-    a { display: block; width: 100%; height: 100%; }
-  }// li
-}
+}// tablet
 
+@include laptop {
+  #menuBox { width: 100%; @include remUnit(height, 66); background-color: $color_ottogi_blue; }
+  .menu_inner { width: 965px; height: 100%; margin: auto; }
+  .menu_tab { float:left; width: auto; height: auto;  
+    ul { width: 100%; height: auto; }
+    li { 
+      float:left; position:relative; width: 184px; height: 66px; text-align: center;
+      &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_white;
+      }
+      &:last-child:after, &:last-child::after { display: none; }   
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_white;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+  
+    }// li
+  }// menu_tab
+  .menu_sns {
+    float:right; width: auto; height: auto; padding-top: 15px;
+    ul { display: flex; justify-content: space-between; width: 220px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(1) a { @include img('facebook.png'); }
+      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
+      &:nth-child(3) a { @include img('instagram.png'); }
+      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      a { display: block; width: 100%; height: 100%; }
+    }// li
+  }
+}// laptop
+
+@include pc {
+  #menuBox { width: 100%; @include remUnit(height, 66); background-color: $color_ottogi_blue; }
+  .menu_inner { width: 965px; height: 100%; margin: auto; }
+  .menu_tab { float:left; width: auto; height: auto;  
+    ul { width: 100%; height: auto; }
+    li { 
+      float:left; position:relative; width: 184px; height: 66px; text-align: center;
+      &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_white;
+      }
+      &:last-child:after, &:last-child::after { display: none; }   
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_white;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+  
+    }// li
+  }// menu_tab
+  .menu_sns { float:right; width: auto; height: auto; padding-top: 15px;
+    ul { display: flex; justify-content: space-between; width: 220px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(1) a { @include img('facebook.png'); }
+      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
+      &:nth-child(3) a { @include img('instagram.png'); }
+      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      a { display: block; width: 100%; height: 100%; }
+    }// li
+  }
+}// pc

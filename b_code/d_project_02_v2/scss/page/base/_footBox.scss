@@ -2,40 +2,73 @@
 
 $imgPath:'../../multi/img/base/headBox/';
 
-#footBox {
-  width: 100%;
-  background-color: $color_white;
-  @include mobile { @include remUnit(height, 124); padding-top: 37px; }
-  @include tablet { @include remUnit(height, 238); padding-top: 60px; }
-  @include laptop { @include remUnit(height, 240); padding-top: 50px; }
-  @include pc { @include remUnit(height, 240); padding-top: 50px; }
-}// #footBox
-
-.foot_inner {
-  margin: auto;
-  @include mobile { width: 248px; height: 65px; }
-  @include tablet { width: 518px; height: 132px; }
-  @include laptop { width: 942px; height: 132px; }
-  @include pc { width: 942px; height: 132px; }
-
-  h2 {
-    @include img('logo_pc.png',$size:cover);
-    @include mobile { @include blind; }
-    @include tablet { @include blind; }
-    @include laptop { float:right; width: 128px; height: 124px; }
-    @include pc { float:right; width: 128px; height: 124px; }
+@include mobile {
+  #footBox {
+    width: 100%; @include remUnit(height, 110); padding-top: 37px;
+    background-color: $color_white;  
+  }// #footBox
+  .foot_inner { width: 248px; height: 65px;  margin: auto; 
+    h2 { @include img('logo_pc.png',$size:cover); @include blind; }
   }
-}
+  
+  address { width: 248px; height: 132px; 
+    p { 
+      margin-bottom: 10px; line-height:140%; text-transform: capitalize; word-break: keep-all;
+      &:nth-child(1) { display: none; } 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// mobile
 
 
-address { 
-  float:left; width: 517px; height: 132px; 
-  @include mobile { float:none; width: 248px; }
-  p { 
-    margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
-    &:last-child { margin-bottom: 0; }
-    span { text-transform: uppercase; }
-    @include mobile { word-break: break-all;
-      &:nth-child(1) { display: none;} }
+@include tablet {
+  #footBox {
+    width: 100%; @include remUnit(height, 238); padding-top: 60px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 518px; height: 132px; margin: auto; 
+    h2 { @include img('logo_pc.png',$size:cover); @include blind; }
   }
-}
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// tablet
+
+@include laptop {
+  #footBox {
+    width: 100%; @include remUnit(height, 240); padding-top: 50px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 942px; height: 132px; margin: auto; 
+    h2 { float:right; width: 128px; height: 124px; @include img('logo_pc.png',$size:cover); }
+  }
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// laptop
+
+@include pc {
+  #footBox {
+    width: 100%; @include remUnit(height, 240); padding-top: 50px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 942px; height: 132px; margin: auto; 
+    h2 { float:right; width: 128px; height: 124px; @include img('logo_pc.png',$size:cover); }
+  }
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// pc

@@ -1,9 +1,9 @@
-/* Error: Undefined mixin.
+/* Error: Undefined variable.
  *   ,
- * 6 |   @include mobile {  height:950px; }
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 5 | #companyBox { width: 100%; height: 840px; padding-top: 180px; background-color: $color_white; 
+ *   |                                                                                 ^^^^^^^^^^^^
  *   '
- *   scss\page\summary\companyBox.scss 6:3  root stylesheet */
+ *   scss\page\summary\companyBox.scss 5:81  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 6 \2502    @include mobile {  height:950px; }\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\page\\summary\\companyBox.scss 6:3  root stylesheet";
+  content: "Error: Undefined variable.\a   \2577 \a 5 \2502  #companyBox { width: 100%; height: 840px; padding-top: 180px; background-color: $color_white; \d\a   \2502                                                                                  ^^^^^^^^^^^^\a   \2575 \a   scss\\page\\summary\\companyBox.scss 5:81  root stylesheet";
 }
