@@ -75,10 +75,11 @@
   const fnAniSlide = async () => {
     await fnDelay();
     ulStyle.transition = `left ${TIME_OPTION}ms linear`; // 복제된 마지막 요소로 이동 후 다음 요소를 위해 효과를 넣음
-    ulStyle.left = ( -100 * SLIDE_COUNT) + '%';          // 클릭할때마다 ul이 left -100%씩 이동
+    ulStyle.left = ( -100 * SLIDE_COUNT) + '%';          // n번째에 맞는 -n00%값이 입력됨
     await fnDelay(TIME_OPTION + 200);                    // 이동효과가 끝난 후에 true가 되어야 정상작동됨
     PERMISSION = true;
   }
+
 
   slideNext.addEventListener('click', (e) => {
     e.preventDefault();
@@ -98,7 +99,7 @@
       /* 방법1 (간략화한 함수가 fnAniSlide)
       setTimeout(() => {
         ulStyle.transition = `left ${TIME_OPTION}ms linear`; // 복제된 마지막 요소로 이동 후 다음 요소를 위해 효과를 넣음
-        ulStyle.left = ( -100 * SLIDE_COUNT) + '%';          // 클릭할때마다 ul이 left -100%씩 이동
+        ulStyle.left = ( -100 * SLIDE_COUNT) + '%';          // n번째에 맞는 -n00%값이 입력됨
         setTimeout(() => {
           PERMISSION = true;
         }, TIME_OPTION + 200); // 이동효과가 끝난 후에 true가 되어야 정상작동됨
@@ -108,4 +109,22 @@
     }// if
   })// slideNext
 
+  slidePrev.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(PERMISSION){
+      PERMISSION = false;
+      SLIDE_COUNT -= 1;
+
+      if(SLIDE_COUNT <= -1){
+        fnAniSlide();                   // 복제된 마지막요소로 스르륵 이동
+        setTimeout(() => {
+          SLIDE_COUNT = slideLen - 1;   // 마지막요소 지정 순번으로 변경
+          ulStyle.transition = null;    // 애니메이션 제거
+          ulStyle.left = -300 + '%';    // 마지막요소로 이동
+        }, TIME_OPTION)
+      }
+      fnAniSlide();
+      
+    }
+  })
 })()// 즉시실행함수
