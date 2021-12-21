@@ -21,10 +21,22 @@
 // 4. 원본이미지 처음요소에 위치했을 경우 복제된곳으로 anmation 이동한 후 복제원본요소로 점프 이동
 // *  여러번 반복 클릭시 문제점 발생됨 -> 권한을 부여하여 처리
 
-// 인디케이터 시나리오
+// 숫자 인디케이터 시나리오
 // 1. 복제이전의 개수 파악하여 .total_count에 값 삽입
 // 2. 현재 보이는 순번을 .now_count에 값 삽입
 // 3. 다음/이전 버튼 수행시 .now_count값 변화
+
+// 동그라미 인디케이터 시나리오
+// 1. 클릭시 해당 순번 파악 
+// 2. 파악된 광고슬라이드 해당위치로 이동(공통변수)
+// 3. indicator li에 .on의 위치 변경
+
+// 일정시간마다 자동으로 광고 슬라이드
+// 광고영역에 마우스 올리면 일시정지(벗어나면 다시 재생)
+
+// data 불러와서 광고 수 만큼 생성
+// 인디케이터 생성
+//
 
 
 (() => {
@@ -33,15 +45,34 @@
 
   // 선택자
   const elViewBox = document.querySelector('#viewBox');
+
+  const slideNext = elViewBox.querySelector('.next');
+  const slidePrev = elViewBox.querySelector('.prev');
+
+  const elCount = elViewBox.querySelector('.count_part');
+  const elNowCount = elCount.querySelector('.now_count');
+  const elTotalCount = elCount.querySelector('.total_count')
+
   const elSlideContent = elViewBox.querySelector('.slide_content');
   const elSlideUl = elSlideContent.querySelector('.slide_wrapper');
   const elSlideLi = elSlideUl.querySelectorAll('li');
   const elSlideCvt = [].slice.call(elSlideLi); // li를 배열로 만들기
 
-  // 추가설정
-  const slideLen = elSlideLi.length;
 
+  // 추가설정
+  let SLIDE_COUNT = 0;
+  let TIME_OPTION = 500;  
+  let PERMISSION = true;
+
+  const slideLen = elSlideLi.length;  // 복제 전 슬라이드 수
+  
   // 기능처리
+  // 5.2 복제슬라이드는 인디케이테 목록에 포함되지 않는다
+  const indiPart = elViewBox.querySelector('.indicator_part');
+  const indiLi = indiPart.querySelectorAll('li');
+
+
+  // 가로형 슬라이드 기능처리
   // 1.1 광고슬라이드 마지막요소를 복제하여 첫번째 요소 앞에 배치
   const elSlideLast = elSlideCvt.at(-1);          // 마지막 요소 선택
   const cloneSlide = elSlideLast.cloneNode(true); // 마지막 요소 복제(true - 내부까지 복제)
@@ -65,22 +96,13 @@
   ulStyle.marginLeft = '-100%';
   elSlideContent.style.overflowX = 'hidden';
 
+  // 숫자 인디케이터 - 총 개수
   elTotalCount.innerText = slideLen;
 
 
 
   // 버튼에 대한 내용 -------------------------------------------------------------------------------------------------
-  const slideNext = elViewBox.querySelector('.next');
-  const slidePrev = elViewBox.querySelector('.prev');
 
-  const elCount = elViewBox.querySelector('.count_part');
-  const elNowCount = elCount.querySelector('.nowCount');
-  const elTotalCount = elCount.querySelector('.totalCount')
-
-
-  let SLIDE_COUNT = 0;
-  let TIME_OPTION = 500;  
-  let PERMISSION = true;
 
   ulStyle.transition = `left ${TIME_OPTION}ms linear`; // 스르륵
 
@@ -93,17 +115,30 @@
     });
   }
 
-  // 현재 슬라이드 위치 표현하는 함수
+  // 숫자 인디케이터 - 현재 슬라이드 위치 표현하는 함수
   const fnNowCount = () => {
     elNowCount.innerText = SLIDE_COUNT + 1;
   }
 
+  // indicator 수행 함수 - SLIDE_COUNT에 해당하지않는 순번의 클래스는 제거하고, 해당하는 순번엔 클래스를 첨부한다
+  const fnIndiRotate = () => {
+    indiLi.forEach((el, index) => {      
+      (index !== SLIDE_COUNT)? el.classList.remove('on') : el.classList.add('on');  
+    })
+  }
+
   // 슬라이드 기능 함수(다음버튼)
   const fnAniSlide = async () => {                       // async를 함수안에 넣으려면 함수도 async를 사용해야함
+    if(SLIDE_COUNT >= slideLen){ // 마지막 요소에서 첫번째 요소로 이동하는 if문
+      SLIDE_COUNT = 0;
+      ulStyle.transition = null; // 마지막요소에서 첫번째 요소 앞 복제된 마지막요소로 이동할때엔 효과가 없어야함
+      ulStyle.left = 100 + '%';  // 복제된 마지막 요소로 이동
+    }
     await fnDelay();
     ulStyle.transition = `left ${TIME_OPTION}ms linear`; // 복제된 마지막 요소로 이동 후 다음 요소를 위해 효과를 넣음
     ulStyle.left = ( -100 * SLIDE_COUNT) + '%';          // n번째에 맞는 -n00%값이 입력됨
     await fnDelay(TIME_OPTION + 200);                    // 이동효과가 끝난 후에 true가 되어야 정상작동됨
+    fnIndiRotate();
     fnNowCount();
     PERMISSION = true;
   }
@@ -118,13 +153,32 @@
       ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';  
     }
     await fnDelay(200);
+    fnIndiRotate();
     fnNowCount();
     ulStyle.transition = `left ${TIME_OPTION}ms linear`;
     PERMISSION = true;
   };  
 
+  // 일정시간마다 광고슬라이드 이동수행 (다음버튼 클릭과 동일한 기능)
+  let slideGo;
+
+  const fnSlideMove = ()=> {
+    slideGo = setInterval( ()=>{ // 일정시간마다 수행
+      if(PERMISSION){
+        PERMISSION = false;
+        SLIDE_COUNT += 1;
+        fnAniSlide();
+      }// if
+    }, TIME_OPTION * 4 );
+  };
+    
+  const fnSlidePause = () =>{ // 멈추기
+    clearInterval(slideGo);
+  }
+
   // 기본함수 수행
   fnNowCount();
+  fnSlideMove();
 
 
 
@@ -134,16 +188,7 @@
     if(PERMISSION){       // 버튼을 연속하여 눌러도 정상작동되도록 하는 기능 permission
       PERMISSION = false;
       SLIDE_COUNT += 1;
-
-      // 마지막 요소일때 수행
-      if(SLIDE_COUNT >= slideLen){ // 마지막 요소에서 첫번째 요소로 이동하는 if문
-        SLIDE_COUNT = 0;
-        ulStyle.transition = null; // 마지막요소에서 첫번째 요소 앞 복제된 마지막요소로 이동할때엔 효과가 없어야함
-        ulStyle.left = 100 + '%';  // 복제된 마지막 요소로 이동
-      }
-
       fnAniSlide();
-
       /* 방법1 (간략화한 함수가 fnAniSlide)
       setTimeout(() => {
         ulStyle.transition = `left ${TIME_OPTION}ms linear`; // 복제된 마지막 요소로 이동 후 다음 요소를 위해 효과를 넣음
@@ -153,7 +198,6 @@
         }, TIME_OPTION + 200); // 이동효과가 끝난 후에 true가 되어야 정상작동됨
       }, 0)
       */
-
     }// if
   })// slideNext
 
@@ -161,49 +205,50 @@
     e.preventDefault();
     if(PERMISSION === true){
       PERMISSION = false;
-  
       SLIDE_COUNT -= 1;
-      console.log( SLIDE_COUNT );
-  
-      // TIME_OPTION 시간이 지난 후에 SLIDE_COUNT 값을 파악하여 추가 진행
-      /*
+       
+      /* setTImeout으로 처리하는 방법
       setTimeout( ()=>{
         if(SLIDE_COUNT <= -1){
           SLIDE_COUNT = slideLen - 1;
           ulStyle.transition = null;
           ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';  
           setTimeout(()=>{
-            ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+            ulStyle.transition = `left ${TIME_OPTION}ms linear`; 
             PERMISSION = true;
           }, 200);
         }
-      }, TIME_OPTION);
+      }, TIME_OPTION); // TIME_OPTION 시간이 지난 후에 SLIDE_COUNT 값을 파악하여 추가 진행
       */
+
       aniPrevSlide(); 
+
     }// if
   }); // slidePrev 클릭
 
 
-  /* 숙제로 한 코드
-  slidePrev.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(PERMISSION){
-      PERMISSION = false;
-      SLIDE_COUNT -= 1;
+  // 인디케이터 클릭시 이벤트
+  indiLi.forEach((el, idx) => {
+    el.children[0].addEventListener('click', (e) => {
+      e.preventDefault();
+      if(PERMISSION){
+        PERMISSION = false;
 
-      if(SLIDE_COUNT <= -1){
-        fnAniSlide();                                      // 복제된 마지막요소로 스르륵 이동
+        SLIDE_COUNT = idx;
+        fnIndiRotate(idx);
+        fnNowCount();
+        ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';
         setTimeout(() => {
-          SLIDE_COUNT = slideLen - 1;                      // 마지막요소 지정 순번으로 변경
-          ulStyle.transition = null;                       // 애니메이션 제거
-          ulStyle.left = -300 + '%';                       // 마지막요소로 이동
-        }, TIME_OPTION)
-      }
-      fnAniSlide();
-      
-    }
+          PERMISSION = true;
+        }, TIME_OPTION + 200);
+      }// if
+    })// eventListener
+  })// forEach
+
+  // 자동 슬라이드 멈추게하는 이벤트
+  elViewBox.addEventListener('mouseover', (e) => {
+
   })
-  */
 
 })()// 즉시실행함수
 
