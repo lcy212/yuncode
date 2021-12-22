@@ -93,11 +93,13 @@ $imgPath:'../../multi/img/base/menuBox/';
     ul { display: flex; justify-content: space-between; width: 220px; height: auto; }
     li {
       width: 35px; height: 35px; 
-      &:nth-child(1) a { @include img('facebook.png'); }
-      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
-      &:nth-child(3) a { @include img('instagram.png'); }
-      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      &:nth-child(2) { width: 43px; height: 30px; }
+
       a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png'); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png'); }
+      &:nth-child(4) a { @include img('blog.png'); }
     }// li
   }
 }// laptop
@@ -123,14 +125,16 @@ $imgPath:'../../multi/img/base/menuBox/';
     }// li
   }// menu_tab
   .menu_sns { float:right; width: auto; height: auto; padding-top: 15px;
-    ul { display: flex; justify-content: space-between; width: 220px; height: auto; }
+    ul { display: flex; justify-content: space-between; width: 270px; height: auto; }
     li {
       width: 35px; height: 35px; 
-      &:nth-child(1) a { @include img('facebook.png'); }
-      &:nth-child(2) a { @include img('youtube.png'); padding-top: 5px; }
-      &:nth-child(3) a { @include img('instagram.png'); }
-      &:nth-child(4) a { @include img('blog.png'); padding-top: 3px; margin-right: 0; }
+      &:nth-child(2) { width: 43px; height: 30px; padding-top: 2px; }
+
       a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png', $size:cover); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png', $size:cover); }
+      &:nth-child(4) a { @include img('blog.png'); }
     }// li
   }
 }// pc
