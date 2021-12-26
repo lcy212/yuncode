@@ -22,7 +22,6 @@ $imgPath:'../../multi/img/base/headBox/';
       width: 100%; height: 438px; background-color: $color_ottogi_red;
       & > li { 
         width: 100%; height: 74px; border-bottom: 1px solid $color_white;
-        font-size: 24px; color:$color_white; line-height: 72px; text-indent: 8px;
         &:last-child { border-bottom: 0;}        
       }// li
     }// ul
@@ -34,8 +33,12 @@ $imgPath:'../../multi/img/base/headBox/';
     > button { width: 100%; height: 100%; @include img('gnb_menu.png',$size:cover);}
   }// .gbn_btn
   .gnb_title { 
-    width: 100%; height: 72px;
-    a { display:block; width: 100%; height: 100%; }
+    width: 100%; height: 72px; font-size: 24px; color:$color_white; line-height: 72px; text-indent: 50px;
+    > a { 
+      display:block; width: 100%; height: 100%; 
+      &:hover { font-weight: bold; }
+    }
+    
   }// .gnb_title
   .gnb_list { display:none;
     li { display: none; }
@@ -51,7 +54,7 @@ $imgPath:'../../multi/img/base/headBox/';
   }
   .unb_list {
     display:none;
-    position: absolute; top: 60px; right: 22px; z-index: 10;
+    position: absolute; top: 60px; right: 22px; z-index: 20;
     width: 90px; height:auto; 
     background-color: $color_white; border-radius: 2px;
     li { 
@@ -85,8 +88,7 @@ $imgPath:'../../multi/img/base/headBox/';
       display: none; position:absolute; top: 81px; left: 0; z-index: 10; 
       width: 100%; height: 438px; background-color: $color_ottogi_red;
       & > li { 
-        width: 100%; height: 74px; border-bottom: 1px solid $color_white;
-        font-size: 24px; color:$color_white; line-height: 72px; text-indent: 8px;
+        width: 100%; height: 74px; border-bottom: 1px solid $color_white;        
         &:last-child { border-bottom: 0;}
       }// li
     }// ul
@@ -98,8 +100,11 @@ $imgPath:'../../multi/img/base/headBox/';
     > button { width: 100%; height: 100%; @include img('gnb_menu.png', $size:cover);}
   }// .gbn_btn
   .gnb_title { 
-    width: 100%; height: 72px;
-    a { display:block; width: 100%; height: 100%; }
+    width: 100%; height: 72px; font-size: 24px; color:$color_white; line-height: 72px; text-indent: 50px;
+    a { display:block; width: 100%; height: 100%; 
+      &:hover { font-weight: bold; }
+    }
+    
   }// .gnb_title
   .gnb_list { display:none;
     li { display: none; }
@@ -115,7 +120,7 @@ $imgPath:'../../multi/img/base/headBox/';
   }
   .unb_list {
     display:none;
-    position: absolute; top: 60px; right: 22px; z-index: 10;
+    position: absolute; top: 60px; right: 22px; z-index: 20;
     width: 90px; height:auto; 
     background-color: $color_white; border-radius: 2px;
     li { 

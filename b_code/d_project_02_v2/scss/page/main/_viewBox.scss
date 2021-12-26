@@ -4,7 +4,7 @@ $imgPath:'../../multi/img/main/viewBox/';
 
 #viewBox {
   position:relative; width: 100%;
-  @include img('view_bg.png',$size:cover); // 임시
+  // @include img('view_bg.png',$size:cover); // 임시
   @include mobile { @include remUnit(height, 300);  }
   @include tablet { @include remUnit(height, 360);  }
   @include laptop { @include remUnit(height, 500);  }
@@ -29,8 +29,8 @@ $imgPath:'../../multi/img/main/viewBox/';
   border-radius: 20px;
   @include mobile { bottom: 14px; }
   @include tablet { bottom: 20px; }
-  @include laptop { bottom: 45px; }
-  @include pc { bottom: 45px; }
+  @include laptop { bottom: 35px; }
+  @include pc { bottom: 35px; }
   ul { width: auto; height: 100%; margin: auto;
     li { 
       float:left; margin-right: 15px; width: 18px; height: 18px; 
@@ -42,7 +42,18 @@ $imgPath:'../../multi/img/main/viewBox/';
     }
   }
 }
-.blind_wrap a { display:block; width: 100%; height: 100%; } 
-.view_area { width: 100%; height: 100%; 
-  a { width: 100%; height: 100%; }
+.view_area {     
+  display: flex; flex-wrap:nowrap;
+  width:800%; height:100%;
+  > li {
+    position: relative;  z-index: 0; width:calc(100% / 8); height: 100%; }
+  // a { display: block; width: 100%; height: 100%; } 
+  #view_01 { background-color: rgb(102,159,8);}
+  #view_02 { background-color: rgb(220,104,111);}
+  #view_03 { background-color: rgb(168,96,199);}
+  #view_04 { background-color: rgb(15,131,248);}
+  #view_05 { background-color: rgb(240,211,139);}
+  #view_06 { background-color: rgb(36,8,43);}
+  #view_07 { background-color: rgb(217,16,255);}
+  #view_08 { background-color: rgb(247,3,189);}
 }

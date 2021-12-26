@@ -74,10 +74,6 @@
     width: 100%;
     height: 74px;
     border-bottom: 1px solid #ffffff;
-    font-size: 24px;
-    color: #ffffff;
-    line-height: 72px;
-    text-indent: 8px;
   }
   .gnb_area > ul > li:last-child {
     border-bottom: 0;
@@ -125,11 +121,18 @@
   .gnb_title {
     width: 100%;
     height: 72px;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 72px;
+    text-indent: 50px;
   }
-  .gnb_title a {
+  .gnb_title > a {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  .gnb_title > a:hover {
+    font-weight: bold;
   }
 
   .gnb_list {
@@ -176,7 +179,7 @@
     position: absolute;
     top: 60px;
     right: 22px;
-    z-index: 10;
+    z-index: 20;
     width: 90px;
     height: auto;
     background-color: #ffffff;
@@ -270,10 +273,6 @@
     width: 100%;
     height: 74px;
     border-bottom: 1px solid #ffffff;
-    font-size: 24px;
-    color: #ffffff;
-    line-height: 72px;
-    text-indent: 8px;
   }
   .gnb_area > ul > li:last-child {
     border-bottom: 0;
@@ -321,11 +320,18 @@
   .gnb_title {
     width: 100%;
     height: 72px;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 72px;
+    text-indent: 50px;
   }
   .gnb_title a {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  .gnb_title a:hover {
+    font-weight: bold;
   }
 
   .gnb_list {
@@ -372,7 +378,7 @@
     position: absolute;
     top: 60px;
     right: 22px;
-    z-index: 10;
+    z-index: 20;
     width: 90px;
     height: auto;
     background-color: #ffffff;
@@ -1888,11 +1894,21 @@
     width: 35px;
     height: 35px;
   }
+  .menu_sns li:nth-child(2) {
+    width: 43px;
+    height: 30px;
+    padding-top: 2px;
+  }
+  .menu_sns li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   .menu_sns li:nth-child(1) a {
     background-image: url(../../multi/img/base/menuBox/facebook.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(1) a > span {
     display: block;
@@ -1906,8 +1922,8 @@
     background-image: url(../../multi/img/base/menuBox/youtube.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
-    padding-top: 5px;
+    background-size: cover;
+    padding-top: 2px;
   }
   .menu_sns li:nth-child(2) a > span {
     display: block;
@@ -1921,7 +1937,7 @@
     background-image: url(../../multi/img/base/menuBox/instagram.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(3) a > span {
     display: block;
@@ -1936,8 +1952,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: initial;
-    padding-top: 3px;
-    margin-right: 0;
   }
   .menu_sns li:nth-child(4) a > span {
     display: block;
@@ -1946,11 +1960,6 @@
     width: 0;
     height: 0;
     overflow: hidden;
-  }
-  .menu_sns li a {
-    display: block;
-    width: 100%;
-    height: 100%;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
@@ -2030,11 +2039,21 @@
     width: 35px;
     height: 35px;
   }
+  .menu_sns li:nth-child(2) {
+    width: 43px;
+    height: 30px;
+    padding-top: 2px;
+  }
+  .menu_sns li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   .menu_sns li:nth-child(1) a {
     background-image: url(../../multi/img/base/menuBox/facebook.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(1) a > span {
     display: block;
@@ -2048,8 +2067,8 @@
     background-image: url(../../multi/img/base/menuBox/youtube.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
-    padding-top: 5px;
+    background-size: cover;
+    padding-top: 2px;
   }
   .menu_sns li:nth-child(2) a > span {
     display: block;
@@ -2063,7 +2082,7 @@
     background-image: url(../../multi/img/base/menuBox/instagram.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(3) a > span {
     display: block;
@@ -2078,8 +2097,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: initial;
-    padding-top: 3px;
-    margin-right: 0;
   }
   .menu_sns li:nth-child(4) a > span {
     display: block;
@@ -2088,11 +2105,6 @@
     width: 0;
     height: 0;
     overflow: hidden;
-  }
-  .menu_sns li a {
-    display: block;
-    width: 100%;
-    height: 100%;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
@@ -2185,6 +2197,7 @@
   .menu_sns li:nth-child(2) {
     width: 43px;
     height: 30px;
+    padding-top: 2px;
   }
   .menu_sns li a {
     display: block;
@@ -2195,7 +2208,7 @@
     background-image: url(../../multi/img/base/menuBox/facebook.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(1) a > span {
     display: block;
@@ -2224,7 +2237,7 @@
     background-image: url(../../multi/img/base/menuBox/instagram.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: initial;
+    background-size: cover;
   }
   .menu_sns li:nth-child(3) a > span {
     display: block;
