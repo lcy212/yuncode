@@ -112,3 +112,8 @@ $pc:1440px;
         @content;
     }
 }
+@mixin desk {
+    @media all and (min-width:$laptop) {
+      @content;
+    }
+}
