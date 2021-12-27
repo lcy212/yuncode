@@ -12,7 +12,7 @@
 
 .info_inner { height: 66px; margin: auto;
   @include mobile { width: 320px; }
-  @include tablet { min-width: 768px; width:auto; max-width:1100px; }
+  @include tablet { min-width: 768px; }
   @include laptop { width: 1100px; }
   @include pc { width: 1100px; }
 }

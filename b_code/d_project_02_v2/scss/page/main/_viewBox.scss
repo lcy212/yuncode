@@ -3,7 +3,7 @@
 $imgPath:'../../multi/img/main/viewBox/';
 
 #viewBox {
-  position:relative; width: 100%;
+  position:relative; width: 100%; overflow: hidden;
   // @include img('view_bg.png',$size:cover); // 임시
   @include mobile { @include remUnit(height, 300);  }
   @include tablet { @include remUnit(height, 360);  }
@@ -12,7 +12,7 @@ $imgPath:'../../multi/img/main/viewBox/';
 }// #viewBox
 
 .view_btn_area {
-  position:absolute; top: 50%; left: 0; right: 0;
+  position:absolute; top: 50%; left: 0; right: 0; z-index: 5;
   width: 95%; height: auto;
   margin: auto; transform: translateY(-50%);
   button { width: 60px; height: 100px; background-color: $color_gray_04; }
@@ -23,7 +23,7 @@ $imgPath:'../../multi/img/main/viewBox/';
 }
 
 .indicator {
-  position:absolute; left: 0; right: 0;
+  position:absolute; left: 0; right: 0; z-index: 5;
   width: 300px; height: 32px; margin: auto; padding: 0.4rem 1rem;
   background-color:$color_gray_04;
   border-radius: 20px;
@@ -44,7 +44,7 @@ $imgPath:'../../multi/img/main/viewBox/';
 }
 .view_area {     
   display: flex; flex-wrap:nowrap;
-  width:800%; height:100%;
+  width:800%; height:100%; 
   > li {
     position: relative;  z-index: 0; width:calc(100% / 8); height: 100%; }
   // a { display: block; width: 100%; height: 100%; } 

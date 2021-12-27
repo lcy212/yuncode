@@ -203,10 +203,6 @@
   .unb_list li a:hover {
     font-weight: bold;
   }
-
-  .unb_area:hover .unb_list {
-    display: block;
-  }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
   #headBox {
@@ -520,6 +516,7 @@
     height: auto;
     min-height: 260px;
     background-color: #ffffff;
+    box-shadow: 1px 1px 5px #dcdcdc;
   }
   .gnb_list li {
     width: 100%;
@@ -712,6 +709,7 @@
     height: auto;
     min-height: 260px;
     background-color: #ffffff;
+    box-shadow: 1px 1px 5px #dcdcdc;
   }
   .gnb_list li {
     width: 100%;
@@ -947,8 +945,6 @@
 @media all and (min-width: 768px) and (max-width: 1279px) {
   .info_inner {
     min-width: 768px;
-    width: auto;
-    max-width: 1100px;
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {

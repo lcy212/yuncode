@@ -1,0 +1,17 @@
+// ideologie.scss
+/* ideologie.css */
+
+@import "../common/variable", "../common/mixin";
+
+#wrap { width: 100%; height: auto; min-height: 800px; }
+
+// ---------------------------------------------------
+@import "../page/base/headBox";
+@import "../page/base/titleBox.scss";
+@import "../page/base/companyInfoNavBox.scss";
+@import "../page/base/ottogiNavBox.scss";
+@import "../page/ideologie/ideologieBox.scss";
+@import "../page/ideologie/mottoBox.scss";
+@import "../page/ideologie/creedBox.scss";
+@import "../page/base/menuBox";
+@import "../page/base/footBox";
