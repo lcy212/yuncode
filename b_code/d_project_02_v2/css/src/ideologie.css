@@ -1064,6 +1064,7 @@
 }
 @media all and (max-width: 767px) {
   #ottogi_navBox {
+    height: 160px;
     padding-top: 0;
     border-bottom: 0;
   }
@@ -1073,11 +1074,12 @@
   min-width: 320px;
   max-width: 940px;
   height: 80px;
+  min-height: 160px;
   margin: auto;
 }
 .ottogi_inner ul {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .ottogi_inner ul li {
   float: left;
@@ -1133,286 +1135,1162 @@
   border-bottom: 2px solid #c8102e;
 }
 
-#ideologieBox {
-  width: 100%;
-  height: 1000px;
-  padding-top: 120px;
-}
+@media all and (max-width: 767px) {
+  #ideologieBox {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    overflow: auto;
+  }
 
-.ideologie_inner {
-  width: 940px;
-  height: auto;
-  margin: auto;
+  .ideologie_inner {
+    width: 280px;
+    height: auto;
+    overflow: auto;
+    margin: auto;
+  }
+  .ideologie_inner .title {
+    width: 140px;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .ideologie_inner .title h2 {
+    font-size: 36px;
+  }
+  .ideologie_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ideologie_inner .title h2:after, .ideologie_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ideologie_inner ul {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+  .ideologie_inner li {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 126px;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  .ideologie_inner li:nth-child(4) {
+    margin: 0;
+  }
+  .ideologie_inner li:hover {
+    height: 500px;
+  }
+  .ideologie_inner li:hover > dl {
+    padding-top: 18px;
+  }
+  .ideologie_inner li:hover dt {
+    line-height: 50px;
+  }
+  .ideologie_inner li:hover dd {
+    display: block;
+  }
+  .ideologie_inner .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/ideologieBox.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(40%);
+  }
+  .ideologie_inner .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ideologie_inner dl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+  }
+  .ideologie_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 126px;
+  }
+  .ideologie_inner dd {
+    display: none;
+    padding-top: 15px;
+    line-height: 150%;
+  }
 }
-.ideologie_inner .title {
-  width: 140px;
-  height: 36px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 95px;
-}
-.ideologie_inner .title h2 {
-  font-size: 36px;
-}
-.ideologie_inner .title h2 {
-  margin-bottom: 60px;
-}
-.ideologie_inner .title h2:after, .ideologie_inner .title h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  border-bottom: 1px solid #c8102e;
-  margin: 30px auto;
-}
-.ideologie_inner ul {
-  width: 940px;
-  height: 655px;
-}
-.ideologie_inner li {
-  position: relative;
-  float: left;
-  width: 440px;
-  height: 300px;
-  margin-right: 60px;
-  margin-bottom: 55px;
-  color: #ffffff;
-}
-.ideologie_inner li:nth-child(2) {
-  margin-right: 0;
-}
-.ideologie_inner li:nth-child(3) {
-  margin-bottom: 0;
-}
-.ideologie_inner li:nth-child(4) {
-  margin: 0;
-}
-.ideologie_inner .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-image: url(../../multi/img/sub/ideologieBox.jpeg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  filter: brightness(40%);
-}
-.ideologie_inner .image > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.ideologie_inner dl {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  padding: 0 18px;
-}
-.ideologie_inner dl:hover {
-  padding-top: 18px;
-}
-.ideologie_inner dl:hover > dt {
-  display: none;
-}
-.ideologie_inner dl:hover > dd {
-  display: block;
-}
-.ideologie_inner dt {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 300px;
-}
-.ideologie_inner dd {
-  display: none;
-  padding-top: 15px;
-  line-height: 150%;
-}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #ideologieBox {
+    width: 100%;
+    height: 1650px;
+    padding-top: 120px;
+  }
 
-#mottoBox {
-  width: 100%;
-  height: 788px;
-  padding-top: 130px;
+  .ideologie_inner {
+    width: 440px;
+    height: auto;
+    margin: auto;
+  }
+  .ideologie_inner .title {
+    width: 140px;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .ideologie_inner .title h2 {
+    font-size: 36px;
+  }
+  .ideologie_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ideologie_inner .title h2:after, .ideologie_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ideologie_inner ul {
+    width: 440px;
+    height: 1320px;
+  }
+  .ideologie_inner li {
+    position: relative;
+    float: left;
+    width: 440px;
+    height: 300px;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  .ideologie_inner li:nth-child(4) {
+    margin: 0;
+  }
+  .ideologie_inner .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/ideologieBox.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(40%);
+  }
+  .ideologie_inner .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ideologie_inner dl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+  }
+  .ideologie_inner dl:hover {
+    padding-top: 18px;
+  }
+  .ideologie_inner dl:hover > dt {
+    display: none;
+  }
+  .ideologie_inner dl:hover > dd {
+    display: block;
+  }
+  .ideologie_inner dt {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 300px;
+  }
+  .ideologie_inner dd {
+    display: none;
+    padding-top: 15px;
+    line-height: 150%;
+  }
 }
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  #ideologieBox {
+    width: 100%;
+    height: 1000px;
+    padding-top: 120px;
+  }
 
-.motto_inner {
-  width: 940px;
-  height: auto;
-  margin: auto;
+  .ideologie_inner {
+    width: 940px;
+    height: auto;
+    margin: auto;
+  }
+  .ideologie_inner .title {
+    width: 140px;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .ideologie_inner .title h2 {
+    font-size: 36px;
+  }
+  .ideologie_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ideologie_inner .title h2:after, .ideologie_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ideologie_inner ul {
+    width: 940px;
+    height: 655px;
+  }
+  .ideologie_inner li {
+    position: relative;
+    float: left;
+    width: 440px;
+    height: 300px;
+    margin-right: 60px;
+    margin-bottom: 55px;
+    color: #ffffff;
+  }
+  .ideologie_inner li:nth-child(2) {
+    margin-right: 0;
+  }
+  .ideologie_inner li:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .ideologie_inner li:nth-child(4) {
+    margin: 0;
+  }
+  .ideologie_inner .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/ideologieBox.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(40%);
+  }
+  .ideologie_inner .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ideologie_inner dl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+  }
+  .ideologie_inner dl:hover {
+    padding-top: 18px;
+  }
+  .ideologie_inner dl:hover > dt {
+    display: none;
+  }
+  .ideologie_inner dl:hover > dd {
+    display: block;
+  }
+  .ideologie_inner dt {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 300px;
+  }
+  .ideologie_inner dd {
+    display: none;
+    padding-top: 15px;
+    line-height: 150%;
+  }
 }
-.motto_inner .title {
-  width: auto;
-  height: 36px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 95px;
-}
-.motto_inner .title h2 {
-  font-size: 36px;
-}
-.motto_inner .title h2 {
-  margin-bottom: 60px;
-}
-.motto_inner .title h2:after, .motto_inner .title h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  border-bottom: 1px solid #c8102e;
-  margin: 30px auto;
-}
-.motto_inner ul {
-  width: 940px;
-  height: 444px;
-}
-.motto_inner li {
-  float: left;
-  width: 300px;
-  height: 100%;
-  margin-right: 20px;
-}
-.motto_inner li:last-child {
-  margin-right: 0;
-}
-.motto_inner li .image {
-  width: 300px;
-  height: 300px;
-  margin-bottom: 44px;
-  border-radius: 100%;
-  text-align: center;
-  background-image: url(../../multi/img/sub/mottoBox.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.motto_inner li .image > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.motto_inner dl {
-  width: 300px;
-  height: 100px;
-  text-align: center;
-}
-.motto_inner dt {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 34px;
-}
+@media all and (min-width: 1440px) {
+  #ideologieBox {
+    width: 100%;
+    height: 1000px;
+    padding-top: 120px;
+  }
 
-#creedBox {
-  width: 100%;
-  height: 1286px;
-  padding-top: 120px;
+  .ideologie_inner {
+    width: 940px;
+    height: auto;
+    margin: auto;
+  }
+  .ideologie_inner .title {
+    width: 140px;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .ideologie_inner .title h2 {
+    font-size: 36px;
+  }
+  .ideologie_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ideologie_inner .title h2:after, .ideologie_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ideologie_inner ul {
+    width: 940px;
+    height: 655px;
+  }
+  .ideologie_inner li {
+    position: relative;
+    float: left;
+    width: 440px;
+    height: 300px;
+    margin-right: 60px;
+    margin-bottom: 55px;
+    color: #ffffff;
+  }
+  .ideologie_inner li:nth-child(2) {
+    margin-right: 0;
+  }
+  .ideologie_inner li:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .ideologie_inner li:nth-child(4) {
+    margin: 0;
+  }
+  .ideologie_inner .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/ideologieBox.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(40%);
+  }
+  .ideologie_inner .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ideologie_inner dl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 0 18px;
+  }
+  .ideologie_inner dl:hover {
+    padding-top: 18px;
+  }
+  .ideologie_inner dl:hover > dt {
+    display: none;
+  }
+  .ideologie_inner dl:hover > dd {
+    display: block;
+  }
+  .ideologie_inner dt {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 300px;
+  }
+  .ideologie_inner dd {
+    display: none;
+    padding-top: 15px;
+    line-height: 150%;
+  }
 }
+@media all and (max-width: 767px) {
+  #mottoBox {
+    width: 100%;
+    height: 1300px;
+    padding-top: 130px;
+  }
 
-.creed_inner {
-  width: 940px;
-  height: 921px;
-  margin: auto;
+  .motto_inner {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+  .motto_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .motto_inner .title h2 {
+    font-size: 36px;
+  }
+  .motto_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .motto_inner .title h2:after, .motto_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .motto_inner ul {
+    width: 100%;
+    height: 950px;
+  }
+  .motto_inner li {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 35px;
+  }
+  .motto_inner li .image {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    text-align: center;
+    background-image: url(../../multi/img/sub/mottoBox.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.2;
+  }
+  .motto_inner li .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .motto_inner dl {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-60%);
+    width: 300px;
+    height: auto;
+    text-align: center;
+  }
+  .motto_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
 }
-.creed_inner .title {
-  width: auto;
-  height: 36px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 95px;
-}
-.creed_inner .title h2 {
-  font-size: 36px;
-}
-.creed_inner .title h2 {
-  margin-bottom: 60px;
-}
-.creed_inner .title h2:after, .creed_inner .title h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  border-bottom: 1px solid #c8102e;
-  margin: 30px auto;
-}
-.creed_inner ul {
-  width: 940px;
-  height: 790px;
-}
-.creed_inner li {
-  float: left;
-  width: 440px;
-  height: 360px;
-  margin-right: 60px;
-  margin-bottom: 70px;
-  border-radius: 5px;
-}
-.creed_inner li:nth-child(2) {
-  margin-right: 0;
-}
-.creed_inner li:nth-child(2) > .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-image: url(../../multi/img/sub/creedBox_brain.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.creed_inner li:nth-child(2) > .image > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.creed_inner li:nth-child(3) {
-  float: right;
-  margin: 0;
-}
-.creed_inner li:nth-child(4) {
-  margin-bottom: 0;
-}
-.creed_inner li:nth-child(4) > .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-image: url(../../multi/img/sub/creedBox_sweat.jfif);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.creed_inner li:nth-child(4) > .image > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.creed_inner dl {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-}
-.creed_inner dl:nth-child(1) {
-  padding-top: 8px;
-}
-.creed_inner dt {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.creed_inner dd {
-  line-height: 140%;
-  padding-top: 4px;
-}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #mottoBox {
+    width: 100%;
+    height: 1325px;
+    padding-top: 130px;
+  }
 
+  .motto_inner {
+    width: 640px;
+    height: auto;
+    margin: auto;
+  }
+  .motto_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .motto_inner .title h2 {
+    font-size: 36px;
+  }
+  .motto_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .motto_inner .title h2:after, .motto_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .motto_inner ul {
+    width: 100%;
+    height: 950px;
+  }
+  .motto_inner li {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+  }
+  .motto_inner li:nth-child(1) {
+    margin: 0 170px 64px;
+  }
+  .motto_inner li:last-child {
+    margin-right: 0;
+  }
+  .motto_inner li .image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 44px;
+    border-radius: 100%;
+    text-align: center;
+    background-image: url(../../multi/img/sub/mottoBox.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .motto_inner li .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .motto_inner dl {
+    width: 300px;
+    height: auto;
+    text-align: center;
+  }
+  .motto_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  #mottoBox {
+    width: 100%;
+    height: 788px;
+    padding-top: 130px;
+  }
+
+  .motto_inner {
+    width: 940px;
+    height: auto;
+    margin: auto;
+  }
+  .motto_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .motto_inner .title h2 {
+    font-size: 36px;
+  }
+  .motto_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .motto_inner .title h2:after, .motto_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .motto_inner ul {
+    width: 940px;
+    height: 444px;
+  }
+  .motto_inner li {
+    float: left;
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .motto_inner li:last-child {
+    margin-right: 0;
+  }
+  .motto_inner li .image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 44px;
+    border-radius: 100%;
+    text-align: center;
+    background-image: url(../../multi/img/sub/mottoBox.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .motto_inner li .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .motto_inner dl {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+  }
+  .motto_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #mottoBox {
+    width: 100%;
+    height: 788px;
+    padding-top: 130px;
+  }
+
+  .motto_inner {
+    width: 940px;
+    height: auto;
+    margin: auto;
+  }
+  .motto_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .motto_inner .title h2 {
+    font-size: 36px;
+  }
+  .motto_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .motto_inner .title h2:after, .motto_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .motto_inner ul {
+    width: 940px;
+    height: 444px;
+  }
+  .motto_inner li {
+    float: left;
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .motto_inner li:last-child {
+    margin-right: 0;
+  }
+  .motto_inner li .image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 44px;
+    border-radius: 100%;
+    text-align: center;
+    background-image: url(../../multi/img/sub/mottoBox.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .motto_inner li .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .motto_inner dl {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+  }
+  .motto_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+}
+@media all and (max-width: 767px) {
+  #creedBox {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    overflow: auto;
+  }
+
+  .creed_inner {
+    width: 280px;
+    height: auto;
+    min-height: 345px;
+    margin: auto;
+  }
+  .creed_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .creed_inner .title h2 {
+    font-size: 36px;
+  }
+  .creed_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .creed_inner .title h2:after, .creed_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .creed_inner ul {
+    width: 100%;
+    height: auto;
+  }
+  .creed_inner li {
+    width: 100%;
+    height: 92px;
+    margin-bottom: 60px;
+    padding: 20px;
+  }
+  .creed_inner li:hover {
+    height: 550px;
+  }
+  .creed_inner li:hover dd {
+    display: block;
+  }
+  .creed_inner li:nth-child(1) {
+    position: relative;
+  }
+  .creed_inner li:nth-child(1)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_brain.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.3;
+  }
+  .creed_inner li:nth-child(1)::before > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(3) {
+    position: relative;
+  }
+  .creed_inner li:nth-child(3)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_sweat.jfif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.3;
+  }
+  .creed_inner li:nth-child(3)::before > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(2), .creed_inner li:nth-child(4) {
+    display: none;
+  }
+  .creed_inner dl {
+    width: 100%;
+    height: 100%;
+  }
+  .creed_inner dt {
+    width: 100%;
+    height: 52px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 52px;
+  }
+  .creed_inner dd {
+    display: none;
+    line-height: 140%;
+    padding-top: 4px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #creedBox {
+    width: 100%;
+    height: 1286px;
+    padding-top: 120px;
+  }
+
+  .creed_inner {
+    width: 584px;
+    height: 950px;
+    margin: auto;
+  }
+  .creed_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .creed_inner .title h2 {
+    font-size: 36px;
+  }
+  .creed_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .creed_inner .title h2:after, .creed_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .creed_inner ul {
+    width: 100%;
+    height: 820px;
+  }
+  .creed_inner li {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 70px;
+    padding: 30px;
+  }
+  .creed_inner li:nth-child(1) {
+    position: relative;
+  }
+  .creed_inner li:nth-child(1)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_brain.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.3;
+  }
+  .creed_inner li:nth-child(1)::after > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(3) {
+    position: relative;
+  }
+  .creed_inner li:nth-child(3)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_sweat.jfif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.3;
+  }
+  .creed_inner li:nth-child(3)::after > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(2), .creed_inner li:nth-child(4) {
+    display: none;
+  }
+  .creed_inner dl {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    opacity: 1;
+  }
+  .creed_inner dl:nth-child(1) {
+    padding-top: 8px;
+  }
+  .creed_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .creed_inner dd {
+    line-height: 140%;
+    padding-top: 4px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  #creedBox {
+    width: 100%;
+    height: 1286px;
+    padding-top: 120px;
+  }
+
+  .creed_inner {
+    width: 940px;
+    height: 921px;
+    margin: auto;
+  }
+  .creed_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .creed_inner .title h2 {
+    font-size: 36px;
+  }
+  .creed_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .creed_inner .title h2:after, .creed_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .creed_inner ul {
+    width: 940px;
+    height: 790px;
+  }
+  .creed_inner li {
+    float: left;
+    width: 440px;
+    height: 360px;
+    margin-right: 60px;
+    margin-bottom: 70px;
+    border-radius: 5px;
+  }
+  .creed_inner li:nth-child(2) {
+    margin-right: 0;
+  }
+  .creed_inner li:nth-child(2) > .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_brain.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .creed_inner li:nth-child(2) > .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(3) {
+    float: right;
+    margin: 0;
+  }
+  .creed_inner li:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .creed_inner li:nth-child(4) > .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_sweat.jfif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .creed_inner li:nth-child(4) > .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner dl {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .creed_inner dl:nth-child(1) {
+    padding-top: 8px;
+  }
+  .creed_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .creed_inner dd {
+    line-height: 140%;
+    padding-top: 4px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #creedBox {
+    width: 100%;
+    height: 1286px;
+    padding-top: 120px;
+  }
+
+  .creed_inner {
+    width: 940px;
+    height: 921px;
+    margin: auto;
+  }
+  .creed_inner .title {
+    width: auto;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 95px;
+  }
+  .creed_inner .title h2 {
+    font-size: 36px;
+  }
+  .creed_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .creed_inner .title h2:after, .creed_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .creed_inner ul {
+    width: 940px;
+    height: 790px;
+  }
+  .creed_inner li {
+    float: left;
+    width: 440px;
+    height: 360px;
+    margin-right: 60px;
+    margin-bottom: 70px;
+    border-radius: 5px;
+  }
+  .creed_inner li:nth-child(2) {
+    margin-right: 0;
+  }
+  .creed_inner li:nth-child(2) > .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_brain.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .creed_inner li:nth-child(2) > .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner li:nth-child(3) {
+    float: right;
+    margin: 0;
+  }
+  .creed_inner li:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .creed_inner li:nth-child(4) > .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: url(../../multi/img/sub/creedBox_sweat.jfif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .creed_inner li:nth-child(4) > .image > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .creed_inner dl {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .creed_inner dl:nth-child(1) {
+    padding-top: 8px;
+  }
+  .creed_inner dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .creed_inner dd {
+    line-height: 140%;
+    padding-top: 4px;
+  }
+}
 @media all and (max-width: 767px) {
   #menuBox {
     width: 100%;

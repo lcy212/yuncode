@@ -1064,6 +1064,7 @@
 }
 @media all and (max-width: 767px) {
   #ottogi_navBox {
+    height: 160px;
     padding-top: 0;
     border-bottom: 0;
   }
@@ -1073,11 +1074,12 @@
   min-width: 320px;
   max-width: 940px;
   height: 80px;
+  min-height: 160px;
   margin: auto;
 }
 .ottogi_inner ul {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .ottogi_inner ul li {
   float: left;
