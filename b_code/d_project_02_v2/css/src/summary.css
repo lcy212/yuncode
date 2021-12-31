@@ -784,10 +784,6 @@
   .unb_list li a:hover {
     font-weight: bold;
   }
-
-  .unb_area:hover .unb_list {
-    display: block;
-  }
 }
 /* titleBox.css */
 @media all and (max-width: 767px) {
