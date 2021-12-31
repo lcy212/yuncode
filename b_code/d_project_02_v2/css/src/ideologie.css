@@ -1185,16 +1185,13 @@
   .ideologie_inner li:nth-child(4) {
     margin: 0;
   }
-  .ideologie_inner li:hover {
+  .ideologie_inner li.on {
     height: 500px;
   }
-  .ideologie_inner li:hover > dl {
-    padding-top: 18px;
+  .ideologie_inner li.on dt {
+    height: 100px;
   }
-  .ideologie_inner li:hover dt {
-    line-height: 50px;
-  }
-  .ideologie_inner li:hover dd {
+  .ideologie_inner li.on dd {
     display: block;
   }
   .ideologie_inner .image {
@@ -1225,6 +1222,8 @@
     padding: 0 18px;
   }
   .ideologie_inner dt {
+    width: 100%;
+    height: 126px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -1884,10 +1883,10 @@
     margin-bottom: 60px;
     padding: 20px;
   }
-  .creed_inner li:hover {
+  .creed_inner li.on {
     height: 550px;
   }
-  .creed_inner li:hover dd {
+  .creed_inner li.on dd {
     display: block;
   }
   .creed_inner li:nth-child(1) {
