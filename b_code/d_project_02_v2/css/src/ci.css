@@ -1131,7 +1131,443 @@
   border-bottom: 2px solid #c8102e;
 }
 
+@media all and (max-width: 767px) {
+  #ciBox {
+    width: 100%;
+    height: 3550px;
+    padding-top: 105px;
+  }
+
+  .ci_inner {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+  .ci_inner .title {
+    width: 170px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .ci_inner .title h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .ci_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ci_inner .title h2:after, .ci_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ci_inner .title p {
+    display: none;
+  }
+
+  .ci_area {
+    width: 100%;
+    height: auto;
+    margin-bottom: 65px;
+  }
+  .ci_area .main_ci {
+    width: 100%;
+    height: 410px;
+    margin-bottom: 60px;
+    border-radius: 3px;
+    background-color: #fedb00;
+    background-image: url(../../multi/img/sub/main_ci_mob.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .main_ci > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .detail_ci {
+    width: 300px;
+    height: 1200px;
+    margin: auto;
+    border: 1px solid #777;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .ci_area .detail_ci > div {
+    width: 100%;
+    height: 33.3333333333%;
+  }
+  .ci_area .circle {
+    margin-bottom: 40px;
+  }
+  .ci_area .circle > .img {
+    background-image: url(../../multi/img/sub/circle_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .circle > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .face > .img {
+    background-image: url(../../multi/img/sub/face_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .face > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .info_1 {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+  }
+  .ci_area dl {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+  }
+  .ci_area dt {
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn_area {
+    width: 300px;
+    height: 174px;
+    margin: auto;
+  }
+  .btn_area > button {
+    width: 100%;
+    height: 68px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #fff;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 3px #ddd;
+  }
+  .btn_area > button.ai_btn {
+    margin-bottom: 38px;
+  }
+  .btn_area > button span {
+    margin-right: 20px;
+  }
+  .btn_area > button i {
+    font-size: 24px;
+  }
+  .btn_area > button:hover {
+    border: 2px solid #c8102e;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #ciBox {
+    width: 100%;
+    height: 3010px;
+    padding-top: 105px;
+  }
+
+  .ci_inner {
+    width: 660px;
+    height: auto;
+    margin: auto;
+  }
+  .ci_inner .title {
+    width: 420px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .ci_inner .title h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .ci_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ci_inner .title h2:after, .ci_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ci_inner .title p {
+    text-align: center;
+  }
+
+  .ci_area {
+    width: 100%;
+    height: 2410px;
+    margin-bottom: 65px;
+  }
+  .ci_area .main_ci {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 60px;
+    border-radius: 3px;
+    background-color: #fedb00;
+    background-image: url(../../multi/img/sub/main_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .main_ci > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .detail_ci {
+    width: 450px;
+    height: 960px;
+    margin: auto;
+    border: 1px solid #777;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .ci_area .detail_ci > div {
+    width: 100%;
+    height: 33.3333333333%;
+  }
+  .ci_area .circle {
+    margin-bottom: 85px;
+  }
+  .ci_area .circle > .img {
+    background-image: url(../../multi/img/sub/circle_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .circle > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .face > .img {
+    background-image: url(../../multi/img/sub/face_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .face > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .info_1 {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+  }
+  .ci_area dl {
+    width: 100%;
+    height: 100%;
+    padding: 50px 25px;
+  }
+  .ci_area dt {
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn_area {
+    display: flex;
+    justify-content: space-between;
+    width: 520px;
+    height: 68px;
+    margin: auto;
+  }
+  .btn_area > button {
+    width: 240px;
+    height: 68px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #fff;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 3px #ddd;
+  }
+  .btn_area > button span {
+    margin-right: 20px;
+  }
+  .btn_area > button i {
+    font-size: 24px;
+  }
+  .btn_area > button:hover {
+    border: 2px solid #c8102e;
+  }
+}
 @media all and (min-width: 1280px) and (max-width: 1439px) {
+  #ciBox {
+    width: 100%;
+    height: 1940px;
+    padding-top: 105px;
+  }
+
+  .ci_inner {
+    width: 940px;
+    height: auto;
+    margin: auto;
+  }
+  .ci_inner .title {
+    width: 420px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .ci_inner .title h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .ci_inner .title h2 {
+    margin-bottom: 60px;
+  }
+  .ci_inner .title h2:after, .ci_inner .title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #c8102e;
+    margin: 30px auto;
+  }
+  .ci_inner .title p {
+    text-align: center;
+  }
+
+  .ci_area {
+    width: 100%;
+    height: 1340px;
+    margin-bottom: 65px;
+  }
+  .ci_area .main_ci {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 60px;
+    border-radius: 3px;
+    background-color: #fedb00;
+    background-image: url(../../multi/img/sub/main_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .main_ci > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .detail_ci {
+    float: left;
+    width: 450px;
+    height: 960px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .ci_area .detail_ci > div {
+    width: 100%;
+    height: 33.3333333333%;
+  }
+  .ci_area .circle {
+    margin-right: 40px;
+  }
+  .ci_area .circle > .img {
+    background-image: url(../../multi/img/sub/circle_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .circle > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .face > .img {
+    background-image: url(../../multi/img/sub/face_ci.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: initial;
+  }
+  .ci_area .face > .img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .ci_area .info_1 {
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+  }
+  .ci_area dl {
+    width: 100%;
+    height: 100%;
+    padding: 50px 25px;
+  }
+  .ci_area dt {
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn_area {
+    display: flex;
+    justify-content: space-between;
+    width: 520px;
+    height: 68px;
+    margin: auto;
+  }
+  .btn_area > button {
+    width: 240px;
+    height: 68px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: #fff;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 3px #ddd;
+  }
+  .btn_area > button span {
+    margin-right: 20px;
+  }
+  .btn_area > button i {
+    font-size: 24px;
+  }
+  .btn_area > button:hover {
+    border: 2px solid #c8102e;
+  }
+}
+@media all and (min-width: 1440px) {
   #ciBox {
     width: 100%;
     height: 1940px;
