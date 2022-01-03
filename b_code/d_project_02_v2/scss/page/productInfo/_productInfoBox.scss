@@ -1,0 +1,33 @@
+// _productInfoBox.scss
+
+#productInfoBox { width: 100%; height: 2260px; padding-top: 120px;}
+.productInfo_inner { width: 940px; height: 1998px; margin: auto;}
+.title_area { width: 160px; height: auto; margin: auto;
+  h2 { font-size: 36px; text-align: center; @include title_line(); }
+}
+.search_area { width: 100%; height: 100px; padding: 20px 50px; margin-bottom: 70px; background-color: #eee; }
+
+.sub_area { width: 100%; height: 25px; margin-bottom: 25px; }
+.number_part { float: left; width: auto; height: 100%; }
+.sort_part { float:right; width: auto; height: 100%; 
+  > li { float: left; width: auto; height: 100%; padding: 0 10px; border-right: 1px solid #333; 
+    &:last-child { border-right: 0; padding-right: 0; }
+  }
+}
+
+.content_area { width: 100%; height: 1500px; margin-bottom: 64px; 
+  ul { display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; height: 100%; }
+  li { width: 220px; height: 354px; border:1px solid $color_gray_03; }
+  a { display: block; width: 100%; height: 100%; }
+  .img { width: 100%; height: 200px; }
+  .text { width: 100%; height: 154px; border-top: 1px solid $color_gray_03; }
+}
+
+.page_area { width: 477px; height: 30px; margin: auto;
+  ul { width: 100%; height: 100%; }
+  li { float: left; width: auto; height: 100%; margin-right: 20px; line-height: 30px;
+    &:last-child { margin-right: 0; }
+    &.btn { width: 30px; height: 30px; background-color: $color_gray_02; }
+    a { display: block; width: 100%; height: 100%; text-align: center; }
+  }
+}
