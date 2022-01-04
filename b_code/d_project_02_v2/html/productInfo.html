@@ -125,7 +125,53 @@
           <div class="title_area">
             <h2>제품정보</h2>
           </div>
-          <div class="search_area"><!-- form 다시 공부하고 작성하기 --></div>
+          <div class="search_area">
+            <h2 class="blind">제품 검색하기</h2>
+            <form action="#" method="POST">
+              <fieldset class="category">
+                <legend class="blind">카테고리 선택</legend>
+                <ul>
+                  <li>
+                    <label for="mainCategory" class="blind">대분류 선택</label>
+                    <select id="mainCategory" name="main__Category" required>
+                      <option value="조미소스/식품">조미소스/식품</option>
+                      <option value="분말/건조식품">분말/건조식품</option>
+                      <option value="레토르트/간편식">레토르트/간편식</option>
+                      <option value="곡류가공식품">곡류가공식품</option>
+                      <option value="농/축/수산식품">농/축/수산식품</option>
+                    </select>
+                  </li>
+                  <li><i class="fas fa-chevron-right"></i></li>
+                  <li>
+                    <label for="subCategory" class="blind">소분류 선택</label>
+                    <select id="subCategory" name="sub__Category" required>
+                      <option value="케챂">케챂</option>
+                      <option value="마요네즈">마요네즈</option>
+                      <option value="상온드레싱">상온드레싱</option>
+                      <option value="육류소스">육류소스</option>
+                      <option value="스파게티소스">스파게티소스</option>
+                    </select>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="search">
+                <ul>
+                  <li>
+                    <label for="searchProduct" class="blind">검색할 내용을 입력하세요.</label>
+                    <input type="text" id="searchProduct" name="search__Product" value="" placeholder="검색할 내용을 입력하세요." />
+                  </li>
+                  <li>
+                    <div class="search_btn">
+                      <button type="button">
+                        <span class="blind">검색하기</span>
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
           <div class="sub_area">
             <div class="number_part">총 000개의 제품이 있습니다.</div>
             <ul class="sort_part">
@@ -268,9 +314,15 @@
           </div>
           <div class="page_area">
             <ul>
-              <li class="btn page_start"><a href="#">&lt;&lt;</a><span class="blind">시작점으로 이동</span></li>
-              <li class="btn page_prev"><a href="#">&lt;</a><span class="blind">이전으로 이동</span></li>
-              <li><a href="#">1</a></li>
+              <li class="btn page_start">
+                <a href="#"><i class="fas fa-angle-double-left"></i></a>
+                <span class="blind">시작점으로 이동</span>
+              </li>
+              <li class="btn page_prev">
+                <a href="#"><i class="fas fa-angle-left"></i></a>
+                <span class="blind">이전으로 이동</span>
+              </li>
+              <li class="on"><a href="#">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
               <li><a href="#">4</a></li>
@@ -280,8 +332,14 @@
               <li><a href="#">8</a></li>
               <li><a href="#">9</a></li>
               <li><a href="#">10</a></li>
-              <li class="btn page_next"><a href="#">&gt;</a><span class="blind">다음으로 이동</span></li>
-              <li class="btn page_end"><a href="#">&gt;&gt;</a><span class="blind">마지막지점으로 이동</span></li>
+              <li class="btn page_next">
+                <a href="#"><i class="fas fa-angle-right"></i></a>
+                <span class="blind">다음으로 이동</span>
+              </li>
+              <li class="btn page_end">
+                <a href="#"><i class="fas fa-angle-double-right"></i></a>
+                <span class="blind">마지막지점으로 이동</span>
+              </li>
             </ul>
           </div>
         </div>
