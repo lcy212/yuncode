@@ -4,7 +4,7 @@
 // 1. laptop, pc에서 #history_1990, #history_1980의 .text에 dir="rtl" 넣기
 // 2. movile, tablet에선 빼기
 
-
+{
 // 변수 --------------------------------------------------------
 const history90 = document.querySelector('#history_1990');
 const text90 = history90.querySelector('.text');
@@ -30,3 +30,4 @@ const fnDevice = ()=>{
 
 // 이벤트처리 ---------------------------------------------------
 mediaQuery.addEventListener('change', fnDevice);
+}

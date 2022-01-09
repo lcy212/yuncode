@@ -42,12 +42,13 @@ $imgPath:'../../multi/img/sub/';
     li {
       position:relative; float: left; width: 440px; height: 300px; margin-bottom: 40px; color:$color_white;
       &:nth-child(4) { margin: 0; }
+      // &.on { padding-top: 18px; }
+      &.on dt { display: none; }
+      &.on dd { display: block; }
     }// li
     .image { width: 100%; height: 100%; border-radius:5px;  @include img('ideologieBox.jpeg',$size:cover); filter:brightness(40%); }
-    dl { position:absolute; top: 0; left: 0; z-index: 10; width: 100%; height: 100%; padding: 0 18px; 
-      &:hover { padding-top: 18px; }
-      &:hover > dt { display: none; }
-      &:hover > dd { display: block; }
+    dl { position:absolute; top: 0; left: 0; z-index: 10; width: 100%; height: 100%; padding: 10px 18px; 
+
     }
     dt { font-size: 36px; font-weight: bold; text-align: center; line-height: 300px; }
     dd { display: none; padding-top: 15px; line-height: 150%; }
@@ -93,7 +94,8 @@ $imgPath:'../../multi/img/sub/';
     }
     ul { width: 940px; height: 655px;}
     li {
-      position:relative; float: left; width: 440px; height: 300px; margin-right: 60px; margin-bottom: 55px; color:$color_white;
+      position:relative; float: left; width: 440px; height: 300px; 
+      margin-right: 60px; margin-bottom: 55px; color:$color_white;
       &:nth-child(2) { margin-right: 0; }
       &:nth-child(3) { margin-bottom: 0; }
       &:nth-child(4) { margin: 0; }
@@ -103,7 +105,6 @@ $imgPath:'../../multi/img/sub/';
       &:hover { padding-top: 18px; }
       &:hover > dt { display: none; }
       &:hover > dd { display: block; }
-      
     }
     dt { font-size: 36px; font-weight: bold; text-align: center; line-height: 300px; }
     dd { display: none; padding-top: 15px; line-height: 150%; }

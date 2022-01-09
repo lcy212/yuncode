@@ -45,7 +45,7 @@ $imgPath:'../../multi/img/sub/';
           @include laptop {}
           @include pc {}
         }
-        select { width: 180px; height: 100%; background-color: #fff;
+        select { width: 180px; height: 100%; background-color: $color_white; color:$color_black;
           @include mobile { width: 240px; 
             &#subCategory { width: 300px; }
           }

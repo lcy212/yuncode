@@ -151,9 +151,9 @@ $imgPath:'../../multi/img/sub/';
   }// .ci_area
 
 
-  .btn_area { display: flex; justify-content: space-between; width: 520px; height: 68px; margin: auto;
+  .btn_area { display: flex; justify-content: space-between; width: 520px; height: 68px; margin: auto; color:$color_black; 
     > button { 
-      width: 240px; height: 68px; border:1px solid #777; border-radius: 5px; background-color: #fff; 
+      width: 240px; height: 68px; border:1px solid #777; border-radius: 5px; background-color: $color_white; 
       text-transform: uppercase; box-shadow: 2px 2px 3px #ddd; 
       span { margin-right: 20px;}
       i { font-size: 24px; }

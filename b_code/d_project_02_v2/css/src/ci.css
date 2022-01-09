@@ -1713,13 +1713,14 @@
     width: 520px;
     height: 68px;
     margin: auto;
+    color: #1e1e1e;
   }
   .btn_area > button {
     width: 240px;
     height: 68px;
     border: 1px solid #777;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #ffffff;
     text-transform: uppercase;
     box-shadow: 2px 2px 3px #ddd;
   }

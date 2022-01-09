@@ -1157,6 +1157,11 @@
   height: 1150px;
   padding-top: 120px;
 }
+@media all and (max-width: 767px) {
+  #newsBox {
+    height: 1000px;
+  }
+}
 
 .news_inner {
   width: 940px;
