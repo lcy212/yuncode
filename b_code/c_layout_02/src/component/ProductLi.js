@@ -2,14 +2,12 @@ import React from 'react';
 
 export default function ProductLi({data}){
 
-  const pr = data;
-
   return (
-    <li key={pr.product}>
+    <li>
       <div className='img_part'></div>
       <dl>
-        <dt>{pr.product}</dt>     
-        <dd>{pr.narr}</dd>
+        <dt>{data.product}</dt>     
+        <dd>{data.narr}</dd>
       </dl>
     </li>
   )

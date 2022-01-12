@@ -1,10 +1,15 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../style/HeadBox.scss';
 
 export default function HeadBox(){
+
+  const fnAction = ({isActive})=> isActive ? "on" : '' ;
+
   return (
     <header id="headBox">
       <div className='head_inner'>
-        <h1>coffee</h1>
+        <h1><NavLink className={fnAction} to="/">company</NavLink></h1>
         <nav>
           <div className='unb'>
             <ul>
@@ -16,7 +21,7 @@ export default function HeadBox(){
           </div>
           <div className='gnb'>
             <ul>
-              <li><a href="#">about</a></li>
+              <li><NavLink className={fnAction} to="/EventBox">event</NavLink></li>
               <li><a href="#">product</a></li>
               <li><a href="#">gallery</a></li>
               <li><a href="#">notice</a></li>

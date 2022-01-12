@@ -4,7 +4,7 @@ export default function FootBox(){
   return (
     <footer id="footBox">
       <div className='foot_inner'>
-        <h2>coffee</h2>
+        <h2>company</h2>
         <div className='menu_area'>
           <ul>
             <li><a href="#">이용약관</a></li>
