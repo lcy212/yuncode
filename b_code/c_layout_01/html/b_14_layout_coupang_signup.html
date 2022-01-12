@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- b_14_layout_coupang_signup.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_14_layout_coupang_signup.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>쿠팡 회원가입</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+
+       <article class="signupBox">
+            <form action="#" method="POST">
+                <fieldset class="signup_area">
+                    <legend>회원정보를 입력해주세요</legend>
+                    <ul>
+                        <li>
+                            <label for="userId">
+                                <i class="far fa-envelope"></i>
+                                <span class="blind">아이디(이메일)를 입력하세요</span>
+                            </label>
+                            <input type="text" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" required />
+                        </li>
+                        <li>
+                            <label for="userPw">
+                                <i class="fas fa-lock"></i>
+                                <span class="blind">비밀번호를 입력하세요</span>
+                            </label>
+                            <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호" required />
+                        </li>
+                        <li>
+                            <label for="userPw2">
+                                <i class="fas fa-lock"></i>
+                                <span class="blind">비밀번호를 다시 입력하세요</span>
+                            </label>
+                            <input type="password" id="userPw2" name="user__Pw2" value="" placeholder="비밀번호 확인" required />
+                        </li>
+                        <li>
+                            <label for="userName">
+                                <i class="far fa-user"></i>
+                                <span class="blind">이름을 입력하세요</span>
+                            </label>
+                            <input type="text" id="userName" name="user__Name" value="" placeholder="이름" required />
+                        </li>
+                        <li>
+                            <label for="userPhone">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span class="blind">휴대폰 번호를 입력하세요</span>
+                            </label>
+                            <input type="tel" id="userPhone" name="user__Phone" value="" placeholder="휴대폰 번호" required />
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="agree_area">
+                    <legend>쿠팡 서비스약관에 동의해주세요</legend>
+                    <div>
+                        <input type="checkbox" id="agreeAll" name="agree__All" value="agree__All" />
+                        <label for="agreeAll">
+                            <i class="blind">체크박스</i>
+                            <em>모두 동의합니다.<br /></em>
+                            <span>                                
+                                동의에는 필수 및 선택 목적(광고성 정보 수신 포함)에 대한 동의가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.
+                            </span>
+                        </label>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="agree14" name="agree__14" value="agree14" required />
+                            <label for="agree14">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;필수&rbrack; 만 14세 이상입니다
+                            </span>
+                        </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeCoupang" name="agree__Coupang" value="agreeCoupang" required />
+                            <label for="agreeCoupang">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;필수&rbrack; 쿠팡 이용약관 동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+
+                            
+
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeCommerce" name="agree__Commerce" value="agreeCommerce" required />
+                            <label for="agreeCommerce">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;필수&rbrack; 전자금융거래 이용약관 동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreePrivacy" name="agree__Privacy" value="agreePrivacy" required />
+                            <label for="agreePrivacy">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;필수&rbrack; 개인정보 수집 및 이용 동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeThird" name="agree__Third" value="agreeThird" required />
+                            <label for="agreeThird">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;필수&rbrack; 개인정보 제3자 제공 동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeMarketing" name="agree__Marketing" value="agreeMarketing" />
+                            <label for="agreeMarketing">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;선택&rbrack; 마케팅 및 이벤트 목적의 개인정보 수집 및 이용동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeAds" name="agree__Ads" value="agreeAds" />
+                            <label for="agreeAds">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;선택&rbrack; 광고성 정보 수신 동의
+                            </span>
+                            <button class="fas fa-chevron-right" type="button"></button>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeEmail" name="agree__Email" value="agreeEmail" />
+                            <label for="agreeEmail">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;선택&rbrack; 이메일 수신 동의
+                            </span>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeSMS" name="agree__SMS" value="agreeSMS" />
+                            <label for="agreeSMS">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;선택&rbrack; sms,mms 수신 동의<!-- 대문자로 바꾸기 -->
+                            </span>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="agreeApp" name="agree__App" value="agreeApp" />
+                            <label for="agreeApp">
+                            <i class="blind">체크박스</i>
+                            <span>
+                                &lbrack;선택&rbrack; 앱 푸시 수신 동의
+                            </span>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="signup_btn">
+                    <legend class="blind">가입하기</legend>
+                    <div class="btn">
+                        <button type="submit">동의하고 가입하기</button>
+                    </div>
+                </fieldset>
+            </form>
+       </article><!-- .signupBox -->
+
+       <footer class="footBox">
+           <address><span>©coupang corp. all</span> rights reserved.</address> <!--대문자로 바꾸기-->
+       </footer><!-- .footBox -->
+
+       <div class="agreeCoupang_more">
+            <div class="modal_message">
+                <div class="close_btn">
+                    <button type="button">X</button>    
+                </div>
+                <em>쿠팡 이용약관 동의</em>                
+                <p>이용약관 상세내용</p>
+                <div class="ok_btn">
+                    <button type="button">확인</button>
+                </div>
+            </div>
+            <div class="modal_bg"></div>
+        </div>
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

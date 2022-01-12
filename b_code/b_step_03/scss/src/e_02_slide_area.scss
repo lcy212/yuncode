@@ -1,0 +1,16 @@
+// e_02_slide_area.scss
+
+@import '../common/variable';
+@import '../common/mixin';
+@import '../common/reset.scss';
+@import '../common/common.scss';
+
+#wrap {
+  width: 90%; min-width: 600px;
+  height: auto; min-height: 31.25em;
+  padding-top: 1rem; padding-bottom: 20rem;
+  background-color: #eef;
+}
+
+@import '../particle/header';
+@import "../particle/slide";

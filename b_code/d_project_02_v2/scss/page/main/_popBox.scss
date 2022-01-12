@@ -1,0 +1,64 @@
+// _popBox.scss
+
+$imgPath:'../../multi/img/main/';
+
+#popBox {
+  position:relative; width: 100%;
+  background-color: $color_white;
+  @include mobile { @include remUnit(height, 560); padding-top: 74px; }
+  @include tablet { @include remUnit(height, 560); padding-top: 74px; }
+  @include laptop { @include remUnit(height, 660); padding-top: 97px; }
+  @include pc { @include remUnit(height, 660); padding-top: 97px; }
+}// #popBox
+
+.pop_inner {
+  height: auto; margin:auto; 
+  @include mobile { width: 180px;  }
+  @include tablet { width: 612px;}
+  @include laptop { width: 936px; }
+  @include pc { width: 936px; } 
+}
+.pop_title_area {
+  width: auto; height: auto; margin: auto; text-align: center; 
+  h2 {
+    font-size: 36px;
+    @include title_line($margin:20px);
+    span { 
+      @include mobile { @include blind; }
+      @include tablet { @include blind; }
+    }
+  }
+  p {       
+    @include mobile { @include blind; }
+    @include tablet { @include blind; } 
+  }
+}
+ 
+.pop_btn_area {
+  position:absolute; top: 380px; right: 0; left: 0; margin:auto; height: 0;
+  @include mobile { top: 300px; width: 294px; }
+  @include tablet { top: 300px; width: 726px; }
+  @include laptop { width: 1050px}
+  @include pc { width: 1050px}
+  button { width: 36px; height: 70px; }
+  .next { float:right; @include img('pop_next.png'); }
+  .prev { float:left; @include img('pop_prev.png'); }
+}
+
+.pop_con {
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  width:auto; height:auto; margin-top: 58px;
+  li { width: 180px; height: 290px; background-color: $color_white; 
+  @include mobile { &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {display: none;} }
+  @include tablet { &:nth-child(4), &:nth-child(5) {display: none;} }
+  }
+  a { display: block; width: 100%; height: 100%; 
+  &:hover { transform: scale(1.05); font-weight: bold; }
+  }
+  .pop_img { width: 180px; height: 174px; border:1px solid $color_gray_02; @include img('pop.png',$size:cover);  }
+  .pop_text { width: 180px; height: 116px; padding: 16px; border:1px solid $color_gray_02;
+  .pop_name { text-align:center; font-size: 24px; margin-bottom: 36px; }
+  // p {}
+}
+
+}

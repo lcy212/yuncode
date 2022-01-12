@@ -1,0 +1,13 @@
+// FootBox.scss
+
+#footBox { width: 100%; height: 200px; padding-top: 50px; background-color: #888; }
+
+.foot_inner { width: 1180px; height: 100px; margin: auto; 
+  h2 { float: right; width: 300px; height: 100%; background-color: #fff; 
+    font-size: 36px; line-height: 100px; text-align: center;
+  }
+}
+
+.address_area { float: left; width: 780px; height: 100%; padding: 20px; background-color: #fff; 
+  > p { font-size: 18px; font-weight: bold; line-height: 30px; text-transform: capitalize; }
+}

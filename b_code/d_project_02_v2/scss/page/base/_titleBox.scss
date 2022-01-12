@@ -1,0 +1,36 @@
+// titleBox.scss
+/* titleBox.css */
+
+$imgPath:'../../multi/img/sub/';
+
+@include mobile {
+  #titleBox { width: 100%; height: 225px; padding-top: 60px;  @include img('titleBox.png',$size:cover); }
+  .title_inner { 
+    width: 280px; height: 105px; margin:auto; text-align: center;
+    h2 { margin-bottom: 25px; font-size: 36px;  }
+  }
+}// mobile
+
+@include tablet {
+  #titleBox { width: 100%; height: 340px; padding-top: 130px;  @include img('titleBox.png',$size:cover); }
+  .title_inner { 
+    width: 570px; height: 90px; margin:auto; text-align: center;
+    h2 { margin-bottom: 25px; font-size: 36px;  }
+  }
+}// tablet
+
+@include laptop {
+  #titleBox { width: 100%; height: 400px; padding-top: 164px;  @include img('titleBox.png',$size:cover); }
+  .title_inner { 
+    width: 570px; height: 90px; margin:auto; text-align: center;
+    h2 { margin-bottom: 25px; font-size: 36px;  }
+  }
+}// laptop
+
+@include pc {
+  #titleBox { width: 100%; height: 400px; padding-top: 164px;  @include img('titleBox.png',$size:cover); }
+  .title_inner { 
+    width: 570px; height: 90px; margin:auto; text-align: center;
+    h2 { margin-bottom: 25px; font-size: 36px;  }
+  }
+}// pc

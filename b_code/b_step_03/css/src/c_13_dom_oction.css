@@ -1,0 +1,66 @@
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  background-color: #ddd;
+}
+
+#headBox {
+  width: 100%;
+  height: 154px;
+}
+
+#viewBox {
+  position: relative;
+  width: 100%;
+  height: 387px;
+}
+#viewBox .btn_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%);
+  width: 90%;
+  height: 0;
+  margin: auto;
+}
+#viewBox .btn_area > button {
+  width: 35px;
+  height: 40px;
+  background-color: #888;
+}
+#viewBox .btn_area > button.next {
+  float: right;
+}
+#viewBox .btn_area > button.prev {
+  float: left;
+}
+#viewBox .view_area {
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area li:nth-child(1) {
+  background-color: #adf;
+}
+#viewBox .view_area li:nth-child(2) {
+  z-index: -8;
+  background-color: #daf;
+}
+#viewBox .view_area li:nth-child(3) {
+  z-index: -9;
+  background-color: #fad;
+}
+#viewBox .view_area li:nth-child(4) {
+  z-index: -10;
+  background-color: #fda;
+}
+
+/*# sourceMappingURL=c_13_dom_oction.css.map */

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- b_10_layout_never_signup.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_10_layout_naver_signup.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>네이버 회원가입</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">naver</a></h1>
+
+       <article id="signUp">
+            <div class="sign_content">
+                <form class="input_area">
+                    <fieldset class="input_text">
+                        <legend class="blind">회원가입 정보 입력</legend>
+                        <ul>
+                            <li>
+                                <label for="userId">아이디</label>
+                                <input type="text" id="userId" name="user__Id" value="" />
+                                <span>@naver.com</span>
+                            </li>
+                            <li>
+                                <label for="userPw">비밀번호</label>
+                                <input type="password" id="userPw" name="user__Pw" value="" />
+                            </li>
+                            <li>
+                                <label for="userPwRe">비밀번호 재확인</label>
+                                <input type="password" id="userPwRe" name="user__PwRe" value="" />
+                            </li>
+                            <li>
+                                <label for="userName">이름</label>
+                                <input type="text" id="userName" name="user__Name" value="" />
+                            </li>
+                            <li class="birth">
+                                <div>
+                                    <label for="birthYear">생년월일</label>
+                                    <input type="text" id="birthYear" name="birth__Year" value="" placeholder="년(4자)" />
+                                </div>
+                                <div>
+                                    <label for="birthMonth" class="blind">월</label>
+                                    <input type="text" id="birthMonth" name="birth__Month" value="" placeholder="월" />
+                                </div>
+                                <div>
+                                    <label for="birthDay" class="blind">일</label>
+                                    <input type="text" id="birthDay" name="birth__Day" value="" placeholder="일" />
+                                </div>
+                            </li>
+                            <li>
+                                <label for="userGender">성별</label>
+                                <input type="text" id="userGender" name="user__Gender" value="" placeholder="성별" />
+                            </li>
+                            <li>                               
+                                <label for="checkEmail">본인 확인 이메일<span>(선택)</span></label>
+                                <input type="text" id="checkEmail" name="check__Email" value="" placeholder="선택입력" />
+                            </li>
+        
+                            <li>
+                                <label for="userCountry">휴대전화</label>
+                                <input type="text" id="userCountry" name="user__Country" value="" placeholder="대한민국 +82" />
+                            </li>
+
+                            <li class="number">
+                                <div>
+                                    <label for="userPhone" class="blind">전화번호 입력</label>
+                                    <input type="text" id="userPhone" name="user__Phone" value="" placeholder="전화번호 입력" />
+                                </div>
+                                <div>
+                                    <label for="certification" class="blind">인증번호받기</label>
+                                    <input type="button" id="certification" name="certification" value="인증번호받기" />
+                                </div>
+                            </li>
+                            <li>
+                                <label for="securityNum" class="blind">인증번호 입력하세요</label>
+                                <input type="text" id="securityNum" name="security__Num" value="" placeholder="인증번호 입력하세요" />
+                            </li>
+    
+                        </ul>
+                    </fieldset><!-- .input_text-->
+                    <fieldset>
+                        <div class="sign_btn">
+                            <button>가입하기</button>
+                        </div>
+                    </fieldset>
+                </form><!-- .input_area-->
+
+                <div class="footBox clearfix">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">책임의 한계와 법적고지</a></li>
+                        <li><a href="#">회원정보 고객센터</a></li>
+                    </ul>
+                    <address class="clearfix">                       
+                        <p><a href="#">naver</a> copyright <span>naver</span> corp. all rights reserved.</p><!-- 소문자로 변경하기-->
+                    </address>
+                </div>
+            </div>
+       </article>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

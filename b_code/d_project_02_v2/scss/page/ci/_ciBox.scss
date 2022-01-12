@@ -1,0 +1,163 @@
+// _ciBox.scss 
+
+$imgPath:'../../multi/img/sub/';
+
+@include mobile {
+  #ciBox{ width: 100%; height: 3550px; padding-top: 105px; }
+  .ci_inner { width: 300px; height: auto; margin: auto;
+    .title { width: 170px; height: auto; margin: auto; margin-bottom: 40px;
+      h2 { font-size: 36px; text-align: center; @include title_line() }
+      p { display: none; }
+    }
+  }
+  .ci_area { width: 100%; height: auto; margin-bottom: 65px; 
+    .main_ci { 
+      width: 100%; height: 410px; margin-bottom: 60px; 
+      border-radius: 3px; background-color: $color_ottogi_yellow; @include img('main_ci_mob.png') }
+    .detail_ci { 
+      width: 300px; height: 1200px; margin: auto;
+      border:1px solid #777; border-radius: 3px; background-color: #fff; 
+      > div { width: 100%; height: calc(100%/3);}
+    }
+    .circle { margin-bottom: 40px; 
+      > .img { @include img('circle_ci.png')}
+    }
+    .face { 
+      > .img { @include img('face_ci.png')}
+    }
+    .info_1 { border-top:1px solid #777; border-bottom:1px solid #777; }
+    dl { width: 100%; height: 100%; padding: 50px 20px; }
+    dt { margin-bottom: 36px; font-size: 24px; font-weight: bold; text-align: center; }
+    // dd
+  }// .ci_area
+
+  .btn_area { width: 300px; height: 174px; margin: auto;
+    > button { 
+      width: 100%; height: 68px; border:1px solid #777; border-radius: 5px; background-color: #fff; 
+      text-transform: uppercase; box-shadow: 2px 2px 3px #ddd;
+      &.ai_btn { margin-bottom: 38px; }
+      span { margin-right: 20px;}
+      i { font-size: 24px; }
+      &:hover { border: 2px solid $color_ottogi_red; }
+    }
+  }// .btn_area
+}
+@include tablet {
+  #ciBox{ width: 100%; height: 3010px; padding-top: 105px; }
+  .ci_inner { width: 660px; height: auto; margin: auto;
+    .title { width: 420px; height: auto; margin: auto; margin-bottom: 40px;
+      h2 { font-size: 36px; text-align: center; @include title_line() }
+      p { text-align: center; }
+    }
+  }
+  .ci_area { width: 100%; height: 2410px; margin-bottom: 65px; 
+    .main_ci { 
+      width: 100%; height: 320px; margin-bottom: 60px; 
+      border-radius: 3px; background-color: $color_ottogi_yellow; @include img('main_ci.png') }
+    .detail_ci { 
+      width: 450px; height: 960px; margin: auto;
+      border:1px solid #777; border-radius: 3px; background-color: #fff; 
+      > div { width: 100%; height: calc(100%/3);}
+    }
+    .circle { margin-bottom: 85px; 
+      > .img { @include img('circle_ci.png')}
+    }
+    .face { 
+      > .img { @include img('face_ci.png')}
+    }
+    .info_1 { border-top:1px solid #777; border-bottom:1px solid #777; }
+    dl { width: 100%; height: 100%; padding: 50px 25px; }
+    dt { margin-bottom: 36px; font-size: 24px; font-weight: bold; text-align: center; }
+    // dd
+  }// .ci_area
+
+  .btn_area { display: flex; justify-content: space-between; width: 520px; height: 68px; margin: auto;
+    > button { 
+      width: 240px; height: 68px; border:1px solid #777; border-radius: 5px; background-color: #fff; 
+      text-transform: uppercase; box-shadow: 2px 2px 3px #ddd; 
+      span { margin-right: 20px;}
+      i { font-size: 24px; }
+      &:hover { border: 2px solid $color_ottogi_red; }
+    }
+  }// .btn_area
+}
+@include laptop {
+  #ciBox{ width: 100%; height: 1940px; padding-top: 105px; }
+  .ci_inner { width: 940px; height: auto; margin: auto;
+    .title { width: 420px; height: auto; margin: auto; margin-bottom: 40px;
+      h2 { font-size: 36px; text-align: center; @include title_line() }
+      p { text-align: center; }
+    }
+  }
+  .ci_area { width: 100%; height: 1340px; margin-bottom: 65px; 
+    .main_ci { 
+      width: 100%; height: 320px; margin-bottom: 60px; 
+      border-radius: 3px; background-color: $color_ottogi_yellow; @include img('main_ci.png') }
+    .detail_ci { 
+      float: left; width: 450px; height: 960px; 
+      border:1px solid #777; border-radius: 3px; background-color: #fff; 
+      > div { width: 100%; height: calc(100%/3);}
+    }
+    .circle { margin-right: 40px; 
+      > .img { @include img('circle_ci.png')}
+    }
+    .face { 
+      > .img { @include img('face_ci.png')}
+    }
+    .info_1 { border-top:1px solid #777; border-bottom:1px solid #777; }
+    dl { width: 100%; height: 100%; padding: 50px 25px; }
+    dt { margin-bottom: 36px; font-size: 24px; font-weight: bold; text-align: center; }
+    // dd
+  }// .ci_area
+
+
+  .btn_area { display: flex; justify-content: space-between; width: 520px; height: 68px; margin: auto;
+    > button { 
+      width: 240px; height: 68px; border:1px solid #777; border-radius: 5px; background-color: #fff; 
+      text-transform: uppercase; box-shadow: 2px 2px 3px #ddd; 
+      span { margin-right: 20px;}
+      i { font-size: 24px; }
+      &:hover { border: 2px solid $color_ottogi_red; }
+    }
+  }// .btn_area
+}
+@include pc {
+  #ciBox{ width: 100%; height: 1940px; padding-top: 105px; }
+  .ci_inner { width: 940px; height: auto; margin: auto;
+    .title { width: 420px; height: auto; margin: auto; margin-bottom: 40px;
+      h2 { font-size: 36px; text-align: center; @include title_line() }
+      p { text-align: center; }
+    }
+  }
+  .ci_area { width: 100%; height: 1340px; margin-bottom: 65px; 
+    .main_ci { 
+      width: 100%; height: 320px; margin-bottom: 60px; 
+      border-radius: 3px; background-color: $color_ottogi_yellow; @include img('main_ci.png') }
+    .detail_ci { 
+      float: left; width: 450px; height: 960px; 
+      border:1px solid #777; border-radius: 3px; background-color: #fff; 
+      > div { width: 100%; height: calc(100%/3);}
+    }
+    .circle { margin-right: 40px; 
+      > .img { @include img('circle_ci.png')}
+    }
+    .face { 
+      > .img { @include img('face_ci.png')}
+    }
+    .info_1 { border-top:1px solid #777; border-bottom:1px solid #777; }
+    dl { width: 100%; height: 100%; padding: 50px 25px; }
+    dt { margin-bottom: 36px; font-size: 24px; font-weight: bold; text-align: center; }
+    // dd
+  }// .ci_area
+
+
+  .btn_area { display: flex; justify-content: space-between; width: 520px; height: 68px; margin: auto; color:$color_black; 
+    > button { 
+      width: 240px; height: 68px; border:1px solid #777; border-radius: 5px; background-color: $color_white; 
+      text-transform: uppercase; box-shadow: 2px 2px 3px #ddd; 
+      span { margin-right: 20px;}
+      i { font-size: 24px; }
+      &:hover { border: 2px solid $color_ottogi_red; }
+    }
+  }// .btn_area
+}

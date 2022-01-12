@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- b_01_audio.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_01_audio.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>DOCUMENT</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+
+        <div class="part">
+            <h2>audio 불러오기</h2>
+            <p>audio : 음성파일을 불러오는 태그</p>
+
+            <div class="sound">
+                <audio src="../multi/audio/cinematic-fairy-tale-story-main-8697.mp3" controls>
+                    <p>현재 사용하고있는 브라우저는 audio파일을 지원하지 않습니다.<br />
+                    <a href="http://google.com/chrome">최신브라우저</a>를 사용하세요.</p>
+                </audio>
+            </div><!-- .sound -->
+
+            <div class="sound"><!-- 권장하는 audio태그 방식 -->
+                <div class="audio_btn">
+                    <button type="button">재생&sol;일시정지</button>
+                    <button type="button">음소거</button>
+                </div><!-- js에서 컨트롤하는 부분 -->
+                <audio controls>
+                    <source src="../multi/audio/epic-hollywood-trailer-9489.ogg" type="audio/ogg" />
+                    <source src="../multi/audio/epic-hollywood-trailer-9489.mp3" type="audio/mp3" />
+                    <p>
+                        현재 사용하고있는 브라우저는 audio파일을 지원하지 않습니다.<br />
+                        <a href="http://google.com/chrome">최신브라우저</a>를 사용하세요.
+                    </p>
+                </audio>
+            </div><!-- .sound -->
+
+        </div><!-- .part -->
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>
+
+<!--
+    html은 먼저 처리하는 것을 수행하고 동일하지만 나중에 오는 요소는 배제한다
+    css는 하나의 속성에서 여러개 작성하는 경우, 앞의 것을 수행하고 뒤에 오는 것은 배제한다
+    ex) font-family
+    동일속성이 여러개 존재하면 이전속성은 사라지고 뒤에 오는 속성을 처리한다.
+-->

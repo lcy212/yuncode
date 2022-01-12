@@ -10,6 +10,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+
 	<link rel="stylesheet" href="../css/common/reset.css">
 	<link rel="stylesheet" href="../css/common/common.css">
 	<link rel="stylesheet" href="../css/src/main.css">
@@ -55,6 +57,7 @@
 							<li>
 								<div class="gnb_title"><a href="#">제품정보</a></div>
 								<ul class="gnb_list">
+									<li><a href="#">제품연혁</a></li>
 									<li><a href="#">제품정보</a></li>
 									<li><a href="#">제품연혁</a></li>
 								</ul>
@@ -220,7 +223,7 @@
 		</article><!-- #newBox -->
 		
 		<article id="popBox">
-			<div class="pop_inner">
+			<div class="pop_inner ">
 				<div class="pop_title">
 					<h2>인기상품</h2>
 					<p>오뚜기의 인기상품을 소개합니다.</p>
@@ -229,7 +232,7 @@
 					<button type="button" class="next"><img src="../image/pop_next.png" alt="다음상품" /></button>
 					<button type="button" class="prev"><img src="../image/pop_prev.png" alt="이전상품" /></button>
 				</div>
-				<ul>
+				<ul class="clearfix">
 					<li>
 						<a href="#">
 							<div class="pop_img"><img src="#" alt="인기상품_01"></div>
@@ -369,9 +372,7 @@
 		</footer><!-- #footBox -->
 
 		<aside id="upButton">
-			<button type="button">
-				<img src="../image/up.png" alt="위로가기" />
-			</button>
+			<a href="#"><i class="fas fa-sort-up"></i></a>
 		</aside><!-- #upButton -->
 
 	</div><!-- #wrap -->

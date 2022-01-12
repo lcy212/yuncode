@@ -1,0 +1,18 @@
+// main.scss
+/* main.css */
+
+@import "../common/variable", "../common/mixin";
+
+#wrap {
+  width: 100%; height: auto; min-height: 800px; } // #wrap
+
+// ---------------------------------------------------
+@import "../page/base/headBox";
+@import "../page/main/viewBox";
+@import "../page/main/linkBox";
+@import "../page/main/newBox";
+@import "../page/main/popBox";
+@import "../page/main/recipeBox";
+@import "../page/main/snsBox";
+@import "../page/base/menuBox";
+@import "../page/base/footBox";

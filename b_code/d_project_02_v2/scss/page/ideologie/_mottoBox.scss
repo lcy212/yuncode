@@ -1,0 +1,94 @@
+// _mottoBox.scss
+
+$imgPath:'../../multi/img/sub/';
+
+@include mobile {
+  #mottoBox { width: 100%; height: 1300px; padding-top: 130px; }
+  .motto_inner { 
+    width: 300px; height: auto; margin: auto; 
+    .title {
+      width: auto; height: 36px; margin: auto; text-align: center; margin-bottom: 95px;
+      h2 { font-size: 36px; @include title_line(); }
+    }
+    ul { width: 100%; height: 950px;}
+    li { 
+      position: relative;
+      width: 300px; height: 300px; margin-bottom: 35px; 
+      .image { 
+        width: 300px; height: 300px; border-radius:100%;
+        text-align: center; @include img('mottoBox.jpg',$size:cover); opacity: 0.2;
+      }
+    }// li
+    dl { position:absolute; top: 50%; left: 0; transform: translateY(-60%);
+      width: 300px; height: auto; text-align: center;}
+    dt { font-size: 24px; font-weight: bold; margin-bottom: 34px; }
+    // dd { } 
+  }
+}
+@include tablet {
+  #mottoBox { width: 100%; height: 1325px; padding-top: 130px; }
+  .motto_inner { 
+    width: 640px; height: auto; margin: auto; 
+    .title {
+      width: auto; height: 36px; margin: auto; text-align: center; margin-bottom: 95px;
+      h2 { font-size: 36px; @include title_line(); }
+    }
+    ul { width: 100%; height: 950px;}
+    li { 
+      float: left; width: 300px; height: auto; margin-right: 30px; 
+      &:nth-child(1) { margin: 0 170px 64px;}
+      &:last-child { margin-right: 0; }
+      .image { 
+        width: 300px; height: 300px; margin-bottom: 44px; border-radius:100%;
+        text-align: center; @include img('mottoBox.jpg',$size:cover);
+      }
+    }// li
+    dl { width: 300px; height: auto; text-align: center;}
+    dt { font-size: 24px; font-weight: bold; margin-bottom: 34px; }
+    // dd { } 
+  }
+}
+@include laptop {
+  #mottoBox { width: 100%; height: 788px; padding-top: 130px; }
+  .motto_inner { 
+    width: 940px; height: auto; margin: auto; 
+    .title {
+      width: auto; height: 36px; margin: auto; text-align: center; margin-bottom: 95px;
+      h2 { font-size: 36px; @include title_line(); }
+    }
+    ul { width: 940px; height: 444px;}
+    li { 
+      float: left; width: 300px; height: 100%; margin-right: 20px; 
+      &:last-child { margin-right: 0; }
+      .image { 
+        width: 300px; height: 300px; margin-bottom: 44px; border-radius:100%;
+        text-align: center; @include img('mottoBox.jpg',$size:cover);
+      }
+    }// li
+    dl { width: 300px; height: 100px; text-align: center;}
+    dt { font-size: 24px; font-weight: bold; margin-bottom: 34px; }
+    // dd { } 
+  }
+}
+@include pc {
+  #mottoBox { width: 100%; height: 788px; padding-top: 130px; }
+  .motto_inner { 
+    width: 940px; height: auto; margin: auto; 
+    .title {
+      width: auto; height: 36px; margin: auto; text-align: center; margin-bottom: 95px;
+      h2 { font-size: 36px; @include title_line(); }
+    }
+    ul { width: 940px; height: 444px;}
+    li { 
+      float: left; width: 300px; height: 100%; margin-right: 20px; 
+      &:last-child { margin-right: 0; }
+      .image { 
+        width: 300px; height: 300px; margin-bottom: 44px; border-radius:100%;
+        text-align: center; @include img('mottoBox.jpg',$size:cover);
+      }
+    }// li
+    dl { width: 300px; height: 100px; text-align: center;}
+    dt { font-size: 24px; font-weight: bold; margin-bottom: 34px; }
+    // dd { } 
+  }
+}

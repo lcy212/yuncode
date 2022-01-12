@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* b_09_layout_jobis_signup_re.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+
+#wrap { width: 600px; height: auto; color:#333; }
+h1 { width: 100%; height: 50px; padding: 1rem; } /* 헤더 영역 잡아준 것 */
+h1 > a { 
+    display: block; width: 70px; height: 100%; 
+    color: #325def; font-size:2rem;
+}
+
+
+#signUp {
+    width: 500px; height: auto;
+    margin: auto; margin-top: 50px; padding: 5px;
+}
+h2 { width: 100%; height: auto; margin-bottom: 25px; font-size:1.375rem; }
+.sign_content { width: 100%; height: auto; min-height: 500px; }
+
+/* --------------------------------------------------------------------------------- */
+
+.make_account { width: 100%; height: 355px;}
+.input_text { width: 100%; height: 192px; margin-bottom: 20px; }
+    .input_text ul { width: 100%; height:auto; }
+    .input_text li { 
+        width: 100%; height: 40px; 
+        margin-bottom: 12px; 
+    }
+    /* li에 padding값부터 bgc까지 작성해놨다가 input에 옮김 */
+    .input_text li:last-child { margin-bottom: 0; }
+    .input_text input {
+        width: 100%; height: 100%;
+        padding: 0.5rem 0; box-sizing: border-box;
+        border:1px solid #888; border-radius: 0.3rem;
+        text-indent:8px; color:#676767;
+        background-color: #eee; 
+    }
+
+.make_btn { 
+    width: 100%; height: 40px; 
+    padding: 1rem 0; box-sizing: content-box; 
+}
+.make_btn > button { 
+    width: 100%; height: 100%; 
+    color:#fff; 
+    border-radius:0.3rem; box-shadow:0 0.3rem 0.7rem #325def9d;
+    font-size:1rem; font-weight: 600; 
+    background-color: #325def; transition:all 200ms ease;
+}
+.make_btn > button:hover { transform:translateY(-0.3rem); background-color: #4f75ff; color:#171717; }
+.make_btn > button:focus { outline:3px solid #22367e; font-size:1.3rem; }
+
+
+/* --------------------------------------------------------------------------------- */
+
+p { width: 100%; height: auto; padding: 15px 0; font-size:0.875rem; font-weight: 400; }
+p > a { font-size:1rem; color:#325def; font-weight: 600;}
+.sign_content > p:last-of-type { text-align: center; }

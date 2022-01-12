@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* c_07_media_query.css */
+
+/* common
+------------------------------------------------------------ */
+
+
+/* design
+------------------------------------------------------------ */
+
+#wrap {
+    width: 100%; height: auto;
+    min-height:500px;
+    padding: 2rem;
+    background-color: #eee;
+}
+
+.device {
+    display: none;
+    width: 100%; height: 600px;
+    line-height:600px; font-size:1.5rem; text-align: center;
+}
+@media all and (max-width:599px) {
+    #wrap { min-height:auto; background-color: #add;}
+    .mobile { display: block; background-color: #fff; }
+}/* @media all and (max-width:599px) */
+@media all and (min-width:600px) and (max-width:1279px) {
+    #wrap { background-color: #fd0; }
+    .tablet { display: block; }
+}/* @media all and 600~1279px */
+@media all and (min-width:1280px) {
+    #wrap { max-width:1440px; margin: auto; background-color: #afa; }
+    .desktip { display: block; height: 50vw; min-height: 800px;
+    background-color: #577; color:#fff; }
+}/* @media all and 1280~1440px */
+    

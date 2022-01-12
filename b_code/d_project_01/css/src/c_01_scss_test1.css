@@ -1,0 +1,194 @@
+/* c_01_scss_test1.scss */
+#wrap {
+  width: 1440px;
+  height: auto;
+}
+
+/* headBox ------------------------------------------------------ */
+.headBox {
+  width: 100%;
+  height: 100px;
+  padding: 20px 160px 0 170px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  float: left;
+  width: 120px;
+  height: 70px;
+  background-color: #ccc;
+}
+
+.navigation {
+  float: right;
+  width: 530px;
+  height: 70px;
+  background-color: #ccc;
+}
+
+/* titleBox ------------------------------------------------------ */
+.titleBox {
+  width: 100%;
+  height: 250px;
+  padding-top: 92px;
+  background-color: #888;
+}
+
+.title_inner {
+  width: 944px;
+  height: 127px;
+  margin: auto;
+}
+
+dt {
+  width: 100%;
+  height: 58px;
+  margin-bottom: 17px;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+dd {
+  width: 100%;
+  height: 52/2px;
+  margin: 0;
+}
+
+/* conBox ------------------------------------------------------ */
+.conBox {
+  width: 1100px;
+  height: 1735px;
+  margin: auto;
+  margin-top: 175px;
+}
+
+.con_tab {
+  width: 100%;
+  height: 57px;
+  margin-bottom: 38px;
+  padding: 0 147px;
+  border-bottom: 1px solid #333;
+}
+.con_tab ul {
+  width: 100%;
+  height: 100%;
+}
+.con_tab li {
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  line-height: 57px;
+  border-right: 1px solid #333;
+}
+.con_tab li:last-child {
+  border-right: 0;
+}
+
+.con_area {
+  width: 100%;
+  height: 1640px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.con_area > li {
+  float: left;
+  width: 240px;
+  height: 350px;
+  padding: 10px 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.con_area .img {
+  height: 220px;
+  margin-bottom: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.con_area dl {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.con_area .title {
+  height: 28px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #333;
+  font-size: 22px;
+}
+
+.con_area .text {
+  height: 20px;
+  font-size: 12px;
+}
+
+.con_area .info {
+  height: 22px;
+  margin-top: 10px;
+}
+.con_area .info > div {
+  float: left;
+  width: auto;
+  height: 100%;
+  margin-right: 5px;
+  padding: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* footBox ------------------------------------------------------ */
+.footBox {
+  width: 100%;
+  height: 450px;
+  padding-top: 68px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #444;
+}
+
+.foot_inner {
+  width: 940px;
+  height: 300px;
+  margin: auto;
+  background-color: #ccc;
+}
+.foot_inner h2 {
+  float: left;
+  width: 120px;
+  height: 70px;
+  margin-right: 800px;
+  margin-bottom: 45px;
+  background-color: #fff;
+}
+.foot_inner address {
+  float: left;
+  width: 460px;
+  height: 184px;
+  background-color: #fff;
+}
+.foot_inner .sns_family {
+  float: right;
+  width: 160px;
+  height: 135px;
+  background-color: #fff;
+}

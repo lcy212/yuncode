@@ -1,0 +1,35 @@
+// _productDetailBox.scss
+
+#productDetailBox { width: 100%; height: 1350px; padding-top: 120px; 
+  @include mobile { height: auto; }
+}
+
+.productDetail_inner { width: 940px; height: auto; margin: auto; 
+  @include mobile { width: 100%; }
+  @include tablet { width: 714px; }
+  .title_area { width: auto; height: auto; 
+    > h2 { font-size: 36px; text-align: center; @include title_line(); }
+  }
+  .img { width: 400px; height: 400px; margin: auto; margin-bottom: 94px; @include img('productDetailBox.png');
+    @include mobile { width: 300px; height: 300px; }
+  }
+  table { width: 100%; height: auto; border:0; }
+  tbody { width: 100%; height: 100%; border:0;  }
+  tr { width: 100%; height: 60px; border: 0; padding: 0; border-top: 1px solid $color_gray_03;
+    &:last-child { height: 380px; border-bottom: 1px solid $color_gray_03; 
+      @include mobile { width: 100%; height: 120px; }
+    }
+  }
+  th {
+    width: 160px; padding: 0; text-align: center; border:0; font-weight: bold; background-color: $color_gray_01; line-height: 60px;
+    @include mobile { display: block; width: 100%; height: 60px; }
+    @include tablet { width: 100px; word-break: keep-all; }
+  }
+  td { width: auto; height: 100%; border:0; padding: 20px; 
+    &:last-child { line-height: 160%; }
+    @include mobile { display: block; width: 100%; height: auto; box-sizing: border-box; }
+  }
+}
+
+
+

@@ -1,0 +1,22 @@
+// c_05_dom_sample_02.scss
+
+#wrap { width: 95%; height: auto; min-height: 500px; margin: auto; }
+h1 { width: 100%; margin-bottom: 1rem; border-bottom: 1px solid #777;}
+#viewBox { 
+  width: 90%; height: auto; margin: auto; padding: 1rem; border:1px solid #79f;
+
+  .slide_area { 
+    width: 100%; height: auto; background-color: #ddf;
+    transition: all 500ms ease;
+
+    > div { 
+      height: 300px; padding: 1rem;
+      &:nth-child(1) { background-color: rgb(137,13,230); }
+      &:nth-child(2) { background-color: rgb(189,254,177); }
+      &:nth-child(3) { background-color: rgb(207,235,58); }
+      &:nth-child(4) { background-color: rgb(72,154,82); }
+      &:nth-child(5) { background-color: rgb(41, 54, 201); }
+      &:nth-child(6) { display: none; }
+    }
+  }// .slide_area
+}// #viewBox

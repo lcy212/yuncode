@@ -1,0 +1,144 @@
+// _menuBox.scss
+
+$imgPath:'../../multi/img/base/menuBox/';
+
+@include mobile {
+  #menuBox { width: 100%; @include remUnit(height, 166); background-color: $color_ottogi_blue; }
+  .menu_inner { display: flex; height: 100%; margin: auto; justify-content: start; flex-direction: column; }
+  .menu_tab { 
+    width: 100%; height: 100px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02; 
+   ul { width: 100%; height: auto; margin:auto; }
+   li { 
+      float:left; position:relative; width: 50%; height: 50px; text-align: center; 
+      &:nth-child(1) { width: 100%; border-bottom: 1px solid $color_gray_02; }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_black; }
+      &:nth-child(1):after, &:nth-child(1)::after { display: none; }
+      &:last-child:after, &:last-child::after { display: none; }  
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 50px; color:$color_black;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      } 
+    }// li
+  }// menu_tab
+  .menu_sns {
+    width: auto; height: auto; margin: auto;
+    ul { display: flex; justify-content: space-between; height: auto;
+        width: 100vw; min-width: 250px; max-width: 440px; padding: 0 20px; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(2) { width: 43px; height: 30px; padding-top: 2px; }
+
+      a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png', $size:cover); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png', $size:cover); }
+      &:nth-child(4) a { @include img('blog.png'); }
+    }// li
+  }
+}// mobile
+
+@include tablet {
+  #menuBox { width: 100%; @include remUnit(height, 132); background-color: $color_ottogi_blue; }
+  .menu_inner { display: flex; height: 100%; margin: auto; justify-content: start; flex-direction: column; }
+  .menu_tab {  width: 100%; height: 66px; background-color: $color_gray_01; border-bottom: 1px solid $color_gray_02;
+    ul { width: 552px; height: auto; margin:auto; }
+   li { float:left; position:relative; width: 184px; height: 66px; text-align: center;  
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_black;
+      }
+      &:last-child:after, &:last-child::after { display: none; } 
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_black;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+    }// li
+  }// menu_tab
+  .menu_sns {
+    width: auto; height: auto; margin: auto;
+    ul { display: flex; justify-content: space-between; width: 440px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(2) { width: 43px; height: 30px; padding-top: 2px; }
+
+      a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png', $size:cover); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png', $size:cover); }
+      &:nth-child(4) a { @include img('blog.png'); }
+    }// li
+  }
+}// tablet
+
+@include laptop {
+  #menuBox { width: 100%; @include remUnit(height, 66); background-color: $color_ottogi_blue; }
+  .menu_inner { width: 965px; height: 100%; margin: auto; }
+  .menu_tab { float:left; width: auto; height: auto;  
+    ul { width: 100%; height: auto; }
+    li { 
+      float:left; position:relative; width: 184px; height: 66px; text-align: center;
+      &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_white;
+      }
+      &:last-child:after, &:last-child::after { display: none; }   
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_white;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+  
+    }// li
+  }// menu_tab
+  .menu_sns {
+    float:right; width: auto; height: auto; padding-top: 15px;
+    ul { display: flex; justify-content: space-between; width: 220px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(2) { width: 43px; height: 30px; padding-top: 2px; }
+
+      a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png', $size:cover); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png', $size:cover); }
+      &:nth-child(4) a { @include img('blog.png'); }
+    }// li
+  }
+}// laptop
+
+@include pc {
+  #menuBox { width: 100%; @include remUnit(height, 66); background-color: $color_ottogi_blue; }
+  .menu_inner { width: 965px; height: 100%; margin: auto; }
+  .menu_tab { float:left; width: auto; height: auto;  
+    ul { width: 100%; height: auto; }
+    li { 
+      float:left; position:relative; width: 184px; height: 66px; text-align: center;
+      &:nth-child(1) { @include mobile { width: 100%; border-bottom: 1px solid $color_gray_02; } }
+      &:after, &::after {
+        content:""; display:block; position:absolute; top: 0; bottom:0; right: 0; margin: auto;
+        width: 0; height: 20px; border-right:1px solid $color_white;
+      }
+      &:last-child:after, &:last-child::after { display: none; }   
+      a { 
+        display: block; width: 100%; height: 100%; text-align: center; line-height: 66px; color:$color_white;
+        &:hover { font-size:1.1rem; font-weight: bold; }
+      }
+  
+    }// li
+  }// menu_tab
+  .menu_sns { float:right; width: auto; height: auto; padding-top: 15px;
+    ul { display: flex; justify-content: space-between; width: 270px; height: auto; }
+    li {
+      width: 35px; height: 35px; 
+      &:nth-child(2) { width: 43px; height: 30px; padding-top: 2px; }
+
+      a { display: block; width: 100%; height: 100%; }
+      &:nth-child(1) a { @include img('facebook.png', $size:cover); }
+      &:nth-child(2) a { @include img('youtube.png', $size:cover); padding-top: 2px; }
+      &:nth-child(3) a { @include img('instagram.png', $size:cover); }
+      &:nth-child(4) a { @include img('blog.png'); }
+    }// li
+  }
+}// pc

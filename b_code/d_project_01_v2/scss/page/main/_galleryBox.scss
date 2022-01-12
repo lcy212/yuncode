@@ -1,0 +1,11 @@
+// galleryBox.scss
+
+#galleryBox {
+    width: 100%; height: auto; 
+    background-color: $color_yellow_02;
+
+    @include mobile { height:970px;  }
+    @include tablet { height:970px; }
+    @include laptop { height:750px;}
+    @include pc { height:750px;}
+} // #galleryBox 

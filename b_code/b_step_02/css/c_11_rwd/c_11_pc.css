@@ -1,0 +1,16 @@
+/* c_11_pc.css */
+
+/* 769px ~  */
+@media all and (min-width:769px) {
+    #wrap { width: 100%; min-width: 768px; }
+
+    #headBox { height: 150px;}
+        h1 { width: 100px; }
+    #viewBox { height: 450px; }
+    #conBox { height: 600px; }
+        #conBox li { width: 25%; height: 600px; }
+    #plusBox { display: none; }
+    #infoBox { display: none; }
+    /* #footBox { } */
+        h2 { width: 100px; }
+}/* 769px ~  */

@@ -1,0 +1,15 @@
+// _mixin.scss
+$url:"../../img/";
+@mixin size($w:100%, $h:auto){
+    width:$w; height:$h;
+    @content;
+}
+
+@mixin ngImg($i, $r:no-repeat, $p:50% 50%, $s:initial){
+    background: {
+        image:url(#{$url}#{$i});
+        repeat:$r;
+        position:$p;
+        size:$s;
+    }
+}

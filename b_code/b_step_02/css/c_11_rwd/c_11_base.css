@@ -1,0 +1,14 @@
+/* c_11_base.css */
+
+#wrap { width: 960px; height: auto; min-height: 500px; }
+#headBox { width: 100%;  background-color: #fca; }
+    h1 { height: 100%; background-color: #ada; }
+#viewBox { width: 100%; background-color: #a0f; }
+#conBox { width: 100%; }
+    #conBox ul { width: 100%; height: auto;}
+    #conBox li { float: left; background-color: #ada; }
+    #conBox li:nth-child(2n) { background-color: #acf; }
+#plusBox { width:100%; height: 100px; background-color: #dd4; }
+#infoBox { width:100%; height: 200px; background-color: #a45; }
+#footBox { width:100%; height: 100px; background-color: #daa; }
+    h2 { height: 100%; background-color: #aaf; }

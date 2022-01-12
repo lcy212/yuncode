@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- b_02_video.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_02_video.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>DOCUMENT</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹</a></h1>
+
+       <div class="part">
+           <h2>영상 첨부</h2>
+           <div class="movie">
+               <video 
+               muted autoplay controls loop 
+               class="movie_area" 
+               poster="../multi/image/dog-g08e10905b_1920.jpg">
+                   <source src="../multi/video/surfboard.webm" type="video/webm" />
+                   <source src="../multi/video/surfboard.ogg" type="video/ogg" />
+                   <source src="../multi/video/surfboard.mp4" type="video/mp4" />
+                   <p>현재 사용중인 브라우저는 영상을 지원하지않습니다.
+                      <a href="http://google.com/chrome"></a> 최신브라우저를 사용하여주십시오.
+                   </p>
+               </video>
+           </div>
+       </div>
+
+       <div class="part">
+           <h2>iframe - 외부문서 불러오기</h2>
+        <div class="movie">
+            <iframe src="https://www.youtube.com/embed/8pXX2kZNORA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+       </div>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

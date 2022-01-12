@@ -1,0 +1,61 @@
+// _content.scss
+
+$w:100%;
+
+#contentBox{ width:$w; height:auto; background-color: #777;}
+
+.title_area { 
+  @include size($h:250px);
+  padding : { top:92px; bottom:17px; }
+  background-color: #adf;
+  .container {height: auto;}
+}// .title_area
+
+.menu_title{
+  display:flex; justify-content:space-evenly; align-items:flex-end;
+  @include size($h:57px);
+  margin-bottom:16px; padding-bottom:20px; border-bottom: 2px solid #aaa; }
+
+.menu_content{ 
+  @include size();
+  @at-root .coffee { @include size(); }
+  ul{ display:flex; justify-content:space-between; flex-wrap:wrap;}
+  li {
+    @include size(240px, 350px); margin-bottom: 20px;
+
+    & > a {
+      display: block; 
+      @include size($h:100%);
+      padding:10px; box-sizing:border-box;
+      border:1px solid #333; border-radius:3px;
+      background-color: #fff;
+
+    @at-root .thumbnail{ 
+      @include size($h:220px);
+      margin-bottom: 5px; border-radius:3px; 
+      background : {
+        image:url("../../img/menu/card_menu_001.png");
+        repeat:no-repeat; position:50% 50%; size:cover;
+      }
+
+    }
+    @at-root .menu_thum{ @include size(); }
+      & > dt { width: $w; height: auto;
+        color:#333; text-transform:capitalize;
+        font : { size:22px; weight:700; }
+      }
+      & > dd { 
+        @include size();
+        font : { size:12px; weight:400; } color:#757575;
+      }
+    @at-root .tag{ 
+      display: flex; @include size();
+      margin-top: 5px;
+      font : { size:12px; weight:500; } color:#757575; text-transform: uppercase;
+      & > span { margin-right: 5px; padding: 2px 5px; border:1px solid #757575; border-radius:3px; }
+     }
+    }// a
+  }// li
+}// .menu_content
+
+// @at-root 작업편의상 안에 쓰지만 css에서는 내부가 아닌 단독으로 인식되게 하는 것

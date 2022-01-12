@@ -1,0 +1,91 @@
+// _mixin.scss
+@use "sass:math";
+
+
+// design -----------------------------------------------------------------
+@mixin title_line($color:$color_ottogi_red, $margin:30px){
+  & { margin-bottom: $margin*2}
+  &:after, &::after {
+    content:""; display: block;
+    width: 60px; border-bottom: 1px solid $color;
+    margin: $margin auto; 
+  }
+}
+
+@mixin blind(){
+  display: block; width: 0; height: 0;
+  position:absolute; z-index: -1;
+  overflow:hidden;
+}
+
+
+// font --------------------------------------------------------------------
+@mixin font_option($s:4, $w:normal){
+  font_size:nth($font_size, $s);
+  font_weight:#{$font_weight}_$w;
+}
+
+// image --------------------------------------------------------------------
+$imgPath:'../img/';
+
+@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:initial){
+  background: {
+    image: url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position:$position;
+    size: $size;
+  } 
+  & > span{
+    display: block; 
+    position: absolute; z-index:-1;
+    width: 0; height: 0; overflow: hidden;
+  }
+  @content;
+}
+
+
+// // size --------------------------------------------------------------------
+@mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial){
+  display:block; width:100%; height:100%;
+  
+  @if ($file) {
+    @include img($file, $repeat, $position, $size){      @content;    }
+  }
+}
+  
+// 작성예시 : a{ @include full('file.jpg');  // @include img('image_01.png'); } 
+
+// unit --------------------------------------------------------------------
+$baseSize: 16;
+@mixin remUnit($name, $unit){
+  #{$name}:#{$unit} + px;
+  #{$name}:math.div($unit, $baseSize) + rem;
+}
+// 작성예시 : div { @include remUnit(width, 16) }
+
+
+
+// @media query --------------------------------------------------------------------
+
+#wrap { min-width:$mobile; }
+@mixin mobile(){
+  @media all and (max-width:#{$tablet - 1}){
+    @content;
+  }
+}
+
+@mixin tablet(){
+  @media all and (min-width:$tablet) and (max-width:#{$laptop - 1}){
+    @content;
+  }
+}
+@mixin laptop(){
+  @media all and (min-width:$laptop) and (max-width:#{$pc - 1}){
+    @content;
+  }
+}
+@mixin pc(){
+  @media all and (min-width:$pc){
+    @content;
+  }
+}

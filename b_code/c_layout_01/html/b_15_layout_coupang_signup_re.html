@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- b_15_layout_coupang_signup_re.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/b_15_layout_coupang_signup_re.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>DOCUMENT</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <header id="headBox">
+            <h1><a href="./a_00_content.html">웹</a></h1>
+       </header>
+
+       <article id="joinBox">
+           <h2 class="blind">쿠팡 회원가입 내용 입력 및 체크</h2>
+           <form action="#" method="POST">
+               <fieldset>
+                   <legend>회원정보를 입력해주세요</legend>
+                   <ul class="private_data">
+                       <li class="write">
+                           <div class="input_data">
+                               <input type="email" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" />
+                               <label for="userId">
+                                   <i class="fas fa-envelope"></i>
+                                   <span class="blind">사용자 아이디를 입력하세요. 형식은 이메일입니다.</span>
+                                </label>
+                           </div>
+                           <div class="input_info">이메일을 입력하세요.</div>
+                       </li>
+                       <li>
+                            <div class="input_data">
+                                <input type="password" id="userPw1" name="user__Pw1" value="" maxlength="15"  placeholder="비밀번호" required />
+                                <label for="userPw1">
+                                    <i class="fas fa-lock"></i>
+                                    <span class="blind">
+                                        사용자 비밀번호를 입력하세요. 최소 10자이상, 최대 15자입니다.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="input_info">비밀번호를 입력하세요.</div>
+                       </li>
+                       <li>
+                            <div class="input_data">
+                                <input type="password" id="userPw2" name="user__Pw2" value="" maxlength="15"  placeholder="비밀번호 확인" required />
+                                <label for="userPw2">
+                                    <i class="fas fa-lock"></i>
+                                    <span class="blind">
+                                        사용자 비밀번호를 다시 입력하세요.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="input_info">비밀번호를 입력하세요.</div>
+                       </li>
+                       <li>
+                            <div class="input_data">
+                                <input type="tel" id="userName" name="user__Name" value="" placeholder="이름" required />
+                                <label for="userName">
+                                    <i class="fas fa-mobile"></i>
+                                    <span class="blind">
+                                        이름을 입력하세요.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="input_info">이름을 입력하세요.</div>
+                       </li>
+                       <li>
+                        <div class="input_data">
+                            <input type="tel" id="userTel" name="user__Tel" value="" maxlength="12"  placeholder="휴대폰 번호" required />
+                            <label for="userTel">
+                                <i class="fas fa-mobile"></i>
+                                <span class="blind">
+                                    휴대폰 번호를 입력하세요. 최대 12자입니다.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="input_info">휴대폰 번호를 입력하세요.</div>
+                       </li>
+                   </ul>
+               </fieldset>
+               <hr class="form_line" />
+               <fieldset class="error">
+                   <legend>쿠팡 서비스약관에 동의해주세요</legend>
+                   <div class="check_all">
+                       <dl>
+                           <dt class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                           </dt>
+                           <dd>
+                            동의에는 필수 및 선택 목적(광고성 정보 수신 포함)에 대한 동의가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.
+                           </dd>
+                       </dl>
+                   </div>
+                   <div class="check_info"></div>
+                   <div class="check_terms">
+                       <ul>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li class="check_data">
+                               <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                               <label for="checkAll">
+                                   <i></i>
+                                   모두 동의합니다
+                               </label>
+                            </li>
+                           <li>
+                               <div  class="sub_title check_data">
+                                    <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                                     <label for="checkAll">
+                                         <i></i>
+                                         모두 동의합니다
+                                     </label>
+                               </div>
+                               <ul class="sub_select">
+                                   <li class="check_data">
+                                       <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                                        <label for="checkAll">
+                                            <i></i>
+                                            모두 동의합니다
+                                        </label>
+                                    </li>
+                                   <li class="check_data">
+                                       <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                                        <label for="checkAll">
+                                            <i></i>
+                                            모두 동의합니다
+                                        </label>
+                                    </li>
+                                   <li class="check_data">
+                                       <input class="blind" type="checkbox" id="checkAll" name="check__All" value="checkAll" />
+                                        <label for="checkAll">
+                                            <i></i>
+                                            모두 동의합니다
+                                        </label>
+                                        <a href="#">&gt; <span class="blind">자세히보기</span></a>
+                                    </li>
+                               </ul>
+                           </li>
+                       </ul>
+                   </div>
+
+               </fieldset>
+           </form>
+       </article>
+
+       <footer id="footBox">
+           <address>
+               <p>©Coupang Corp. All rights reserved.</p>
+           </address>
+       </footer>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

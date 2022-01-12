@@ -1,0 +1,61 @@
+// companyInfoNavBox.scss
+/* companyInfoNavBox.css */
+
+
+#companyInfo_navBox {
+  width: 100%; height: 66px; 
+  background-color: $color_ottogi_red; color:$color_white;
+  @include tablet { padding-left: 44px; }
+  @include laptop { padding-left: 170px; }
+  @include pc { padding-left: 170px; }
+}
+
+.info_inner { height: 66px; margin: auto;
+  @include mobile { width: 320px; }
+  @include tablet { min-width: 768px; }
+  @include laptop { width: 1100px; }
+  @include pc { width: 1100px; }
+}
+
+.info_tab { 
+  width: 100%; height: 100%; 
+  & > li {
+    float:left; position:relative; width:auto; height: 100%; line-height: 66px;
+    &:nth-child(1) {
+      width: 80px; font-size:30px; text-align: center;
+      border-left:1px solid $color_white; border-right:1px solid $color_white; 
+      @include mobile { display: none; }
+      @include tablet { display: none; }
+    }
+    &:nth-child(2) { width:160px; padding-left: 30px; word-spacing: 30px; }
+    &:nth-child(3) { 
+      position:relative; width:190px;
+      @include mobile { width: 160px; }
+      .info_list_btn { 
+        width: 100%; height: 100%;
+        button { width: 100%; height: 100%; color:$color_white; line-height: 66px; }
+        span { 
+          margin-right: 56px; 
+          @include mobile { margin: 20px; }
+        }
+        i { font-size:30px; }
+      } 
+      .info_list { 
+        display: none; position: absolute; top: 66px; left: 0; z-index: 1;
+        width:190px; height: auto; border:1px solid $color_gray_03; border-top: 0; background-color: $color_white;  
+        li { 
+          width:100%; height: 50px; border-bottom: 1px solid $color_gray_03; 
+          &:last-child { border-bottom:0; }
+          a { 
+            display: block; width: 100%; height: 100%;
+            line-height: 50px; text-align: center; color:$color_black;  
+            &:hover { color:$color_ottogi_red; font-weight: bold; }
+          }
+        }
+      }
+      &:hover .info_list { display: block; }
+    }
+  }// li
+}// info_tab
+
+  

@@ -1,0 +1,74 @@
+// _footBox.scss
+
+$imgPath:'../../multi/img/base/headBox/';
+
+@include mobile {
+  #footBox {
+    width: 100%; @include remUnit(height, 110); padding-top: 37px;
+    background-color: $color_white;  
+  }// #footBox
+  .foot_inner { width: 248px; height: 65px;  margin: auto; 
+    h2 { @include img('logo_pc.png',$size:cover); @include blind; }
+  }
+  
+  address { width: 248px; height: 132px; 
+    p { 
+      margin-bottom: 10px; line-height:140%; text-transform: capitalize; word-break: keep-all;
+      &:nth-child(1) { display: none; } 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// mobile
+
+
+@include tablet {
+  #footBox {
+    width: 100%; @include remUnit(height, 238); padding-top: 60px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 518px; height: 132px; margin: auto; 
+    h2 { @include img('logo_pc.png',$size:cover); @include blind; }
+  }
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// tablet
+
+@include laptop {
+  #footBox {
+    width: 100%; @include remUnit(height, 240); padding-top: 50px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 942px; height: 132px; margin: auto; 
+    h2 { float:right; width: 128px; height: 124px; @include img('logo_pc.png',$size:cover); }
+  }
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// laptop
+
+@include pc {
+  #footBox {
+    width: 100%; @include remUnit(height, 240); padding-top: 50px;
+    background-color: $color_white;
+  }// #footBox
+  .foot_inner { width: 942px; height: 132px; margin: auto; 
+    h2 { float:right; width: 128px; height: 124px; @include img('logo_pc.png',$size:cover); }
+  }
+  address { 
+    float:left; width: 517px; height: 132px; 
+    p { margin-bottom: 10px; line-height:140%; text-transform: capitalize; 
+      &:last-child { margin-bottom: 0; }
+      span { text-transform: uppercase; }
+    }// p
+  }// address
+}// pc

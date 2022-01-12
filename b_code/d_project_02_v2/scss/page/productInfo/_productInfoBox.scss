@@ -1,0 +1,127 @@
+// _productInfoBox.scss
+
+$imgPath:'../../multi/img/sub/';
+
+#productInfoBox { width: 100%; height: auto; padding-top: 120px; padding-bottom: 120px;}
+.productInfo_inner { 
+  margin: auto;
+  @include mobile { width: 320px; height: 2246px; }
+  @include tablet { width: 700px; height: 1800px; }
+  @include laptop { width: 940px; height: 1998px; }
+  @include pc { width: 940px; height: 1998px; }
+}             
+.title_area { width: 160px; height: auto; margin: auto;
+  h2 { font-size: 36px; text-align: center; @include title_line(); }
+}
+.search_area { 
+  width: 100%; margin-bottom: 70px; background-color: $color_gray_01; 
+  @include mobile { height: 248px; padding: 12px 10px; } 
+  @include tablet { height: 180px; padding: 20px; }
+  @include laptop { height: 100px; padding: 20px 50px;  }
+  @include pc { height: 100px; padding: 20px 50px; }
+  form { 
+  @include mobile { width: 300px; height: 224px; }
+  @include tablet { width: 660px; height: 141px; }
+  @include laptop { width: 860px; height: 60px; }
+  @include pc { width: 860px; height: 60px; }
+}
+  fieldset { height: 60px;
+    @include mobile { width: 100%; height: 142px; }
+    @include tablet { width: 100%; }
+    @include laptop { float: left; width: 410px; }
+    @include pc { float: left; width: 410px; }
+    ul { width: 100%; height: 100%; }
+    li { float: left; width: auto; height: 60px; }
+    @at-root &.category {
+      margin-right: 40px;
+      @include mobile { margin-bottom: 22px; }
+      @include tablet { margin-bottom: 20px; }
+      li {
+        @include mobile { margin-bottom: 22px; }
+        &:nth-child(2) { 
+          width: 50px; text-align: center; line-height: 60px; font-size: 24px; color:$color_ottogi_red; 
+          @include mobile { width: 60px; }
+          @include tablet { width: 100px; }
+          @include laptop {}
+          @include pc {}
+        }
+        select { width: 180px; height: 100%; background-color: $color_white; color:$color_black;
+          @include mobile { width: 240px; 
+            &#subCategory { width: 300px; }
+          }
+          @include tablet { width: 280px; }
+        }
+      }
+    }
+    @at-root &.search {
+      input { height: 100%; }
+      #searchProduct { width: 330px; margin-right: 20px; 
+        @include mobile { width: 230px; margin-right: 10px; }
+        @include tablet { width: 580px; }
+      }
+    .search_btn { width: 60px; height: 60px; background-color: $color_ottogi_red; 
+      > button { width: 100%; height: 100%; font-size: 36px; color:$color_white; }
+    }
+    }
+  }
+}
+
+.sub_area { width: 100%; height: 25px; margin-bottom: 25px; 
+  @include mobile { width: 300px; height: 120px; margin: auto; text-align: center; }
+}
+.number_part { float: left; width: auto; height: 25px; font-weight: bold;
+  @include mobile { width: 100%; margin-bottom: 50px; }
+}
+.sort_part { float:right; width: auto; height: 25px; 
+  @include mobile { float: none; width: 280px; margin: auto; }
+  > li { float: left; width: auto; height: 100%; padding: 0 20px; border-right: 1px solid #333; 
+    &:last-child { border-right: 0; padding-right: 0; }
+    @include mobile {
+      width: 50%; padding: 0 20px; 
+      &:nth-child(2) { border-right: 0;} 
+      &:last-child { display: none;} 
+      > a { display: block; width: 100%; height: 100%; }
+    }
+  }
+}
+
+.content_area { width: 100%; margin-bottom: 64px; 
+  @include mobile { height: 1536px; }
+  @include tablet { height: 1140px; }
+  @include laptop { height: 1500px; }
+  @include pc { height: 1500px; }
+  ul { display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; height: 100%; }
+  li { width: 220px; height: 354px; border:1px solid $color_gray_03; 
+    @include mobile { margin: auto; &:nth-child(n+5) { display: none; } }
+    @include tablet { &:nth-child(n+10) { display: none; } }
+  }
+  a { display: block; width: 100%; height: 100%; }
+  .img { width: 100%; height: 200px; @include img('productInfoBox.png') }
+  .text { width: 100%; height: 154px; padding: 16px; padding-top: 35px; 
+    border-top: 1px solid $color_gray_03; }
+  .name { margin-bottom: 40px; text-align:center; font-size: 24px; font-weight: bold; }
+}
+
+.page_area { height: 30px; margin: auto;
+  @include mobile { width: 310px; }
+  @include tablet { width: 350px; }
+  @include laptop { width: 528px; }
+  @include pc { width: 528px; }
+  ul { width: 100%; height: 100%; }
+  li { float: left; width: auto; height: 100%; margin-right: 20px; line-height: 30px;
+
+    &.on { color:$color_ottogi_red; font-weight: bold; }
+    &:hover { border-bottom: 5px solid $color_ottogi_red; }
+    &:nth-child(n+3):nth-child(-n+12) { font-size: 24px; }
+    @include mobile { 
+      &:nth-child(n+3):nth-child(-n+4) { margin-right: 30px; } 
+      &:nth-child(n+6):nth-child(-n+12) { display: none; } 
+    }
+    @include tablet { &:nth-child(n+8):nth-child(-n+12) { display: none; } }
+    &:last-child { margin-right: 0; }
+    &.btn { width: 30px; height: 30px; background-color: $color_gray_02; }
+    a { display: block; width: 100%; height: 100%; text-align: center; 
+      i { font-size: 24px; line-height: 30px; }
+    }
+  }
+}

@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
     
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/common.css">
@@ -45,7 +47,7 @@
 							<li>
 								<div class="gnb_title"><a href="#">회사소개</a></div>
 								<ul class="gnb_list">
-									<li><a href="./companyInfo.html">(주)오뚜기</a></li>
+									<li><a href="./companysummary.html">(주)오뚜기</a></li>
 									<li><a href="#">지속가능경영</a></li>
 									<li><a href="#">인재 채용</a></li>
 									<li><a href="#">사업장 소개</a></li>
@@ -55,8 +57,8 @@
 							<li>
 								<div class="gnb_title"><a href="#">제품정보</a></div>
 								<ul class="gnb_list">
-									<li><a href="#">제품정보</a></li>
 									<li><a href="#">제품연혁</a></li>
+									<li><a href="#">제품정보</a></li>
 								</ul>
 							</li>
 							<li>
@@ -97,23 +99,29 @@
 
         <aside id="titleBox">
 			<div class="title_inner">
-				<h2>회사소개</h2>
+				<h2>(주)오뚜기</h2>
 				<p>(주)오뚜기 임직원은 식품을 통해 인류의 건강과 행복을 추구하고 있습니다.</p>
 			</div>
         </aside><!-- #titleBox -->
         
-        <nav id="companyInfo_navBox"> 
+        <nav id="companyInfo_navBox">
+			<h2 class="blind">회사소개 메뉴</h2>
 			<div class="info_inner">
-				<ul>
-					<li>메인</li><!-- a, 아이콘이나 이미지 삽입 -->
-					<li>회사소개</li>
+				<ul class="info_tab">
+					<li><a href="./main.html"><i class="fas fa-home"></i></a></li>
+					<li><span>회사소개 &gt;</span></li>
 					<li>
-						<div class="info_title">(주)오뚜기</div><!-- a, 아이콘이나 이미지 삽입 --> 
+						<div class="info_list_btn">
+							<button type="button">
+								<span>(주)오뚜기</span><i class="fas fa-sort-down"></i>
+							</button>
+						</div>
+						
 						<ul class="info_list">
-							<li>지속가능경영</li>
-							<li>인재 채용</li>
-							<li>사업장 소개</li>
-							<li>찾아오시는 길</li>
+							<li><a href="#">지속가능경영</a></li>
+							<li><a href="#">인재 채용</a></li>
+							<li><a href="#">사업장 소개</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -121,11 +129,13 @@
         </nav><!-- #companyInfo_navBox -->
 
 		<nav id="ottogi_navBox">
+			<h2 class="blind">(주)오뚜기 메뉴</h2>
 			<div class="ottogi_inner">
 				<ul>
-					<li>회사 개요</li>
-					<li>회사 연혁</li>
-					<li>제품 연혁</li>
+					<li class="action"><a href="./companySummary.html">회사 개요</a></li>
+					<li><a href="./companyHistory.html">회사 연혁</a></li>
+					<li><a href="./companyIdeologie.html">기업 이념</a></li>
+					<li><a href="./companyCI.html">오뚜기 ci</a></li>
 				</ul>
 			</div>
         </nav><!-- #ottogi_navBox -->
@@ -170,43 +180,49 @@
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;오뚜기 3분요리</dt>
+							<dd>신선한 육류와 야채를 사용하여</dd>
+							<dd>바쁜 현대인들에게 영양을 공급합니다.</dd>
 						</dl>
 					</div>
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;오뚜기 마요네스와 드레싱</dt>
+							<dd>정성된 원료로 만들어</dd>
+							<dd>야채를 다양하게 즐길 수 있습니다.</dd>
 						</dl>
 					</div>
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;오뚜기 카레</dt>
+							<dd>갖가지 향신료로 만들어</dd>
+							<dd>부드럽고 향긋한 풍미가 느껴집니다.</dd>
 						</dl>
 					</div>
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;오뚜기 프리저브형 쨈</dt>
+							<dd>과육의 원형이 살아있어</dd>
+							<dd>신선한 과실을 느낄 수 있습니다.</dd>
 						</dl>
 					</div>
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;씻어나온 맛있는 오뚜기 쌀</dt>
+							<dd>깨끗하게 씻은 쌀을 포장하여</dd>
+							<dd>간편하게 밥을 지을 수 있습니다.</dd>
 						</dl>
 					</div>
 					<div class="food_con">
 						<div class="food_img">이미지 삽입</div>
 						<dl>
-							<dt>&num;제품명</dt>
-							<dd>제품안내</dd>
+							<dt>&num;맛있는 오뚜기밥</dt>
+							<dd>갓 지은 밥을 무균 포장하여</dd>
+							<dd>간편한 식생활을 즐길 수 있습니다.</dd>
 						</dl>
 					</div>
 				</div>
@@ -214,17 +230,16 @@
         </article><!-- #foodBox -->
         
         <article id="factoryBox">
-			<div class="factory_inner">
-				<h2 class="blind">품질 및 시설 안내</h2>
+			<div class="factory_inner clearfix">
+				<h2 class="blind">오뚜기 시설</h2>
 				<dl class="factory_title">
 					<dt>우수한 품질은 좋은 시설에서</dt>
-					<dd>우리 회사는 카레, 스프, 케챂, 마요네스 등 1등 제품이 많습니다.
+					<dd>우리 회사는 카레, 스프, 케챂, 마요네스 등 1등 제품이 많습니다.</dd>
+					<dd>이처럼 많은 제품들이 오랫동안 정상을 지켜온 비결은 고객들의 욕구를 충실히 반영한 좋은 품질의 제품을 공급해왔기 때문입니다.
 					</dd>
-					<dd>이처럼 많은 제품들이 오랫동안 정상을 지켜온 비결은 고객들의 욕구를 충실히 반영한 좋은 품질의 제품을 공급해왔기 때문입니다.</dd>
 					<dd>우리 회사의 모든 생산라인은 자동화된 첨단설비, 위생적인 환경을 구축하고 있습니다.
 					</dd>
-					<dd>이것이 바로 오뚜기의 저력이고 1등 제품의 힘입니다. 그리고 발전하는 21세기 오뚜기의 비전입니다.
-					</dd>
+					<dd>이것이 바로 오뚜기의 저력이고 1등 제품의 힘입니다. 그리고 발전하는 21세기 오뚜기의 비전입니다.</dd>
 				</dl>
 				<ul class="factory_con">
 					<li>이미지 삽입</li>
@@ -284,6 +299,10 @@
 				</address>
 			</div>
 		</footer><!-- #footBox -->
+
+		<aside id="upButton">
+			<a href="#"><i class="fas fa-sort-up"></i></a>
+		</aside><!-- #upButton -->
 
     </div><!-- #wrap -->
 

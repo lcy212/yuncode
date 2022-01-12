@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- h_01_modal.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../fonts/ibm_plex/IBMplex.css">
+    
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/h_01_modal.css">
+    
+    <script src="../js/common/modernizr-custom.js"></script>
+
+    <title>모달창 만들기</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+    <!-- layout -->
+    <div id="wrap">
+       <h1><a href="./a_00_content.html">웹 - js</a></h1>
+       <article id="contentBox">
+         <h2>콘텐츠</h2>
+         <ul class="clearfix">
+           <li>
+             <div class="content_btn">
+               <button type="button"><span>제목입력1</span></button>
+            </div>
+          </li>
+           <li>
+             <div class="content_btn">
+               <button type="button"><span>제목입력2</span></button>
+            </div>
+          </li>
+           <li>
+             <div class="content_btn">
+               <button type="button"><span>제목입력3</span></button>
+            </div>
+          </li>
+         </ul>
+         
+         <div class="modal_area">
+           <div class="modal_message">
+             <p>내용을 입력하세요1</p>
+             <div class="close_btn">
+               <button type="button">닫기</button>
+             </div>
+             <div class="modal_bg"></div>
+           </div><!-- modal_message-->
+           <div class="modal_message">
+            <p>내용을 입력하세요2</p>
+            <div class="close_btn">
+              <button type="button">닫기</button>
+            </div>
+             <div class="modal_bg"></div>
+          </div><!-- modal_message-->
+          <div class="modal_message">
+            <p>내용을 입력하세요3</p>
+            <div class="close_btn">
+              <button type="button">닫기</button>
+            </div>
+            
+          </div><!-- modal_message-->
+           <div class="modal_bg"></div>
+         </div><!-- modal_area -->
+       </article>
+
+    </div><!-- #wrap -->
+
+    <!-- script -->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+    <script src="../js/src/h_01_modal.js"></script>
+</body>
+</html>

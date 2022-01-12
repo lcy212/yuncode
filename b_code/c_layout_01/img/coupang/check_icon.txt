@@ -1,0 +1,14 @@
+image { width:32px; height:62px; padding:6px; }
+
+// 초록(체크 후)
+.bg-check__1_ {
+    width: 32px; height: 32px;
+    background: url('css_sprites.png') -6px -6px;
+}
+
+// 검정(체크 전)
+.bg-check {
+    width: 32px; height: 32px;
+    background: url('css_sprites.png') -6px -50px;
+}
+
