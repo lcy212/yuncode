@@ -16,7 +16,7 @@ const deviceSize = `screen and (min-width:1280px)`;
 const mediaQuery = window.matchMedia(deviceSize);
 
 
-// 함수 ---------------------------------------------------------
+// 함수 -------------------------------------------
 const fnDevice = ()=>{ 
   if(mediaQuery.matches){
     text90.setAttribute('dir', 'rtl');
@@ -27,7 +27,8 @@ const fnDevice = ()=>{
   }
 }
 
+fnDevice();
 
-// 이벤트처리 ---------------------------------------------------
+// 이벤트처리 -------------------------------------
 mediaQuery.addEventListener('change', fnDevice);
 }
