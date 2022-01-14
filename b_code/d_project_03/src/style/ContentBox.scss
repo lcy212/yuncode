@@ -8,7 +8,7 @@
 
 .notice_area { background-color: #ddd; }
 .notice_inner {
-  width: 325px; height: auto;
+  width: 325px; height: auto; margin: auto;
 
   ul { width: 325px; height: auto; }
   li { width: 100%; height: 40px; margin-bottom: 18px; border-bottom: 1px solid #000; }
@@ -16,7 +16,7 @@
 }
 
 .gallery_area { background-color: #aaa; }
-.gallery_inner { width: 330px; height: 322px; }
+.gallery_inner { width: 330px; height: 322px; margin: auto; }
 .gallery_part { width: 330px; height: 200px; margin-bottom: 25px;
   ul { width: 100%; height: 100%; }
   li { float: left; width: 160px; height: 100%; margin-right: 10px; background-color: #ddd; 
@@ -33,7 +33,7 @@
 
 .link_area { background-color: #ddd; }
 .link_inner {
-  width: 325px; height: auto;
+  width: 325px; height: auto; margin: auto;
   ul { display: flex; justify-content: space-between; flex-direction: column; width: 100%; height: 250px; }
   li { width: 325px; height: 70px; background-color: #bbb; }
   a { display: block; width: 100%; height: 100%; 
