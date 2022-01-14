@@ -1,0 +1,32 @@
+// ViewBox.scss
+@use "sass:math";
+
+#viewBox { position:relative; width: 100%; height: 460px; background-color: #ddd; 
+  .btn_area { position:absolute; top: 50%; left: 0; right: 0; z-index: 10; transform: translateY(-50%); margin: auto;
+    width: 85%; height: 0;
+    > button { width: 65px; height: 65px; background-color: #aaa; }
+    .next { float:right; }
+    .prev { float: left; }
+  }
+}
+
+
+
+.indi_area { position:absolute; bottom: 30px; right: 150px; z-index: 10; width: 300px; height: auto;
+  ul { display: flex; justify-content: space-around; 
+    width: 100%; height: 100%; padding: 10px; 
+    border-radius: 100px; background-color: #fff; box-shadow: 2px 2px 4px #555; }
+  li { width: 32px; height: 32px; background-color: #aaa; border-radius: 100px; }
+  li.on { width: 90px; background-color: #f00; }
+}
+
+$len:4;
+.view_area { overflow: hidden; width: 100%; height: 100%; 
+  ul { display: flex; width: 100% * $len; height: 100%; }
+  li { width:math.div(100%, $len); height: 100%; }
+  li.on { display: block; }
+  .view_01 { background-color: #D36398; }
+  .view_02 { background-color: #E80DA3; }
+  .view_03 { background-color: #1D8E2E; }
+  .view_04 { background-color: #7B494D; }
+}

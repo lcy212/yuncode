@@ -21,8 +21,8 @@ export default function HeadBox(){
           </div>
           <div className='gnb'>
             <ul>
+              <li><NavLink className={fnAction} to="/ContentBox">product</NavLink></li>
               <li><NavLink className={fnAction} to="/EventBox">event</NavLink></li>
-              <li><a href="#">product</a></li>
               <li><a href="#">gallery</a></li>
               <li><a href="#">notice</a></li>
             </ul>
