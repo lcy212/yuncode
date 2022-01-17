@@ -20,7 +20,7 @@
   li.on { width: 90px; background-color: #f00; }
 }
 
-$len:4;
+$len:5;
 .view_area { overflow: hidden; width: 100%; height: 100%; 
   ul { display: flex; width: 100% * $len; height: 100%; }
   li { width:math.div(100%, $len); height: 100%; }
@@ -29,4 +29,14 @@ $len:4;
   .view_02 { background-color: #E80DA3; }
   .view_03 { background-color: #1D8E2E; }
   .view_04 { background-color: #7B494D; }
+}
+
+@keyframes firstSlide {                                   // num이 0이 되면
+  0% { margin-left: 100%; transition:none; }              // 4번째요소에서 복제요소까지 애니메이션없이 이동한다
+  100% { margin-left: 0; transition:margin 500ms ease; }  // 애니메이션 효과를 다시 집어넣고 1번째 슬라이드로 이동한다
+}
+
+@keyframes lastSlide {
+  0% {margin-left:0; transition:margin 500ms ease;}
+  100% {margin-left:100%;}
 }
