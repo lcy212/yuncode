@@ -1,9 +1,8 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Main from '../page/Main';
-import ContentBox from '../component/ContentBox';
-import EventBox from '../component/EventBox';
-import ViewBox from '../component/ViewBox';
+import ContentBox from '../page/ContentBox';
+import EventBox from '../page/EventBox';
 
 
 export default function RouterPage() {

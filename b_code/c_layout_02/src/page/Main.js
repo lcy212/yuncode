@@ -1,5 +1,5 @@
-import ViewBox from '../component/ViewBox';
-import FormBox from '../component/FormBox';
+import ViewBox from './Main/ViewBox';
+import FormBox from './Main/FormBox';
 
 export default function Main(){
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ProductContent from './ProductContent';
+import ProductContent from '../component/ProductContent';
 import '../style/ContentBox.scss';
 
 export default function ContentBox(){

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { MdExpandMore } from 'react-icons/md';
 import '../style/EventBox.scss';
-import EventLi from './EventLi';
+import EventLi from '../component/EventLi';
 
 export default function EventBox(){
 
